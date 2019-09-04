@@ -1,0 +1,90 @@
+.ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+  background-color: #393D49 !important;
+}
+
+.ant-btn-primary {
+  background-color: #b0b1b3 !important;
+  border-color: #b0b1b3 !important;
+  border-radius: 0px !important;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0px !important;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
+  background-color: #666;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #393D49;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.header_s {
+  color: white;
+  font-size: 18px;
+  line-height: 60px;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+.header_admin {
+  width: 120px;
+  float: right;
+  height: 100%;
+  overflow: hidden;
+  border-left: 3px solid #575757;
+}
+
+.header_admin a {
+  display: inline-block;
+}
+
+.header_admin a i {
+  float: left;
+  font-size: 30px;
+  line-height: 60px;
+}
+
+.img_admin {
+  float: left;
+  height: 60px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.container {
+  padding-top: 60px;
+  height: 100%;
+}
+
+.con_left {
+  height: 100%;
+  overflow: auto;
+  background-color: #393D49;
+  float: left;
+  width: 18%;
+}
+
+.con_right {
+  float: right;
+  height: 100%;
+  width: 82%;
+  overflow: auto;
+}
+
+:host ::ng-deep .ant-badge {
+  margin-right: 16px;
+}
+
+.head-example {
+  width: 21px;
+  height: 21px;
+  border-radius: 6px;
+  background: #eee;
+  display: inline-block;
+}

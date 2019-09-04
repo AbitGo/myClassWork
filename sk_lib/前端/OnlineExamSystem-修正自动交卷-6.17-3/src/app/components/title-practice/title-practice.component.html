@@ -1,0 +1,202 @@
+<div class="container clearfix">
+  <div class="con_left">
+    <!--<i class="fa fa-trash-o fa-lg"></i> Delete-->
+
+    <h2 class="con_h">【单项选择题】</h2>
+    <div id="con_select" class="con_select">
+      <div *ngFor="let item of select;let index=index" id="s{{item.id}}">
+        <div class="tilte_icon clearfix">
+          <span class="orderNum">{{index+1}}</span>
+          <div class="font_icon">
+                          <span class="click_mark" (click)="mark('s',true,index,item.id)">
+                            <i class="fa fa-edit fa-2x icon_color"></i><span class="icon_color"
+                                                                             style="vertical-align: super;">纠错</span>
+                          </span>
+            &nbsp;
+            &nbsp;
+            <span class="click_mark" (click)="mark('s',false,index,item.id)">
+                            <i class="fa fa-flag-o fa-2x icon_color"></i><span class="icon_color"
+                                                                               style="vertical-align: super;">标记</span>
+                          </span>
+          </div>
+        </div>
+        <p class="con_title">{{item.realTitle}}</p>
+        <div>
+          <div class="con_key" *ngFor="let value of item.selectOptions;let i = index"
+               (click)="selectClick(index,'s',item.id,i,value)"><span class="con_key_select">{{list[i]}}</span><span>{{value}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h2 class="con_h">【多项选择题】</h2>
+    <div id="con_selects" class="con_selects">
+      <div *ngFor="let item of selects;let index=index" id="ss{{item.id}}">
+        <div class="tilte_icon clearfix">
+          <span class="orderNum">{{index+1}}</span>
+          <div class="font_icon">
+                        <span class="click_mark" (click)="mark('s',true,index,item.id)">
+                          <i class="fa fa-edit fa-2x icon_color"></i><span class="icon_color"
+                                                                           style="vertical-align: super;">纠错</span>
+                        </span>
+            &nbsp;
+            &nbsp;
+            <span class="click_mark" (click)="mark('s',false,index,item.id)">
+                          <i class="fa fa-flag-o fa-2x icon_color"></i><span class="icon_color"
+                                                                             style="vertical-align: super;">标记</span>
+                        </span>
+          </div>
+        </div>
+        <p class="con_title">{{item.realTitle}}</p>
+        <div>
+          <div class="con_key" *ngFor="let value of item.selectOptions;let i = index"
+               (click)="selectClick(index,'ss',item.id,i,value)"><span class="con_key_select">{{list[i]}}</span><span>{{value}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="con_h">【判断题】</h2>
+    <div id="con_select" class="con_select">
+      <div *ngFor="let item of judges;let index=index" id="j{{item.id}}">
+        <div class="tilte_icon clearfix">
+          <span class="orderNum">{{index+1}}</span>
+          <div class="font_icon">
+                        <span class="click_mark" (click)="mark('s',true,index,item.id)">
+                          <i class="fa fa-edit fa-2x icon_color"></i><span class="icon_color"
+                                                                           style="vertical-align: super;">纠错</span>
+                        </span>
+            &nbsp;
+            &nbsp;
+            <span class="click_mark" (click)="mark('s',false,index,item.id)">
+                          <i class="fa fa-flag-o fa-2x icon_color"></i><span class="icon_color"
+                                                                             style="vertical-align: super;">标记</span>
+                        </span>
+          </div>
+        </div>
+        <p class="con_title">{{item.realTitle}}</p>
+        <div>
+          <div class="con_key" *ngFor="let value of item.selectOptions;let i = index"
+               (click)="selectClick(index,'j',item.id,i,value)"><span class="con_key_select">{{list[i]}}</span><span>{{value}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="con_h">【填空题】</h2>
+    <div id="con_select" class="con_select">
+      <div *ngFor="let item of fillings;let index=index">
+        <div class="tilte_icon clearfix">
+          <span class="orderNum">{{index+1}}</span>
+          <div class="font_icon">
+                        <span class="click_mark" (click)="mark('s',true,index,item.id)">
+                          <i class="fa fa-edit fa-2x icon_color"></i><span class="icon_color"
+                                                                           style="vertical-align: super;">纠错</span>
+                        </span>
+            &nbsp;
+            &nbsp;
+            <span class="click_mark" (click)="mark('s',false,index,item.id)">
+                          <i class="fa fa-flag-o fa-2x icon_color"></i><span class="icon_color"
+                                                                             style="vertical-align: super;">标记</span>
+                        </span>
+          </div>
+        </div>
+        <p class="con_title">{{item.realTitle}}</p>
+        <textarea name="" id="f{{item.id}}" cols="95" rows="6" style="resize:none"
+                  (blur)="selectClick(index,'f',item.id)"></textarea>
+      </div>
+    </div>
+
+    <!-- <h2 class="con_h">【阅读题】</h2>
+    <div  id="con_select" class="con_select">
+      <div *ngFor="let item of select" class="">
+          <div class="tilte_icon clearfix">
+              <span class="orderNum">{{item.id}}</span>
+              <div class="font_icon" >
+                <a href="javascript:void(0)" class="click_error">
+                <i class="fa fa-edit fa-2x icon_color"></i><span class="icon_color" style="vertical-align: super;">纠错</span>
+                </a>
+                &nbsp;
+                &nbsp;
+                <a href="javascript:void(0)" class="click_mark">
+                  <i class="fa fa-flag-o fa-2x icon_color"></i><span class="icon_color" style="vertical-align: super;">标记</span>
+                </a>
+              </div>
+          </div>
+          <p class="con_title">{{item.title}}</p>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+      </div>
+  </div> -->
+
+  </div>
+  <div class="con_right">
+    <div class="schedule"><p>考试进度</p>
+      <div class="clearfix schedule_father"><span id="scheduleLength"></span>
+        <span style="float:right;margin-top:-7px">{{schedule}}</span>
+        <span class="scheduleLength"></span>
+      </div>
+
+    </div>
+    <div class="put">
+      <span (click)="upData()">
+        <i class="fa fa-file-text-o fa-3x icon_color"></i>
+        <div class="icon_color">交卷</div>
+        <!--<input type="text" [(ngModel)]="examTime">-->
+      </span>
+    </div>
+    <div class="scantron">
+      <h3>答题卡</h3>
+      <hr/>
+      <div class="scantron_mark">
+        <span class="y"></span><span>已做</span>
+        <span></span><span>未做</span>
+        <span class="marks"></span><span>标记</span>
+      </div>
+      <h3>【单项选择题】</h3>
+      <div class="select" id="select">
+        <a *ngFor="let value of select;let i = index">{{i+1}}</a>
+      </div>
+      <h3>【多项选择题】</h3>
+      <div class="selects" id="selects">
+        <a *ngFor="let value of selects;let i = index">{{i+1}}</a>
+      </div>
+      <h3>【判断题】</h3>
+      <div class="selects" id="judges">
+        <a *ngFor="let value of judges;let i = index">{{i+1}}</a>
+      </div>
+      <h3>【填空题】</h3>
+      <div class="selects" id="fillings">
+        <a *ngFor="let value of fillings;let i = index">{{i+1}}</a>
+      </div>
+    </div>
+  </div>
+
+  <!--练习结果-->
+  <nz-modal [(nzVisible)]="isVisibleResult" nzTitle="练习结果" [nzContent]="modalContent1"
+            (nzOnCancel)="handleCancelPractice()"
+            (nzOnOk)="handleOkPractice()">
+    <ng-template #modalContent1>
+      <p>{{practiceResult}}</p>
+    </ng-template>
+  </nz-modal>
+
+  <!-- 纠错 -->
+  <nz-modal [nzWidth]="400" [nzVisible]="isVisible" [nzTitle]="modalTitle" [nzContent]="modalContent"
+            [nzFooter]="modalFooter" (nzOnCancel)="isVisible=false;">
+    <ng-template #modalTitle>
+      {{this.errorTitle}}
+    </ng-template>
+    <ng-template #modalContent>
+      <textarea placeholder="请输入错误信息" style="resize:none" cols="60" rows="15" [(ngModel)]="errorContent"></textarea>
+    </ng-template>
+    <ng-template #modalFooter>
+      <button nz-button [nzType]="'default'" [nzSize]="'large'" (click)="isVisible=false;">
+        取消
+      </button>
+      <button nz-button [nzType]="'primary'" [nzSize]="'large'" (click)="handleOk($event)">
+        提 交
+      </button>
+    </ng-template>
+  </nz-modal>
+</div>

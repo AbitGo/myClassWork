@@ -1,0 +1,56 @@
+.paper {
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.paperSearch {
+  padding: 5px 100px 30px 0px;
+}
+
+.selectLab {
+  vertical-align: text-bottom;
+  height: 28px;
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+  background: #e5e5e5;
+  line-height: 28px;
+}
+
+.pLab {
+  vertical-align: text-bottom;
+  height: 28px;
+  width: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.otherLab {
+  vertical-align: text-bottom;
+  height: 28px;
+  width: 80px;
+  display: inline-block;
+  text-align: center;
+  background: #e5e5e5;
+  line-height: 28px;
+}
+
+.selectOptions {
+  vertical-align: text-bottom;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.paperSearch button {
+  vertical-align: text-bottom;
+}
+
+.classSearch {
+  padding: 30px 100px 30px 0px;
+}
+
+.classTable {
+  padding-top: 20px;
+}
+
+

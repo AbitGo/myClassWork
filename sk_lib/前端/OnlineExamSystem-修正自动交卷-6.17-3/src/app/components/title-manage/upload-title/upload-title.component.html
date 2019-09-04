@@ -1,0 +1,76 @@
+<!--<umeditor #editor id="editor" [(ngModel)]="model_text"-->
+<!--(contentChange)="contentChange($event)"-->
+<!--(ready)="editorReady($event)"-->
+<!--(onEditorContentChange)="keyupHandler($event)"-->
+<!--(click)="test(editor.text)"></umeditor>-->
+
+
+<!--<umeditor [(ngModel)]="full_source"</umeditor>-->
+<div class="classSearch">
+  <label class="selectLab">知识点</label>
+  <div class="selectOptions">
+    <nz-select style="width: 200px;" [(ngModel)]="eoKnowleagePoint" [nzPlaceHolder]="'请选择知识点'" >
+      <nz-option
+        *ngFor="let option of eoKnowleagePoints"
+        [nzLabel]="option.name"
+        [nzValue]="option.id"
+        [nzDisabled]="option.disabled">
+      </nz-option>
+    </nz-select>
+  </div>
+
+  <label class="selectLab">题目类型</label>
+
+  <div class="selectOptions" nz-form-control>
+    <nz-select style="width: 200px;" [(ngModel)]="title_type" [nzPlaceHolder]="'请选择题型'"
+               >
+      <nz-option
+        *ngFor="let option of title_types"
+        [nzLabel]="option.label"
+        [nzValue]="option.value"
+        [nzDisabled]="option.disabled">
+      </nz-option>
+    </nz-select>
+  </div>
+
+  <label class="selectLab">题目难度</label>
+
+  <div class="selectOptions">
+    <nz-rate [(ngModel)]="degree" (ngModelChange)="get_degree_value(degree)" nzAllowHalf></nz-rate>
+    <span *ngIf="degree_value" class="ant-rate-text">{{degree_value}} 难度</span>
+  </div>
+</div>
+
+<div class="classSearch">
+  <label class="selectLab">题目简称</label>
+  <div class="selectOptions">
+    <nz-input [(ngModel)]="title_nickname" [nzPlaceHolder]="'请输入题目称号'"></nz-input>
+  </div>
+</div>
+
+<div class="div-title">
+  <!--<label class="label-title">上传题目</label>-->
+
+
+  <p style="font-size: large">题干</p>
+  <umeditor class="ume-title" [(ngModel)]="title_text" #full></umeditor>
+
+  <p style="font-size: large">选项（每个选项占一行，选项前不用加ABCD）</p>
+  <umeditor class="ume-title" [(ngModel)]="title_option" #full></umeditor>
+
+  <!--<label class="label-title">答案</label>-->
+  <p style="font-size: large">答案（选择题请直接输入A/B/C/D,多选题ABCD任意搭配）</p>
+  <umeditor class="ume-title" [(ngModel)]="answer_text" #full></umeditor>
+
+
+</div>
+
+<div class="classSearch">
+  <button class="btn" nz-button [nzType]="'danger'" [nzSize]="'large'" (click)="submit()">
+    <span>&nbsp;添加题目&nbsp;</span>
+  </button>
+</div>
+
+
+<!-- Indicates a successful or positive action -->
+

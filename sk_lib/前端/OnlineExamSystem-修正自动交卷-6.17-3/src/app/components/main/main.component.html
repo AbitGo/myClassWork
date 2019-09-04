@@ -1,0 +1,270 @@
+<div class="header">
+  <div class="header_s">苏州科技大学在线考试与成绩分析系统</div>
+  <div class="header_s">
+    <nz-select style="width: 120px;" [(ngModel)]="selectedSubject" [nzPlaceHolder]="'请选择科目'" *ngIf="isTeacherStudent()"
+               (ngModelChange)="selectSubject(selectedSubject)" nzAllowClear>
+      <nz-option
+        *ngFor="let option of subjects"
+        [nzLabel]="option.name"
+        [nzValue]="option.id"
+        [nzDisabled]="option.disabled">
+      </nz-option>
+    </nz-select>
+  </div>
+
+  <div class="header_admin">
+    <nz-dropdown>
+      <a class="ant-dropdown-link clearfix" nz-dropdown>
+
+        <img class="img_admin" src="../../assets/imgs/admin1.jpg" alt="">
+        <nz-badge [nzCount]="count">
+          <ng-template #content>
+            <!--<a class="head-example"></a>-->
+            <!--<img class="img_admin" src="../../assets/imgs/admin1.jpg" alt="">-->
+          </ng-template>
+        </nz-badge>
+        <i class="anticon anticon-down"></i>
+
+
+      </a>
+      <ul nz-menu>
+        <!--<li nz-menu-item>-->
+        <!--<a target="_blank" rel="noopener noreferrer" href="javascript:void(0)">用户信息</a>-->
+        <!--</li>-->
+        <!--<li nz-menu-item>-->
+        <!--<a target="_blank" rel="noopener noreferrer" href="javascript:void(0)">修改密码</a>-->
+        <!--</li>-->
+        <li nz-menu-item>
+          <a rel="noopener noreferrer" href="javascript:void(0)" (click)="changePassword()">重置密码</a>
+        </li>
+        <li nz-menu-item>
+          <a rel="noopener noreferrer" (click)="logout()" href="javascript:void(0)">退出登录</a>
+        </li>
+      </ul>
+    </nz-dropdown>
+  </div>
+</div>
+<div class="container clearfix">
+  <div class="con_left">
+    <div style="width: 240px;">
+      <button nz-button [nzType]="'primary'"
+              (click)="toggleCollapsed()"
+              style="margin-bottom: 10px;width: 100%;">
+        <i class="anticon"
+           [class.anticon-menu-unfold]="isCollapsed"
+           [class.anticon-menu-fold]="!isCollapsed">
+        </i>
+      </button>
+      <ul nz-menu [nzMode]="'inline'" nzTheme='dark' [nzInlineCollapsed]="isCollapsed">
+        <!--<li nz-menu-item>-->
+        <li nz-menu-item [routerLink]="['/main']">首页</li>
+        <li nz-submenu *ngIf="isTeacherStudent()">
+          <span title>
+            <i class="anticon anticon-mail"></i>
+            <span>信息查询</span>
+          </span>
+          <ul>
+            <li nz-menu-item *ngIf="isStudent()" [routerLink]="['./grade-query']">成绩查询</li>
+            <li nz-menu-item *ngIf="isTeacher()" [routerLink]="['./student-query']">学生成绩</li>
+            <!--<li nz-menu-item [routerLink]="['./teacher-query']">教师查询</li>-->
+          </ul>
+        </li>
+        <li nz-submenu *ngIf="isRootAdmin()">
+          <span title>
+            <i class="anticon anticon-appstore"></i>
+            <span>信息管理</span>
+          </span>
+          <ul>
+            <li nz-menu-item *ngIf="isRoot()" [routerLink]="['./admin-manage']">管理员管理</li>
+            <li nz-menu-item *ngIf="isRoot()" [routerLink]="['./leadership-manage']">学校管理员管理</li>
+            <li nz-menu-item *ngIf="isAdmin()" [routerLink]="['./teacher-manage']">教师管理</li>
+            <li nz-menu-item *ngIf="isAdmin()" [routerLink]="['./student-manage']">学生管理</li>
+            <li nz-menu-item *ngIf="isRoot()" [routerLink]="['./school-manage']">学校管理</li>
+            <li nz-menu-item *ngIf="isRootAdmin()" [routerLink]="['./department-manage']">学院管理</li>
+            <li nz-menu-item *ngIf="isRootAdmin()" [routerLink]="['./major-manage']">专业管理</li>
+            <li nz-menu-item *ngIf="isAdmin()" [routerLink]="['./class-manage']">班级管理</li>
+            <li nz-menu-item *ngIf="isAdmin()" [routerLink]="['./course-manage']">科目管理</li>
+            <li nz-menu-item *ngIf="isAdmin()" [routerLink]="['./subject-bind']">科目绑定</li>
+          </ul>
+        </li>
+        <!--<li nz-submenu>-->
+        <!--<span title>-->
+        <!--<i class="anticon anticon-setting"></i>-->
+        <!--<span>权限管理</span>-->
+        <!--</span>-->
+        <!--<ul>-->
+        <!--<li nz-menu-item [routerLink]="['./getData']">权限设置</li>-->
+        <!--<li nz-menu-item>推动消息</li>-->
+        <!--</ul>-->
+        <!--</li>-->
+        <li nz-submenu *ngIf="isTeacher()">
+          <span title>
+            <i class="anticon anticon-setting"></i>
+            <span>考试设计</span>
+          </span>
+          <ul>
+            <li nz-menu-item [routerLink]="['./design-paper']">在线组卷</li>
+            <li nz-menu-item [routerLink]="['./insert-exam']">考试安排</li>
+            <li nz-menu-item [routerLink]="['./paper-history']">组卷历史</li>
+          </ul>
+        </li>
+        <li nz-submenu *ngIf="isTeacherStudent()">
+          <span title>
+            <i class="anticon anticon-setting"></i>
+            <span>题目管理</span>
+          </span>
+          <ul>
+            <li nz-menu-item *ngIf="isStudent()" [routerLink]="['./error-title']">错题列表</li>
+            <li nz-menu-item *ngIf="isTeacher()" [routerLink]="['./title-list']">题目列表</li>
+            <li nz-menu-item *ngIf="isTeacher()" [routerLink]="['./upload-title']">上传题目</li>
+            <!--<li nz-menu-item *ngIf="isTeacherStudent()" [routerLink]="['./import-title']">导入题目</li>-->
+            <li nz-menu-item *ngIf="isTeacher()" [routerLink]="['./import-title']">导入题目</li>
+            <li nz-menu-item *ngIf="isTeacher()" [routerLink]="['./plan-job']">定时查重</li>
+            <li nz-menu-item *ngIf="isTeacher()" [routerLink]="['./knowledage-manage']">知识点管理</li>
+          </ul>
+        </li>
+        <li nz-submenu *ngIf="isTeacher()">
+          <span title>
+            <i class="anticon anticon-setting"></i>
+            <span>数据分析</span>
+          </span>
+          <ul>
+            <li nz-submenu>
+              <span title>
+                <!--<i class="anticon anticon-setting"></i>-->
+                <span>试卷分析</span>
+              </span>
+              <ul>
+                <li nz-menu-item [routerLink]="['./knowledge-analysis']">知识点分析</li>
+                <li nz-menu-item [routerLink]="['./title-analysis']">题目分析</li>
+              </ul>
+            </li>
+            <li nz-menu-item [routerLink]="['./get-analysis']">学生分析</li>
+            <!--<li nz-menu-item [routerLink]="['./knowledge-analysis']">知识点分析</li>-->
+
+            <li nz-menu-item [routerLink]="['./score-analysis']">班级分析</li>
+            <!--<li nz-menu-item [routerLink]="['./score-analysis']">成绩分析</li>-->
+          </ul>
+        </li>
+        <li nz-submenu *ngIf="isTeacher()">
+          <span title>
+            <i class="anticon anticon-setting"></i>
+            <span>统计报表</span>
+          </span>
+          <ul>
+            <li nz-menu-item *ngIf="isTeacher()" [routerLink]="['./export-data']">导出报表</li>
+            <!--<li nz-menu-item>任务报表</li>-->
+          </ul>
+        </li>
+        <li nz-menu-item *ngIf="isStudent()">
+          <span title>
+            <i class="anticon anticon-setting"></i>
+            <!--<span [routerLink]="['../exam']">进入考试</span>-->
+            <span (click)="showModalMiddle()">进入考试</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="con_right">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<nz-modal [nzWrapClassName]="'vertical-center-modal'" [nzContent]="modalContent2" [nzVisible]="isVisibleMiddle"
+          [nzTitle]="'选择考试'" (nzOnCancel)="handleCancelMiddle($event)" (nzOnOk)="handleOkMiddle($event)">
+  <ng-template #modalContent2>
+    <!--<label class="selectLab">考试科目</label>-->
+    <!--<div class="selectOptions">-->
+    <!--<nz-select style="width: 200px;" [(ngModel)]="_subject" [nzPlaceHolder]="'请选择考试科目'"-->
+    <!-- (ngModelChange)="queryExam(_subject)">-->
+    <!--<nz-option-->
+    <!--*ngFor="let option of subjectsStu"-->
+    <!--[nzLabel]="option.name"-->
+    <!--[nzValue]="option.id"-->
+    <!--[nzDisabled]="option.disabled">-->
+    <!--</nz-option>-->
+    <!--</nz-select>-->
+    <!--</div>-->
+    <label class="selectLab">考试</label>
+    <div class="selectOptions">
+      <nz-select style="width: 200px;" [(ngModel)]="_exam" [nzPlaceHolder]="'请选择考试'"
+      >
+        <nz-option
+          *ngFor="let option of exams"
+          [nzLabel]="option.name"
+          [nzValue]="option.id"
+          [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </div>
+
+  </ng-template>
+</nz-modal>
+
+<!--<nz-modal [nzWrapClassName]="'vertical-center-modal'" [nzContent]="modalContent3" [nzVisible]="isVisiblePassword"-->
+<!--[nzTitle]="'选择考试'" (nzOnCancel)="handleCancelPassword($event)" (nzOnOk)="handleOkPassword($event)">-->
+<!--<ng-template #modalContent3>-->
+<!--<div>-->
+<!--<label class="selectLab">编号</label>-->
+<!--<div class="selectOptions">-->
+<!--<nz-input [nzSize]="'large'" [(ngModel)]="_userId" [nzType]="'text'"-->
+<!--[nzId]="'text'"></nz-input>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div>-->
+<!--<label class="selectLab">新密码</label>-->
+<!--<div class="selectOptions">-->
+<!--<nz-input [nzSize]="'large'" [(ngModel)]="_newPassword" [nzType]="'text'"-->
+<!--[nzId]="'text'"></nz-input>-->
+<!--</div>-->
+<!--</div>-->
+<!--</ng-template>-->
+<!--</nz-modal>-->
+
+
+<nz-modal [nzVisible]="isVisiblePassword" [nzTitle]="'tabTitle'" [nzContent]="modalContent3" [nzFooter]="false"
+          (nzOnCancel)="handleCancelPassword($event)">
+  <ng-template #modalContent3>
+    <form nz-form [nzType]="'horizontal'" [formGroup]="validateForm">
+      <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSpan]="6">
+          <label nz-form-item-required>编号</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+          <nz-input [nzSize]="'large'" [nzReadonly]="true" formControlName="_userId" [(ngModel)]="_userId"
+                    [nzType]="'text'"
+                    [nzId]="'text'"></nz-input>
+          <div nz-form-explain
+               *ngIf="validateForm.controls._userId.dirty&&validateForm.controls._userId.hasError('required')">请填写编号
+          </div>
+        </div>
+      </div>
+      <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSpan]="6">
+          <label nz-form-item-required>新密码</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+          <nz-input [nzSize]="'large'" formControlName="_newPassword" [(ngModel)]="_newPassword"
+                    [nzType]="'text'"
+                    [nzId]="'text'"></nz-input>
+          <div nz-form-explain
+               *ngIf="validateForm.controls._newPassword.dirty&&validateForm.controls._newPassword.hasError('required')">
+            请填写新密码
+          </div>
+        </div>
+      </div>
+      <div nz-form-item nz-row style="margin-bottom:8px;">
+        <div nz-form-control nz-col [nzSpan]="14" [nzOffset]="6">
+          <button nz-button [nzSize]="'large'" style="margin-left: 20px" (click)="handleOkPassword($event)">提交
+          </button>
+          <!--<button nz-button [nzType]="'primary'" [nzSize]="'large'"-->
+          <!--(click)="handleOkPassword($event)">提交-->
+          <!--</button>-->
+          <button nz-button [nzSize]="'large'" style="margin-left: 20px" (click)="handleCancelPassword($event)">取消
+          </button>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+</nz-modal>

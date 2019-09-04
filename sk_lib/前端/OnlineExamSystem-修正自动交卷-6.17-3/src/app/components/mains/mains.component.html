@@ -1,0 +1,149 @@
+<div class="knowledage">
+
+  <div *ngIf="isTeacher()" class="departmentSearch a">
+    <label class="selectLab">学院</label>
+    <div class="selectOptions">
+      <nz-select style="width: 200px;" [(ngModel)]="department" [nzPlaceHolder]="'请选择学院'"
+                 (ngModelChange)="queryMajor(department)">
+        <nz-option
+          *ngFor="let option of departments"
+          [nzLabel]="option.name"
+          [nzValue]="option.id"
+          [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </div>
+
+    <label class="selectLab">专业</label>
+    <div class="selectOptions">
+      <nz-select style="width: 200px;" [(ngModel)]="major" [nzPlaceHolder]="'请选择专业'"
+                 (ngModelChange)="queryClass(major)">
+        <nz-option
+          *ngFor="let option of majors"
+          [nzLabel]="option.name"
+          [nzValue]="option.id"
+          [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </div>
+
+    <label class="selectLab">班级</label>
+    <div class="selectOptions">
+      <nz-select style="width: 200px;" [(ngModel)]="class" [nzPlaceHolder]="'请选择班级'"
+                 (ngModelChange)="queryStudent(class)">
+        <nz-option
+          *ngFor="let option of classes"
+          [nzLabel]="option.name"
+          [nzValue]="option.id"
+          [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </div>
+    <!--<button nz-button [nzType]="'default'" (click)="searchDepartment()">-->
+    <!--<i class="anticon anticon-search"></i><span>查询</span>-->
+    <!--</button>-->
+  </div>
+  <div *ngIf="isTeacher()" class="departmentSearch b">
+    <label class="selectLab">学生</label>
+    <div class="selectOptions">
+      <nz-select style="width: 200px;" [(ngModel)]="student" [nzPlaceHolder]="'请选择学生'">
+        <nz-option
+          *ngFor="let option of students"
+          [nzLabel]="option.realName"
+          [nzValue]="option.id"
+          [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </div>
+
+    <label class="selectLab">多选班级</label>
+    <div class="selectOptions">
+      <nz-select style="width: 200px;" [(ngModel)]="_class2" [nzPlaceHolder]="'请选择多个班级'"
+                 [nzMode]="'multiple'"
+      >
+        <nz-option
+          *ngFor="let option of classes2"
+          [nzLabel]="option.name"
+          [nzValue]="option.id"
+          [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </div>
+
+  </div>
+
+  <div *ngIf="isTeacher()" class="departmentSearch c">
+    <label class="selectLab">内容</label>
+    <div class="inputTextarea">
+      <nz-input [(ngModel)]="content" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="''"></nz-input>
+    </div>
+  </div>
+
+  <div class="departmentSearch d">
+    <div class="selectLab" *ngIf="isTeacher()">
+      <button nz-button [nzType]="'primary'" [nzSize]="'large'" (click)="send()">
+        <span>&nbsp;推送&nbsp;</span>
+      </button>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="selectLab" *ngIf="isTeacher()">
+      <button nz-button [nzType]="'primary'" [nzSize]="'large'" (click)="sendClass()">
+        <span>&nbsp;推送班级&nbsp;</span>
+      </button>
+
+    </div>
+
+    <div class="knowledageTable" *ngIf="isTeacherStudent()">
+      <nz-table #nzTable
+                [nzAjaxData]="_dataSet"
+                nzShowSizeChanger
+                [nzLoading]="_loading"
+                [nzTotal]="_total"
+                [(nzPageIndex)]="_current"
+                (nzPageIndexChange)="refrashData()"
+                [(nzPageSize)]="_pageSize"
+                (nzPageSizeChange)="refrashData(true)"
+                nzBordered>
+        <thead nz-thead>
+        <tr>
+          <th nz-th>
+            <span>编号</span>
+            <nz-table-sort (nzValueChange)="sort($event)"></nz-table-sort>
+          </th>
+          <th nz-th *ngIf="isTeacher()"><span>接收者</span></th>
+          <th nz-th *ngIf="isStudent()"><span>发送者</span></th>
+          <th nz-th>
+            <span>内容{{examTime|date:'yyyy-MM-dd HH:mm:ss'}}</span>
+          </th>
+          <th nz-th><span>状态</span></th>
+          <th nz-th><span>创建时间</span></th>
+          <th nz-th><span>更新时间</span></th>
+          <th nz-th><span>操作</span></th>
+        </tr>
+        </thead>
+        <tbody nz-tbody>
+        <tr nz-tbody-tr *ngFor="let data of nzTable.data">
+          <td nz-td>{{data.id}}</td>
+          <td nz-td *ngIf="isTeacher()">{{data.toUserName}}</td>
+          <td nz-td *ngIf="isStudent()">{{data.fromUserName}}</td>
+          <td nz-td>{{data.content|slice:0:20}}</td>
+          <td nz-td *ngIf="data.isRead ==1 ">已阅</td>
+          <td nz-td *ngIf="data.isRead != 1">未阅</td>
+          <td nz-td>{{data.createdTime|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+          <td nz-td>{{data.updateTime|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+          <td nz-td>
+
+            <span style="color: dodgerblue;cursor: pointer" (click)="showMessage(data)">查看</span>
+          </td>
+        </tr>
+        </tbody>
+      </nz-table>
+    </div>
+
+    <nz-modal [nzVisible]="isVisible" [nzTitle]="'消息'" [nzContent]="modalContent" (nzOnCancel)="handleCancel($event)"
+              (nzOnOk)="handleOk($event)">
+      <ng-template #modalContent>
+        <p>{{message}}</p>
+      </ng-template>
+    </nz-modal>
+  </div>

@@ -1,0 +1,137 @@
+<div class="department">
+  <div class="departmentSearch">
+    <label class="selectLab" *ngIf="isRoot()">学校</label>
+    <div class="selectOptions" *ngIf="isRoot()">
+      <nz-select style="width: 200px;" [(ngModel)]="schoolId" [nzPlaceHolder]="'请选择学校'"
+                 (ngModelChange)="querySchool(schoolId)">
+        <nz-option
+          *ngFor="let option of scholls"
+          [nzLabel]="option.name"
+          [nzValue]="option.id">
+        </nz-option>
+      </nz-select>
+    </div>
+    <button nz-button *ngIf="isRoot()" [nzType]="'default'" (click)="searchDepartment()">
+      <i class="anticon anticon-search"></i><span>查询</span>
+    </button>
+
+    <button nz-button *ngIf="isAdmin()" [nzType]="'default'" (click)="searchDepartmentFromAdmin()">
+      <i class="anticon anticon-search"></i><span>查询学院</span>
+    </button>
+
+    <button nz-button *ngIf="isRoot()" [nzType]="'default'" class="addDepartment" (click)="operateData('add')">
+      <span>添加学院</span>
+    </button>
+  </div>
+  <div class="departmentTable" *ngIf="serachShow">
+    <nz-table #nzTable
+              [nzAjaxData]="_dataSet"
+              nzShowSizeChanger
+              [nzLoading]="_loading"
+              [nzTotal]="_total"
+              [(nzPageIndex)]="_current"
+              (nzPageIndexChange)="refreshData()"
+              [(nzPageSize)]="_pageSize"
+              (nzPageSizeChange)="refreshData(true)"
+              nzBordered>
+      <thead nz-thead>
+      <tr>
+        <th nz-th>
+          <span>编号</span>
+          <nz-table-sort (nzValueChange)="sort($event)"></nz-table-sort>
+        </th>
+        <th nz-th><span>学校名称</span></th>
+        <th nz-th><span>学院名称</span></th>
+        <th nz-th><span>操作</span></th>
+      </tr>
+      </thead>
+      <tbody nz-tbody>
+      <tr nz-tbody-tr *ngFor="let data of nzTable.data">
+        <td nz-td>{{data.id}}</td>
+        <td nz-td>{{data.schoolName}}</td>
+        <td nz-td>{{data.name}}</td>
+        <td nz-td>
+          <!--<span>shanchu</span>-->
+          <!--<span>xiugai</span>-->
+          <nz-popconfirm [nzTitle]="'确定要删除这个任务吗？'" (nzOnConfirm)="confirm(data.id)" (nzOnCancel)="cancel()">
+            <a nz-popconfirm>删除</a>
+          </nz-popconfirm>
+
+          <span style="color: dodgerblue;cursor: pointer" (click)="operateData(data)">修改</span>
+        </td>
+      </tr>
+
+      </tbody>
+    </nz-table>
+  </div>
+  <!--<nz-modal [nzVisible]="isVisible" [nzTitle]="'学院添加'" [nzContent]="modalContent" (nzOnCancel)="handleCancel()"-->
+  <!--(nzOnOk)="addDepartment($event)">-->
+  <!--弹窗-->
+  <!--<nz-modal [nzVisible]="isVisible" [nzTitle]="'专业添加'" [nzContent]="modalContent" (nzOnCancel)="handleCancel()"-->
+  <!--(nzOnOk)="addMajor($event)">-->
+  <nz-modal [nzVisible]="isVisible" [nzTitle]="'tabTitle'" [nzContent]="modalContent" [nzFooter]="false"
+            (nzOnCancel)="handleCancel()">
+    <ng-template #modalContent>
+      <!--<p>对话框的内容</p>-->
+      <!--<p>对话框的内容</p>-->
+      <!--<p>对话框的内容</p>-->
+      <form nz-form [nzType]="'horizontal'" [formGroup]="validateForm">
+        <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label nz-form-item-required>学校</label>
+          </div>
+          <div nz-form-control nz-col [nzSpan]="14">
+            <nz-select formControlName="school_id" [(ngModel)]="school_id" [nzSize]="'large'">
+              <nz-option
+                *ngFor="let option of scholls"
+                [nzLabel]="option.name"
+                [nzValue]="option.id">
+              </nz-option>
+            </nz-select>
+            <div nz-form-explain
+                 *ngIf="validateForm.controls.school_id.dirty&&validateForm.controls.school_id.hasError('required')">
+              请选择学校
+            </div>
+          </div>
+        </div>
+        <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label nz-form-item-required>学院</label>
+          </div>
+          <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="name" [(ngModel)]="name" [nzType]="'text'"
+                      [nzId]="'text'"></nz-input>
+            <div nz-form-explain
+                 *ngIf="validateForm.controls.name.dirty&&validateForm.controls.name.hasError('required')">请填写专业
+            </div>
+          </div>
+        </div>
+        <div nz-form-item nz-row *ngIf="flag">
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label>状态</label>
+          </div>
+          <div nz-form-control nz-col [nzSpan]="14">
+            <nz-radio-group formControlName="is_adult">
+              <label nz-radio [nzValue]="1">
+                <span>已审核</span>
+              </label>
+              <label nz-radio [nzValue]="2">
+                <span>未审核</span>
+              </label>
+            </nz-radio-group>
+          </div>
+        </div>
+        <div nz-form-item nz-row style="margin-bottom:8px;">
+          <div nz-form-control nz-col [nzSpan]="14" [nzOffset]="6">
+            <button nz-button [nzType]="'primary'" [nzSize]="'large'"
+                    (click)="submit($event)">提交
+            </button>
+            <button nz-button [nzSize]="'large'" style="margin-left: 20px" (click)="handleCancel()">取消</button>
+          </div>
+        </div>
+      </form>
+    </ng-template>
+  </nz-modal>
+</div>
+
+<!--删除提醒-->

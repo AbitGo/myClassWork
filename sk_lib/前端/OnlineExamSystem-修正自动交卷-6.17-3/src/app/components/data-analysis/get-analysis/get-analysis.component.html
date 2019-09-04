@@ -1,0 +1,82 @@
+<div class="div-get-analysis">
+  <div class="departmentSearch a">
+    <label class="selectLab">学院</label>
+    <div class="selectOptions">
+      <nz-select style="width: 200px;" [(ngModel)]="department" [nzPlaceHolder]="'请选择学院'"
+                 (ngModelChange)="queryMajor(department)">
+        <nz-option
+          *ngFor="let option of departments"
+          [nzLabel]="option.name"
+          [nzValue]="option.id"
+          [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </div>
+
+    <label class="selectLab">专业</label>
+    <div class="selectOptions">
+      <nz-select style="width: 200px;" [(ngModel)]="major" [nzPlaceHolder]="'请选择专业'"
+                 (ngModelChange)="queryClass(major)">
+        <nz-option
+          *ngFor="let option of majors"
+          [nzLabel]="option.name"
+          [nzValue]="option.id"
+          [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </div>
+
+    <label class="selectLab">班级</label>
+    <div class="selectOptions">
+      <nz-select style="width: 200px;" [(ngModel)]="class" [nzPlaceHolder]="'请选择班级'"
+                 (ngModelChange)="queryStudent(class)">
+        <nz-option
+          *ngFor="let option of classes"
+          [nzLabel]="option.name"
+          [nzValue]="option.id"
+          [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </div>
+    <!--<button nz-button [nzType]="'default'" (click)="searchDepartment()">-->
+    <!--<i class="anticon anticon-search"></i><span>查询</span>-->
+    <!--</button>-->
+  </div>
+  <div class="departmentSearch b">
+    <label class="selectLab">学生</label>
+    <div class="selectOptions">
+      <nz-select style="width: 200px;" [(ngModel)]="student" [nzPlaceHolder]="'请选择学生'">
+        <nz-option
+          *ngFor="let option of students"
+          [nzLabel]="option.realName"
+          [nzValue]="option.id"
+          [nzDisabled]="option.disabled">
+        </nz-option>
+      </nz-select>
+    </div>
+
+    <label class="selectLab">时间</label>
+    <div class="selectOptions">
+      <nz-datepicker [(ngModel)]="_startTime" nzShowTime [nzPlaceHolder]="'开始时间'"
+                     [nzFormat]="'YYYY-MM-DD'"></nz-datepicker>
+      <nz-datepicker [(ngModel)]="_endTime" nzShowTime [nzPlaceHolder]="'结束时间'"
+                     [nzFormat]="'YYYY-MM-DD'"></nz-datepicker>
+    </div>
+
+    <button nz-button [nzType]="'primary'" [nzSize]="'large'" (click)="submit()">
+      <span>&nbsp;查询&nbsp;</span>
+    </button>
+  </div>
+
+  <!--<div>-->
+  <div class="charts">
+    <div echarts [options]="option1" class="option1" style="height:400px"></div>
+    <br>
+    <br>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div echarts [options]="option2" class="option2" style="height:400px"></div>
+    <br>
+    <div echarts [options]="option3" class="option3" style="height:450px"></div>
+    <div echarts [options]="option4" class="option4" style="height:450px"></div>
+  </div>
+</div>

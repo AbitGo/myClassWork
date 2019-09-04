@@ -1,0 +1,232 @@
+.container{
+	width: 100%;
+	background-color: whitesmoke;
+	text-align: center;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+.container .con_left{
+	width: 50%;
+	/*border: 1px solid red;*/
+	text-align: left;
+	margin-left: 10%;
+	float: left;
+}
+.con_select>div, .con_selects>div{
+	padding: 20px 40px;
+	background-color: white;
+	margin-bottom: 10px;
+}
+.con_select>div:last-child{
+	margin-bottom: 0px;
+}
+.tilte_icon{
+	padding-right: 50px;
+}
+.icon_color{
+	color: #949393;
+}
+.container .con_right{
+  width: 25%;
+  height: 650px;
+  margin-left: 20px;
+  float: left;
+  overflow: auto;
+}
+.put{
+	background-color: white;
+	margin: 10px 0px;
+	padding: 15px;
+}
+.put a{
+	display: inline-block;
+    width: 40px;
+    padding: 2px;
+}
+.put a i{
+	padding-bottom: 10px;
+}
+.scantron{
+	text-align: left;
+	padding: 10px 20px;
+	background-color: white;
+}
+.scantron_mark{
+  margin-top: 5px;
+}
+.scantron_mark span{
+	display: inline-block;
+	height: 35px;
+	width: 35px;
+	text-align: center;
+	line-height: 35px;
+}
+.scantron_mark span:nth-child(2n+1){
+	border-radius: 5px;
+	border: 1px solid #cfcfcf;
+}
+.scantron_mark span:nth-child(2n+1){
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.schedule{
+	width: 100%;
+	padding: 15px;
+	background-color: white;
+}
+.schedule p{
+	text-align: center;
+}
+.schedule #scheduNum{
+	margin-left: 20px;
+    float: left;
+    margin-top: -3px;
+}
+.schedule_father{
+	position: relative;
+	padding: 20px 10px 0px 20px;
+}
+.scheduleLength{
+	content: '';
+	width: 0px;
+	height: 8px;
+	background-color: #47c88a;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+.schedule #scheduleLength{
+	width: 250px;
+	height: 8px;
+	background-color: #ccc;
+	float: left;
+}
+.select a, .selects a{
+	display: inline-block;
+	border: 1px solid #cfcfcf;
+	border-radius: 5px;
+	height: 35px;
+	width: 35px;
+	text-align: center;
+	line-height: 35px;
+	margin: 10px 10px 10px 0px;
+}
+/*纠错*/
+#sure{
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	background-color:rgba(0, 0, 0, 0.4);
+	z-index: 11;
+}
+#sure .sure_con{
+	width: 500px;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -250px;
+	background-color: white;
+	box-shadow: 3px 3px 3px #ccc,-3px -3px 3px #ccc,-3px 3px 3px #ccc,3px -3px 3px #ccc;
+	border-radius: 5px;
+}
+.sure_top{
+	padding: 20px 10px;
+    border-bottom: 3px solid #ccc;
+}
+.sure_top span{
+	font-size: 18px;
+}
+.sure_top i{
+	float: right;
+}
+.mistake{
+	padding: 10px 20px;
+	display: none;
+}
+.form_group{
+	margin-top: 8px;
+    margin-bottom: 16px;
+}
+label{
+	float: left;
+    font-weight: normal;
+    color: #666;
+    width: 70px;
+    font-size: 16px;
+    text-align: center;
+}
+.subInput{
+	border-top: 2px solid #ccc;
+	text-align: center;
+	padding-top: 20px;
+}
+.subInput input{
+	border: 0px;
+    color: #fff;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #28b5d6;
+}
+
+a.y, span.y{
+	background-color: #fcde84;
+}
+.marks{
+	background: url('../../../assets/imgs/mark.png') no-repeat;
+}
+h3{
+	margin-top: 10px;
+}
+.orderNum{
+	/*display: inline-block;*/
+	height: 30px;
+	width: 26px;
+	text-align: center;
+	line-height: 20px;
+	margin-bottom: 15px;
+	background:url('../../../assets/imgs/xuhao.png') no-repeat;
+	float: left;
+}
+.con_h{
+	margin: 0px;
+	background-color: #47c88a;
+	padding: 10px;
+	border-bottom: 2px solid #ccc;
+}
+.font_icon{
+	float: right;
+
+}
+.con_title{
+	margin-bottom: 10px;
+}
+.con_key{
+	margin-bottom: 6px;
+	cursor: pointer;
+}
+.con_key_select{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background-color: #e1e1e1;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 20px;
+	margin-right: 15px;
+}
+
+/*设置卷起时右侧内容定位*/
+.con_right{
+  position: fixed;
+  right: 50px;
+  top: 70px;
+  z-index: 10;
+}
+.click_mark{
+  cursor: pointer;
+}
+

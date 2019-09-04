@@ -1,0 +1,35 @@
+.uploadTitle {
+  padding: 30px 100px 30px 0px;
+}
+
+.titleImport {
+  padding: 10px 100px 30px 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selectOptions {
+  vertical-align: text-bottom;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.selectLab {
+  vertical-align: text-bottom;
+  height: 28px;
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+  background: #e5e5e5;
+  line-height: 28px;
+}
+
+.topDiv {
+  margin: 10px 10px;
+}
+
+.imgText {
+  padding: 20px 100px 0px 10px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,4 @@
+ctrl+shift+r 全局替换http://localhost:8080/examonline/   与  /apis/
+在terminal中的命令：ng build --prod --aot
+本地调试启动命令： ng serve
+首次导入后，安装依赖包: ng install

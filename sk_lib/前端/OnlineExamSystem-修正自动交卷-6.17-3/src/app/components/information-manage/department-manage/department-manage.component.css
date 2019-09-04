@@ -1,0 +1,37 @@
+nz-dropdown-button, nz-dropdown {
+  float: left;
+  margin: 2px;
+}
+
+nz-dropdown::after {
+  content: '';
+  clear: both;
+}
+
+.department {
+  padding: 20px;
+}
+
+.departmentSearch {
+  padding: 30px 100px 30px 0px;
+}
+
+.selectLab {
+  vertical-align: text-bottom;
+  height: 28px;
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+  background: #e5e5e5;
+  line-height: 28px;
+}
+
+.selectOptions {
+  vertical-align: text-bottom;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.departmentSearch button {
+  vertical-align: text-bottom;
+}

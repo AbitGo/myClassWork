@@ -1,0 +1,25 @@
+.paper {
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.card1 {
+  padding-top: 10px;
+  width: 33.3%;
+}
+
+ :host ::ng-deep .ant-row {
+   /*padding: 0;*/
+   width: 33.3%;
+ }
+
+:host ::ng-deep .ant-card-body {
+  /*padding: 0;*/
+  height: 150px;
+}
+
+:host ::ng-deep .ant-card-head {
+  /*padding: 0;*/
+  height: 50px;
+}
+

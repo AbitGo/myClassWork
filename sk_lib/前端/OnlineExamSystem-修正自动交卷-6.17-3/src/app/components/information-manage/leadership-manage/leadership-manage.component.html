@@ -1,0 +1,167 @@
+<div class="leadership">
+  <div class="leadershipSearch">
+
+    <button nz-button [nzType]="'default'" (click)="operateData('add')">
+      <span>添加学校管理员</span>
+    </button>
+  </div>
+  <div class="leadershipTable" *ngIf="serachShow">
+    <nz-table #nzTable
+              [nzAjaxData]="_dataSet"
+              nzShowSizeChanger
+              [nzLoading]="_loading"
+              [nzTotal]="_total"
+              [(nzPageIndex)]="_current"
+              (nzPageIndexChange)="refreshData()"
+              [(nzPageSize)]="_pageSize"
+              (nzPageSizeChange)="refreshData(true)"
+              nzBordered>
+      <thead nz-thead>
+      <tr>
+        <th nz-th>
+          <span>编号</span>
+          <nz-table-sort (nzValueChange)="sort($event)"></nz-table-sort>
+        </th>
+        <th nz-th>
+          <span>登录名</span>
+        </th>
+        <th nz-th><span>姓名</span></th>
+        <th nz-th><span>角色</span></th>
+        <th nz-th><span>学校</span></th>
+        <th nz-th><span>性别</span></th>
+        <th nz-th><span>创建时间</span></th>
+        <th nz-th><span>更新时间</span></th>
+        <th nz-th><span>操作</span></th>
+      </tr>
+      </thead>
+      <tbody nz-tbody>
+      <tr nz-tbody-tr *ngFor="let data of nzTable.data">
+        <td nz-td>{{data.id}}</td>
+        <td nz-td>{{data.loginName}}</td>
+        <td nz-td>{{data.realName}}</td>
+        <td nz-td>校管</td>
+        <td nz-td>{{data.schoolName}}</td>
+        <td nz-td>{{data.gender}}</td>
+        <td nz-td>{{data.createdTime|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+        <td nz-td>{{data.updateTime|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+        <td nz-td>
+          <!--<span>shanchu</span>-->
+          <!--<span>xiugai</span>-->
+          <nz-popconfirm [nzTitle]="'确定要删除这个任务吗？'" (nzOnConfirm)="confirm(data.id)" (nzOnCancel)="cancel()">
+            <a nz-popconfirm>删除</a>
+          </nz-popconfirm>
+
+          <span style="color: dodgerblue;cursor: pointer" (click)="operateData(data)">修改</span>
+        </td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </div>
+  <!--<nz-modal [nzVisible]="isVisible" [nzTitle]="'用户添加'" [nzContent]="modalContent" (nzOnCancel)="handleCancel()"-->
+  <!--(nzOnOk)="addLeadership($event)">-->
+  <!--弹窗-->
+  <!--<nz-modal [nzVisible]="isVisible" [nzTitle]="'专业添加'" [nzContent]="modalContent" (nzOnCancel)="handleCancel()"-->
+  <!--(nzOnOk)="addMajor($event)">-->
+  <nz-modal [nzVisible]="isVisible" [nzTitle]="'tabTitle'" [nzContent]="modalContent" [nzFooter]="false"
+            (nzOnCancel)="handleCancel()">
+    <ng-template #modalContent>
+      <!--<p>对话框的内容</p>-->
+      <!--<p>对话框的内容</p>-->
+      <!--<p>对话框的内容</p>-->
+      <form nz-form [nzType]="'horizontal'" [formGroup]="validateForm">
+        <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label nz-form-item-required>登录名</label>
+          </div>
+          <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="name" [(ngModel)]="loginName_modal" [nzType]="'text'"
+                      [nzId]="'text'"></nz-input>
+            <div nz-form-explain
+                 *ngIf="validateForm.controls.name.dirty&&validateForm.controls.name.hasError('required')">请填写姓名
+            </div>
+          </div>
+        </div>
+        <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label nz-form-item-required>姓名</label>
+          </div>
+          <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="name" [(ngModel)]="realName_modal" [nzType]="'text'"
+                      [nzId]="'text'"></nz-input>
+            <div nz-form-explain
+                 *ngIf="validateForm.controls.name.dirty&&validateForm.controls.name.hasError('required')">请填写姓名
+            </div>
+          </div>
+        </div>
+        <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label nz-form-item-required>密码</label>
+          </div>
+          <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="name" [(ngModel)]="password_modal" [nzType]="'text'"
+                      [nzId]="'text'"></nz-input>
+            <div nz-form-explain
+                 *ngIf="validateForm.controls.name.dirty&&validateForm.controls.name.hasError('required')">请填写密码
+            </div>
+          </div>
+        </div>
+        <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label nz-form-item-required>学校</label>
+          </div>
+          <div nz-form-control nz-col [nzSpan]="14">
+            <nz-select formControlName="name" [(ngModel)]="school_modal" [nzSize]="'large'">
+              <nz-option
+                *ngFor="let option of scholls"
+                [nzLabel]="option.name"
+                [nzValue]="option.id">
+              </nz-option>
+            </nz-select>
+            <div nz-form-explain
+                 *ngIf="validateForm.controls.name.dirty&&validateForm.controls.name.hasError('required')">
+              请选择学校
+            </div>
+          </div>
+        </div>
+        <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label nz-form-item-required>性别</label>
+          </div>
+          <div nz-form-control nz-col [nzSpan]="14">
+            <nz-select formControlName="name" [(ngModel)]="gender_modal" [nzSize]="'large'">
+              <nz-option [nzLabel]="'男'" [nzValue]="'男'"></nz-option>
+              <nz-option [nzLabel]="'女'" [nzValue]="'女'"></nz-option>
+            </nz-select>
+            <div nz-form-explain
+                 *ngIf="validateForm.controls.name.dirty&&validateForm.controls.name.hasError('required')">
+              请选择用户
+            </div>
+          </div>
+        </div>
+        <div nz-form-item nz-row *ngIf="statusShow">
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label>状态</label>
+          </div>
+          <div nz-form-control nz-col [nzSpan]="14">
+            <nz-radio-group formControlName="is_adult">
+              <label nz-radio [nzValue]="1">
+                <span>已审核</span>
+              </label>
+              <label nz-radio [nzValue]="2">
+                <span>未审核</span>
+              </label>
+            </nz-radio-group>
+          </div>
+        </div>
+        <div nz-form-item nz-row style="margin-bottom:8px;">
+          <div nz-form-control nz-col [nzSpan]="14" [nzOffset]="6">
+            <button nz-button [nzType]="'primary'" [nzSize]="'large'"
+                    (click)="submit($event)">提交
+            </button>
+            <button nz-button [nzSize]="'large'" style="margin-left: 20px" (click)="handleCancel()">取消</button>
+          </div>
+        </div>
+      </form>
+    </ng-template>
+  </nz-modal>
+</div>

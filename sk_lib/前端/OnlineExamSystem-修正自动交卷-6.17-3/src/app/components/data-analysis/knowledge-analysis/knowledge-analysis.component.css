@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.div-get-analysis {
+  /*display: inline;*/
+  overflow: auto;
+  height: 100%;
+  padding: 20px;
+}
+
+.a {
+  padding: 10px 100px 30px 0px;
+}
+
+.charts{
+  padding: 20px;
+}
+
+.selectLab {
+  vertical-align: text-bottom;
+  height: 28px;
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+  background: #e5e5e5;
+  line-height: 28px;
+}
+
+.selectOptions {
+  vertical-align: text-bottom;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.departmentSearch button {
+  vertical-align: text-bottom;
+}
+
+.option1 {
+  float: left;
+  /*display: inline-block;*/
+  width: 50%;
+  height: 40%;
+  word-wrap: break-word;
+  /*border-bottom: 3px solid red;*/
+}
+
+.option2 {
+  /*display: inline-block;*/
+  float: right;
+  /*position: relative;*/
+  width: 50%;
+  height: 40%;
+  /*border-bottom: 3px solid green;*/
+}
+
+.option3 {
+  width: 50%;
+  height: 40%;
+  float: left;
+
+  word-wrap: break-word;
+  /*border-bottom: 3px solid red;*/
+}
+
+.option4 {
+  width: 50%;
+  height: 40%;
+  float: right;
+
+  word-wrap: break-word;
+  /*border-bottom: 3px solid red;*/
+}

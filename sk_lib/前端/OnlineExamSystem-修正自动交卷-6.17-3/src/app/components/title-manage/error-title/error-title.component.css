@@ -1,0 +1,8 @@
+.errorTable{
+  padding: 20px;
+}
+.limit{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
