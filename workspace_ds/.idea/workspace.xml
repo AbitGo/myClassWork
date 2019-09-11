@@ -15,84 +15,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTable/LinkTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="14" selection-start-column="14" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="381">
+              <caret line="166" column="30" lean-forward="true" selection-start-line="166" selection-start-column="30" selection-end-line="166" selection-end-column="30" />
               <folding>
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#335#336#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
-                <element signature="e#542#543#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTableInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTableTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="34" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ch1/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-              <folding>
-                <element signature="e#218#219#0" expanded="true" />
-                <element signature="e#245#246#0" expanded="true" />
-                <element signature="e#317#318#0" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-                <element signature="e#373#374#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-451">
-              <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
-              <folding>
-                <element signature="e#175#176#0" expanded="true" />
-                <element signature="e#216#217#0" expanded="true" />
-                <element signature="e#235#236#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#574#575#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTableTest.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTable/LinkTableTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            <state relative-caret-position="162">
+              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -117,12 +56,14 @@
         <option value="$PROJECT_DIR$/src/com/company/ch1/LinkList.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch1/LinkTable.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch1/LinkTableTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ch1/LinkTable/LinkTable.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ch1/LinkTable/LinkTableTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1011" />
-    <option name="y" value="443" />
+    <option name="x" value="495" />
+    <option name="y" value="456" />
     <option name="width" value="1394" />
     <option name="height" value="922" />
   </component>
@@ -149,14 +90,14 @@
               <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
               <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="ch1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
               <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="ch1" type="462c0819:PsiDirectoryNode" />
+              <item name="LinkTable" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -186,11 +127,11 @@
   </component>
   <component name="RunManager" selected="Application.LinkTableTest">
     <configuration name="LinkTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.ch1.LinkTableTest" />
+      <option name="MAIN_CLASS_NAME" value="com.company.ch1.LinkTable.LinkTableTest" />
       <module name="workspace_ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.ch1.*" />
+          <option name="PATTERN" value="com.company.ch1.interfaceFile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,11 +150,11 @@
       </method>
     </configuration>
     <configuration name="SequenceTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.ch1.SequenceTableTest" />
+      <option name="MAIN_CLASS_NAME" value="com.company.ch1.SequenceTable.SequenceTableTest" />
       <module name="workspace_ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.ch1.*" />
+          <option name="PATTERN" value="com.company.ch1.interfaceFile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -245,17 +186,20 @@
       <updated>1568082508957</updated>
       <workItem from="1568082511275" duration="3646000" />
       <workItem from="1568121288816" duration="6439000" />
+      <workItem from="1568183641222" duration="5559000" />
+      <workItem from="1568195265832" duration="1825000" />
+      <workItem from="1568203757197" duration="476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10085000" />
+    <option name="totallyTimeSpent" value="17945000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1011" y="443" width="1394" height="922" extended-state="0" />
+    <frame x="495" y="456" width="1394" height="922" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25412294" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26236883" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -264,7 +208,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5513308" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.61343473" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -290,40 +234,28 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/interfaceFile/SequenceTableInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        <state relative-caret-position="54">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTableInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTable/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        <state relative-caret-position="54">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTable.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTable/SequenceTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="108">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
             <element signature="e#306#307#0" expanded="true" />
             <element signature="e#335#336#0" expanded="true" />
@@ -333,29 +265,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTableTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTable/SequenceTableTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="34" selection-end-column="58" />
+        <state relative-caret-position="351">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTable.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTable/LinkTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-451">
-          <caret line="85" column="22" lean-forward="true" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+        <state relative-caret-position="381">
+          <caret line="166" column="30" lean-forward="true" selection-start-line="166" selection-start-column="30" selection-end-line="166" selection-end-column="30" />
           <folding>
-            <element signature="e#175#176#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTableTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTable/LinkTableTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state relative-caret-position="162">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
         </state>
       </provider>
     </entry>
