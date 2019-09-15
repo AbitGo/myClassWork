@@ -14,20 +14,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ch3/LinkStack/LinkStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+            <state relative-caret-position="890">
+              <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#216#217#0" expanded="true" />
                 <element signature="e#247#248#0" expanded="true" />
                 <element signature="e#293#294#0" expanded="true" />
                 <element signature="e#331#332#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#857#858#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/ch3/LinkStack/LinkStackTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/ch3/Stack/SqStackTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -70,13 +86,14 @@
         <option value="$PROJECT_DIR$/src/com/company/ch3/SqStack.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch3/SqStackTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch3/Stack/SqStackTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ch3/LinkStack/LinkStackTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch3/LinkStack/LinkStack.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="246" />
-    <option name="y" value="424" />
+    <option name="x" value="418" />
+    <option name="y" value="837" />
     <option name="width" value="1392" />
     <option name="height" value="821" />
   </component>
@@ -161,13 +178,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SqStackTest">
+  <component name="RunManager" selected="Application.LinkStackTest">
     <configuration name="DuLinkListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.ch2.DuLinkTable.DuLinkListTest" />
       <module name="workspace_ds" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.ch2.DuLinkTable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkStackTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.ch3.LinkStack.LinkStackTest" />
+      <module name="workspace_ds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.ch3.LinkStack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -184,16 +214,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="workspace_ds" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -225,14 +245,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.SequenceTableTest" />
       <item itemvalue="Application.LinkTableTest" />
       <item itemvalue="Application.DuLinkListTest" />
       <item itemvalue="Application.SqStackTest" />
+      <item itemvalue="Application.LinkStackTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LinkStackTest" />
         <item itemvalue="Application.SqStackTest" />
         <item itemvalue="Application.DuLinkListTest" />
         <item itemvalue="Application.LinkTableTest" />
@@ -259,18 +280,18 @@
       <workItem from="1568338266976" duration="19984000" />
       <workItem from="1568426711144" duration="7639000" />
       <workItem from="1568508308422" duration="632000" />
-      <workItem from="1568530582264" duration="7663000" />
+      <workItem from="1568530582264" duration="8439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56908000" />
+    <option name="totallyTimeSpent" value="57684000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="246" y="424" width="1392" height="821" extended-state="0" />
+    <frame x="54" y="-8" width="1394" height="2576" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2777778" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27736133" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -279,7 +300,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35901162" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35980353" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -352,13 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch3/Stack/SqStackTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ch3/Stack/SqStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -394,19 +408,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch3/Stack/SqStackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ch3/LinkStack/LinkStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+        <state relative-caret-position="890">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#216#217#0" expanded="true" />
             <element signature="e#247#248#0" expanded="true" />
             <element signature="e#293#294#0" expanded="true" />
             <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch3/LinkStack/LinkStackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>

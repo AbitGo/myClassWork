@@ -39,12 +39,22 @@ public class LinkStack implements IStack {
 
     @Override
     public boolean push(Object x) throws Exception {
-        this.top = 
+        Node p = new Node(x);
+        p.next = top;
+        top = p;
+        return true;
     }
 
     @Override
     public Object pop() {
-        return null;
+        if(isEmpty()){
+            System.out.println("栈已空");
+            return null;
+        }else{
+            Node pop = top;
+            top = top.next;
+            return pop.data;
+        }
     }
 
     public void display(){
