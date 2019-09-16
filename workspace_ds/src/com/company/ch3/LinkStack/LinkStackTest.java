@@ -15,6 +15,7 @@ public class LinkStackTest {
         System.out.println("栈顶元素："+sqStack.peek());
         System.out.println("弹出栈顶元素：" + sqStack.pop());
         System.out.println("----------查看栈顶操作：结束----------");
+        
 
         System.out.println("----------查看栈长度操作：开始----------");
         System.out.println("长度为：" + sqStack.length());
