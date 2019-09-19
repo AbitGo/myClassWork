@@ -56,9 +56,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/ch3/Stack/CircleSqQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
+            <state relative-caret-position="297">
+              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding>
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#779#780#0" expanded="true" />
                 <element signature="e#1192#1193#0" expanded="true" />
                 <element signature="e#1261#1262#0" expanded="true" />
               </folding>
@@ -130,9 +132,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="978" />
-    <option name="y" value="945" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="672" />
+    <option name="y" value="-10" />
     <option name="width" value="1392" />
     <option name="height" value="821" />
   </component>
@@ -314,12 +316,12 @@
       <workItem from="1568530582264" duration="8536000" />
       <workItem from="1568638023329" duration="3677000" />
       <workItem from="1568726620748" duration="6060000" />
-      <workItem from="1568789766892" duration="259000" />
+      <workItem from="1568789766892" duration="577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67777000" />
+    <option name="totallyTimeSpent" value="68095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="2514" height="1456" extended-state="6" />
@@ -482,9 +484,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ch3/Stack/CircleSqQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
+        <state relative-caret-position="297">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding>
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
             <element signature="e#1192#1193#0" expanded="true" />
             <element signature="e#1261#1262#0" expanded="true" />
           </folding>

@@ -8,8 +8,7 @@ public class CircleSqQueue implements IQueue {
     private int rear;
     private int maxSize;
 
-    public CircleSqQueue(int maxSize)
-    {
+    public CircleSqQueue(int maxSize) {
         this.maxSize = maxSize;
         front = rear = 0;
         queueElem = new Object[maxSize];
@@ -55,7 +54,7 @@ public class CircleSqQueue implements IQueue {
 
     @Override
     public boolean isEmpty() {
-        if(front == rear){
+        if (front == rear) {
             return true;
         }
         return false;
@@ -63,14 +62,14 @@ public class CircleSqQueue implements IQueue {
 
     @Override
     public int length() {
-        return (rear-front+queueElem.length)%queueElem.length;
+        return (rear - front + queueElem.length) % queueElem.length;
     }
 
     @Override
     public Object peek() {
-        if(isEmpty()){
+        if (isEmpty()) {
             return null;
-        }else
+        } else
             return queueElem[this.getFront()];
     }
 
@@ -79,21 +78,29 @@ public class CircleSqQueue implements IQueue {
         //入队
 
         //当队列已满的时候
-        if((rear+1)%queueElem.length==front){
+        if ((rear + 1) % queueElem.length == front) {
             System.out.println("the Sqack is full");
-            return ;
-        }else{
-            queueElem[rear]=x;
+            return;
+        } else {
+            queueElem[rear] = x;
         }
 
         //修改队尾指针
-        rear = (rear+1)%queueElem.length;
+        rear = (rear + 1) % queueElem.length;
 
     }
 
     @Override
     public Object poll() {
         //出队
-        return null;
+
+        //为空栈的时候则返回空指针
+        if (isEmpty()) {
+            return null;
+        } else {
+            Object t = queueElem[front];
+            front = (front + 1) % queueElem.length;
+            return t;
+        }
     }
 }
