@@ -34,44 +34,44 @@ public class Exp3_1 {
                 char c = str.charAt(i);
                 String temp = String.valueOf(c);
                 if (i != len) {
-                    if ((c == '/' && '*' == str.charAt(i + 1)) || (c == '*' && '/' == str.charAt(i + 1))){
-                        temp = temp.concat(String.valueOf(str.charAt(i+1)));
+                    if ((c == '/' && '*' == str.charAt(i + 1)) || (c == '*' && '/' == str.charAt(i + 1))) {
+                        temp = temp.concat(String.valueOf(str.charAt(i + 1)));
                         ++i;
                     }
                 }
-                if(LEFT==verifyFlag(temp)){
+                if (LEFT == verifyFlag(temp)) {
                     sqStack.push(temp);
-                }else if(RIGHT==verifyFlag(temp)){
-                    if(sqStack.isEmpty() || !matches(sqStack.pop().toString(),temp)){
+                } else if (RIGHT == verifyFlag(temp)) {
+                    if (sqStack.isEmpty() || !matches(sqStack.pop().toString(), temp)) {
                         System.out.println("Java语法不合法");
                         return false;
                     }
                 }
             }
             //当栈不为空的时候就证明还有 没有被抵消的符号
-            if(!sqStack.isEmpty()){
+            if (!sqStack.isEmpty()) {
                 System.out.println("Java语法不合法");
                 return false;
             }
             return true;
-        }
-        else{
+        } else {
             System.out.println("Java语法不合法");
             return false;
         }
     }
+
     public static void main(String[] args) throws Exception {
         Exp3_1 exp3_1 = new Exp3_1();
         String exp_String1 = "a=a+b*(c+a)";
         String exp_String2 = "a=(b+c/(d*e)*f";
-        if(exp3_1.isLegal(exp_String1)){
+        if (exp3_1.isLegal(exp_String1)) {
             System.out.println("合法");
-        }else{
+        } else {
             System.out.println("不合法");
         }
-        if(exp3_1.isLegal(exp_String2)){
+        if (exp3_1.isLegal(exp_String2)) {
             System.out.println("合法");
-        }else{
+        } else {
             System.out.println("不合法");
         }
     }
