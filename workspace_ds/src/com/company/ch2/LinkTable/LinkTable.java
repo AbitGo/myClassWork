@@ -94,6 +94,21 @@ public class LinkTable implements SequenceTableInterface {
         return false;
     }
 
+    public void insert_increase(Object x) throws Exception {
+        Node p = head.next;
+        if(p==null){
+            this.insert(0,x);
+            return;
+        }else{
+            while (p!=null){
+                if((double)p.data>(double)x){
+                    Node s = new Node(x);
+
+                }
+            }
+        }
+    }
+
     @Override
     public boolean remove(int index) {
         //这里为什么不是head.next呢？
