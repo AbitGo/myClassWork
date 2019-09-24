@@ -14,12 +14,12 @@ public class LinkTable implements SequenceTableInterface {
 
     //构建一个长度为n的链表，
     //并且使用order判别是否为头插发还是尾插法
-    public LinkTable(int len,boolean order) {
+    public LinkTable(int len, boolean order) {
         this.head = new Node();
 
-        if(order){
+        if (order) {
             create1(len);
-        }else{
+        } else {
             create2(len);
         }
     }
@@ -65,9 +65,10 @@ public class LinkTable implements SequenceTableInterface {
                 p = p.next;
             }
             //超过链表的长度
-            if (i > index || p == null) {
+            if (i < index || p == null) {
                 return null;
             }
+
             return p.data;
         }
 
@@ -78,15 +79,14 @@ public class LinkTable implements SequenceTableInterface {
     public boolean insert(int index, Object x) throws Exception {
         Node p = head;
         int j = -1;
-        while(p!=null && j<index-1){
+        while (p != null && j < index - 1) {
             p = p.next;
             j++;
         }
-        if(j>index-1 || p==null){
+        if (j > index - 1 || p == null) {
             System.out.println("插入位置不合法");
             return false;
-        }
-        else{
+        } else {
             Node s = new Node(x);
             s.next = p.next;
             p.next = s;
@@ -96,12 +96,12 @@ public class LinkTable implements SequenceTableInterface {
 
     public void insert_increase(Object x) throws Exception {
         Node p = head.next;
-        if(p==null){
-            this.insert(0,x);
+        if (p == null) {
+            this.insert(0, x);
             return;
-        }else{
-            while (p!=null){
-                if((double)p.data>(double)x){
+        } else {
+            while (p != null) {
+                if ((double) p.data > (double) x) {
                     Node s = new Node(x);
 
                 }
@@ -158,15 +158,40 @@ public class LinkTable implements SequenceTableInterface {
         System.out.println();
     }
 
+    //p56_3_3需要使用的函数
+    public void p56_3_3_method(int x) throws Exception {
+        int len = this.getLenght();
+        int i = 0;
+        for (; i < len; i++) {
+            int param = this.indexOf(i);
+            if (x < param) {
+                break;
+            }
+        }
+        System.out.println(i);
+        this.insert(i, x);
+    }
+
+    //p56_3_3需要使用的函数
+    public void p56_3_4_method() throws Exception {
+        int len = this.getLenght();
+        for(int i=0;i<len;i++){
+            Object param = this.get(i);
+            this.remove(i);
+            this.insert(0,param);
+        }
+
+    }
+
     //使用尾插法建立单链表
     //我发现书上的是(n+1)*n/2
-    public void create1(int len){
+    public void create1(int len) {
         int i = 0;
         //这个节点类似于一个中转站
-        Node p =  this.head;
+        Node p = this.head;
 
         //建立一个长度大于等于0的链表
-        while(i<len && i>=0){
+        while (i < len && i >= 0) {
             Node temp = new Node();
             temp.data = i;
             p.next = temp;
@@ -176,10 +201,10 @@ public class LinkTable implements SequenceTableInterface {
     }
 
     //使用头插发建立单链表
-    public void create2(int len){
+    public void create2(int len) {
         int i = 0;
         Node p = this.head;
-        while (i<len && i>=0){
+        while (i < len && i >= 0) {
             Node temp = new Node();
             temp.data = i;
             temp.next = p.next;
