@@ -68,7 +68,6 @@ public class LinkTable implements SequenceTableInterface {
             if (i < index || p == null) {
                 return null;
             }
-
             return p.data;
         }
 
@@ -175,11 +174,35 @@ public class LinkTable implements SequenceTableInterface {
     //p56_3_3需要使用的函数
     public void p56_3_4_method() throws Exception {
         int len = this.getLenght();
-        for(int i=0;i<len;i++){
+        for (int i = 0; i < len; i++) {
             Object param = this.get(i);
+            System.out.println("param:"+param);
             this.remove(i);
-            this.insert(0,param);
+            this.insert(0, param);
         }
+
+    }
+
+    //p56_3_3需要使用的函数
+    public int p56_3_6_method(Object x) throws Exception {
+        int len = this.getLenght();
+        int counter = 0;
+        //这里不能这样写会造成空指针
+        //因为你删除的时候会造成链表长度变短
+        for (int i = 0; i < len; i++) {
+            Object param = this.get(i);
+            if (x == param) {
+
+                this.remove(i);
+                ++counter;
+                //弥补措施，修复上面的bug
+                //长度缩短1
+                --len;
+                //i回到上一个节点，否则遇见相邻符合要求的链表就不行了
+                --i;
+            }
+        }
+        return counter;
 
     }
 
