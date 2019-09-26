@@ -1,7 +1,5 @@
 package com.company.ch3.queue;
 
-import com.company.ch3.Stack.SqStack.SqStack;
-
 public class CircleSqQueueTest {
     public static void main(String[] args){
         CircleSqQueue sqStack = new CircleSqQueue(20);
