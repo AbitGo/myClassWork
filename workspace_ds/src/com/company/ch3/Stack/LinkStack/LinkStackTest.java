@@ -1,4 +1,4 @@
-package com.company.ch3.LinkStack;
+package com.company.ch3.Stack.LinkStack;
 
 public class LinkStackTest {
     public static void main(String[] args) throws Exception {

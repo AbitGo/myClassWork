@@ -1,5 +1,6 @@
 package com.company.ch2.SequenceTable;
 
+import com.company.ch2.LinkTable.Node;
 import com.company.ch2.interfaceFile.SequenceTableInterface;
 
 public class SequenceTable implements SequenceTableInterface {
@@ -14,7 +15,7 @@ public class SequenceTable implements SequenceTableInterface {
 
     @Override
     public void clear() {
-        this.curlen=0;
+        this.curlen = 0;
     }
 
     @Override
@@ -47,8 +48,8 @@ public class SequenceTable implements SequenceTableInterface {
             System.out.println("数组已满");
             return false;
         }
-        for (int j = curlen; j>index; j--) {
-            listElem[j] = listElem[j-1];
+        for (int j = curlen; j > index; j--) {
+            listElem[j] = listElem[j - 1];
         }
         listElem[index] = x;
         curlen++;
@@ -57,16 +58,16 @@ public class SequenceTable implements SequenceTableInterface {
 
     @Override
     public boolean remove(int index) {
-        if(index<0 || index>curlen){
+        if (index < 0 || index > curlen) {
             System.out.println("删除位置不合法");
             return false;
         }
-        if(curlen<=0){
+        if (curlen <= 0) {
             System.out.println("此表已空");
             return false;
         }
-        for(int i=index;i<curlen-1;i++){
-            listElem[i]=listElem[i+1];
+        for (int i = index; i < curlen - 1; i++) {
+            listElem[i] = listElem[i + 1];
         }
         curlen--;
         return false;
@@ -78,8 +79,7 @@ public class SequenceTable implements SequenceTableInterface {
         while (j < curlen && !listElem[j].equals(x)) {
             j++;
         }
-        if(j==curlen)
-        {
+        if (j == curlen) {
             System.out.println("没有这个元素");
             return -1;
         }
@@ -96,4 +96,15 @@ public class SequenceTable implements SequenceTableInterface {
         }
         System.out.println();
     }
+
+    public void deserve() {
+        int len = this.getLenght();
+        for (int i = 0; i < len / 2; i++) {
+            Object p = this.listElem[i];
+            this.listElem[i]=this.listElem[len-1-i];
+            this.listElem[len-1-i]=p;
+
+        }
+    }
+
 }
