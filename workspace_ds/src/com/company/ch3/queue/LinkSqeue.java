@@ -68,6 +68,10 @@ public class LinkSqeue implements IQueue {
         }else{
             Object p = this.front.data;
             this.front = this.front.next;
+            if(p==rear){
+                this.rear = null;
+                this.front = null;
+            }
             return p;
         }
     }

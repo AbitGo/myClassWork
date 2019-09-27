@@ -28,9 +28,10 @@ public class Exp35 {
     public static SequenceTable inserRing(LinkSqeue sqeue, SequenceTable link, int m, int n) throws Exception {
         int count = 0;
         while (!sqeue.isEmpty() && count <=n - m) {
+            //队列最后一个
             int p = (int) sqeue.poll();
+            //线性表最后一个
             int q = (int) link.get(link.getLenght() - 1);
-            System.out.println("p:"+p+" q:"+q);
             //当是队列最后一个元素的时候
             if (m == n) {
                 if (isPrime(p + q) && isPrime(p + 1)) {
