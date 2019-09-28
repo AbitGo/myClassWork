@@ -1,4 +1,4 @@
-package com.company.ch1.interfaceFile;
+package com.company.ch2;
 
 public interface SequenceTableInterface {
     void clear();

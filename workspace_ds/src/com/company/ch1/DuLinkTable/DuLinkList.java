@@ -1,7 +1,6 @@
 package com.company.ch1.DuLinkTable;
 
-import com.company.ch1.interfaceFile.SequenceTableInterface;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+import com.company.ch1.SequenceTableInterface;
 
 public class DuLinkList implements SequenceTableInterface {
     DuNode head;

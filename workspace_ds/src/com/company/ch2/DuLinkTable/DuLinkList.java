@@ -1,6 +1,6 @@
 package com.company.ch2.DuLinkTable;
 
-import com.company.ch2.interfaceFile.SequenceTableInterface;
+import com.company.ch2.SequenceTableInterface;
 
 public class DuLinkList implements SequenceTableInterface {
     DuNode head;

@@ -1,6 +1,6 @@
 package com.company.ch1.LinkTable;
 
-import com.company.ch1.interfaceFile.SequenceTableInterface;
+import com.company.ch1.SequenceTableInterface;
 
 public class LinkTable implements SequenceTableInterface {
 

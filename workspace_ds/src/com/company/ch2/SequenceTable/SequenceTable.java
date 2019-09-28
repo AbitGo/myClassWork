@@ -1,7 +1,6 @@
 package com.company.ch2.SequenceTable;
 
-import com.company.ch2.LinkTable.Node;
-import com.company.ch2.interfaceFile.SequenceTableInterface;
+import com.company.ch2.SequenceTableInterface;
 
 public class SequenceTable implements SequenceTableInterface {
     final int maxLen = 100;
