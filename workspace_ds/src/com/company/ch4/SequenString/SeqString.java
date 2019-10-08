@@ -63,7 +63,7 @@ public class SeqString implements IString {
     }
 
     @Override
-    public IString subString(int begin, int end) {
+    public char[] subString(int begin, int end) {
         if (this.isEmpty()) {
             System.out.println("此字符串为空");
             return null;
@@ -72,13 +72,17 @@ public class SeqString implements IString {
                 System.out.println("位置不合法");
                 return null;
             } else if(begin==end){
-                return this;
+                char[] result = new char[1];
+                result[0] = this.strValue[end];
+                return result;
             } else{
+                //创建长度韦end-begin长度的字符串
                 char[] result = new char[end-begin];
-                for (int i = begin; i < end; i++) {
+                //使用for循环为长度为end-begin长度的字符串赋值
+                for (int i = 0; i < result.length; i++) {
                     result[i] = this.strValue[i+begin];
                 }
-                return new SeqString(result);
+                return result;
             }
         }
     }
@@ -161,8 +165,9 @@ public class SeqString implements IString {
     }
 
     public void disPlay(){
-        for(char x:strValue){
-            System.out.print(x+" ");
+        for(int i=0;i<curLen;i++){
+            System.out.print(strValue[i]);
         }
+        System.out.println();
     }
 }
