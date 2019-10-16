@@ -16,21 +16,21 @@ public class SymmetricMatrix {
     private int row;
 
     public SymmetricMatrix(int row) {
-        //数组的个数为3n-2
-        int num = row* (row+1)/2;
+        int num = row * (row + 1) / 2;
         tripleNodes = new TripleNode[num];
         for (int i = 0; i < num; i++)
             tripleNodes[i] = new TripleNode();
         this.row = row;
     }
 
-    //自动填充
     public void autoGenerate() {
         int k = 0;
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < row; j++) {
-                if(i>=j)
+                if (i >= j) {
+                    //System.out.println("k:"+k);
                     this.tripleNodes[k++].setValue(i + j);
+                }
             }
         }
     }
