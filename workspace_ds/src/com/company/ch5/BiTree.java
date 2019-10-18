@@ -1,5 +1,6 @@
 package com.company.ch5;
 
+import com.company.ch3.Stack.CircleSqQueue;
 import com.company.ch3.Stack.LinkStack.LinkStack;
 
 public class BiTree {
@@ -79,6 +80,24 @@ public class BiTree {
     public void postRootTraverse(){
         //LRD
 
+    }
+    public void levelTraverse(){
+        BiTreeNode t = this.root;
+        if(t!=null){
+            CircleSqQueue circleSqQueue = new CircleSqQueue(40);
+            //根节点入队
+            circleSqQueue.offer(t);
+            while (!circleSqQueue.isEmpty()){
+                t = (BiTreeNode) circleSqQueue.poll();
+                System.out.print(t.data);
+                if(t.lchild!=null){
+                    circleSqQueue.offer(t.lchild);
+                }
+                if(t.rchild!=null){
+                    circleSqQueue.offer(t.rchild);
+                }
+            }
+        }
     }
 
 }
