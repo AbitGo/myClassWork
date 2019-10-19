@@ -5,12 +5,30 @@ import com.company.ch3.Stack.LinkStack.LinkStack;
 
 public class BiTree {
     private BiTreeNode root;
+
+    public BiTreeNode getRoot() {
+        return root;
+    }
+
+    public void setRoot(BiTreeNode root) {
+        this.root = root;
+    }
+
+    public static int getIndex() {
+        return index;
+    }
+
+    public static void setIndex(int index) {
+        BiTree.index = index;
+    }
+
     //构建一颗空树
-    public BiTree(){
+    public BiTree() {
         this.root = null;
     }
+
     //构造一颗树
-    public BiTree(BiTreeNode root){
+    public BiTree(BiTreeNode root) {
         this.root = root;
     }
 
@@ -18,9 +36,9 @@ public class BiTree {
     private static int index = 0;
 
     //递归先序历遍
-    public void preRootTraverse(BiTreeNode t){
+    public void preRootTraverse(BiTreeNode t) {
         //DLR
-        if(t!=null){
+        if (t != null) {
             System.out.print(t.data);
             preRootTraverse(t.lchild);
             preRootTraverse(t.rchild);
@@ -28,9 +46,9 @@ public class BiTree {
     }
 
     //递归中序历遍
-    public void inRootTraverse(BiTreeNode t){
+    public void inRootTraverse(BiTreeNode t) {
         //LDR
-        if(t!=null){
+        if (t != null) {
             inRootTraverse(t.lchild);
             System.out.print(t.data);
             inRootTraverse(t.rchild);
@@ -38,9 +56,9 @@ public class BiTree {
     }
 
     //递归中序历遍
-    public void postRootTraverse(BiTreeNode t){
+    public void postRootTraverse(BiTreeNode t) {
         //LRD
-        if(t!=null){
+        if (t != null) {
             postRootTraverse(t.lchild);
             postRootTraverse(t.rchild);
             System.out.print(t.data);
@@ -51,53 +69,56 @@ public class BiTree {
     public void preRootTraverse() throws Exception {
         //DLR
         BiTreeNode t = this.root;
-        if(t!=null){
+        if (t != null) {
             LinkStack s = new LinkStack();
             s.push(t);
-            while(!s.isEmpty()){
-                t=(BiTreeNode)s.pop();
+            while (!s.isEmpty()) {
+                t = (BiTreeNode) s.pop();
                 System.out.print(t.data);
-                while(t!=null){
-                    if(t.lchild!=null){
+                while (t != null) {
+                    if (t.lchild != null) {
                         System.out.print(t.lchild.data);
                     }
-                    if(t.rchild!=null){
+                    if (t.rchild != null) {
                         System.out.print(t.rchild.data);
                     }
-                    t=t.lchild;
+                    t = t.lchild;
                 }
             }
         }
     }
 
     //非递归中序历遍
-    public void inRootTraverse(){
+    public void inRootTraverse() {
         //LDR
 
     }
 
     //非递归中序历遍
-    public void postRootTraverse(){
+    public void postRootTraverse() {
         //LRD
 
     }
-    public void levelTraverse(){
+
+    public void levelTraverse() {
+        //层次历遍操作实现的非递归算法
         BiTreeNode t = this.root;
-        if(t!=null){
+        if (t != null) {
             CircleSqQueue circleSqQueue = new CircleSqQueue(40);
             //根节点入队
             circleSqQueue.offer(t);
-            while (!circleSqQueue.isEmpty()){
+            while (!circleSqQueue.isEmpty()) {
                 t = (BiTreeNode) circleSqQueue.poll();
                 System.out.print(t.data);
-                if(t.lchild!=null){
+                if (t.lchild != null) {
                     circleSqQueue.offer(t.lchild);
                 }
-                if(t.rchild!=null){
+                if (t.rchild != null) {
                     circleSqQueue.offer(t.rchild);
                 }
             }
         }
     }
+
 
 }
