@@ -100,6 +100,18 @@ public class BiTree {
 
     }
 
+    public BiTreeNode searchNode(BiTreeNode t,Object x){
+        if(t!=null){
+            if(t.data.equals(x))
+                return t;
+            else{
+                BiTreeNode lresult = searchNode(t.lchild,x);
+                return lresult !=null ? lresult :searchNode(t.rchild,x);
+            }
+        }
+        return null;
+    }
+
     public void levelTraverse() {
         //层次历遍操作实现的非递归算法
         BiTreeNode t = this.root;
