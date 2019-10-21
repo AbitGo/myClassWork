@@ -2,6 +2,7 @@ package com.company.ch5;
 
 import com.company.ch3.Stack.CircleSqQueue;
 import com.company.ch3.Stack.LinkStack.LinkStack;
+import com.company.ch3.queue.LinkSqeue;
 
 public class BiTree {
     private BiTreeNode root;
@@ -70,10 +71,10 @@ public class BiTree {
         //DLR
         BiTreeNode t = this.root;
         if (t != null) {
-            LinkStack s = new LinkStack();
-            s.push(t);
+            LinkSqeue s = new LinkSqeue();
+            s.offer(t);
             while (!s.isEmpty()) {
-                t = (BiTreeNode) s.pop();
+                t = (BiTreeNode) s.poll();
                 System.out.print(t.data);
                 while (t != null) {
                     if (t.lchild != null) {
@@ -100,23 +101,125 @@ public class BiTree {
 
     }
 
-    public BiTreeNode searchNode(BiTreeNode t,Object x){
-        if(t!=null){
-            if(t.data.equals(x))
+    public BiTreeNode searchNode(BiTreeNode t, Object x) {
+        if (t != null) {
+            if (t.data.equals(x))
                 return t;
-            else{
-                BiTreeNode lresult = searchNode(t.lchild,x);
-                return lresult !=null ? lresult :searchNode(t.rchild,x);
+            else {
+                BiTreeNode lresult = searchNode(t.lchild, x);
+                return lresult != null ? lresult : searchNode(t.rchild, x);
             }
         }
         return null;
+    }
+
+    //统计二叉树中结点个数的算法
+    //使用递归的方式
+    public int countNode(BiTreeNode t) {
+        //使用递归算法
+        int count = 0;
+        if (t != null) {
+            ++count;
+            count += countNode(t.lchild);
+            count += countNode(t.rchild);
+        }
+        return count;
+    }
+
+    //统计二叉树中结点个数的算法
+    //使用递归的方式
+    public int countNode2(BiTreeNode t) {
+        //使用递归算法
+        if (t != null) {
+            return 0;
+        } else {
+            return 1 + countNode2(t.lchild) + countNode2(t.rchild);
+        }
+    }
+
+    //统计二叉树中结点个数的算法
+    //使用非递归的方式
+    public int countNode1(BiTreeNode t) {
+        //使用递归算法
+        int count = 0;
+        if (t != null) {
+            LinkSqeue linkSqeue = new LinkSqeue();
+            linkSqeue.offer(t);
+            while (!linkSqeue.isEmpty()) {
+                t = (BiTreeNode) linkSqeue.poll();
+                ++count;
+                if (t.lchild != null) {
+                    linkSqeue.offer(t.lchild);
+                }
+                if (t.rchild != null) {
+                    linkSqeue.offer(t.rchild);
+                }
+            }
+        }
+        return count;
+    }
+
+    public int getDepth(BiTreeNode t) {
+        if (t != null) {
+            int lDepth = getDepth(t.lchild);
+            int rDepth = getDepth(t.rchild);
+            return 1 + (lDepth > rDepth ? lDepth : rDepth);
+        }
+        return 0;
+    }
+
+
+    public int getDepth1(BiTreeNode t) {
+        if (t == null) {
+            return 0;
+        } else if (t.rchild == null && t.lchild == null) {
+            return 1;
+        } else {
+            return 1 + (getDepth1(t.lchild) > getDepth1(t.rchild) ? getDepth1(t.lchild) : getDepth1(t.rchild));
+        }
+    }
+
+    public boolean isEqual(BiTreeNode t1, BiTreeNode t2) {
+        if (t1 == null && t2 == null) {
+            return true;
+        }
+        //当两个节点都不为空时
+        if (t1 != null && t2 != null) {
+            if (t1.data.equals(t2.data)) {
+                //左子树是否相等
+                if (isEqual(t1.lchild, t2.lchild)) {
+                    //右子树是否相等
+                    if (isEqual(t1.rchild, t2.rchild)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        //当剩下只有一个不为空，则返回false
+        return false;
+    }
+
+    public boolean isEqual1(BiTreeNode t1, BiTreeNode t2) {
+        if (t1 == null && t2 == null) {
+            return true;
+        }
+        //当两个节点都不为空时
+        else if (t1 != null && t2 != null) {
+            //必须满足三个条件
+            //1。两个结点的值相等
+            //2。左子树相等
+            //3。右子树相等
+            return (t1.data.equals(t2.data) && (isEqual1(t1.lchild, t2.lchild)) && (isEqual1(t1.rchild, t2.rchild)));
+        }
+        //当剩下只有一个不为空，则返回false
+        return false;
     }
 
     public void levelTraverse() {
         //层次历遍操作实现的非递归算法
         BiTreeNode t = this.root;
         if (t != null) {
-            CircleSqQueue circleSqQueue = new CircleSqQueue(40);
+            LinkSqeue circleSqQueue = new LinkSqeue();
             //根节点入队
             circleSqQueue.offer(t);
             while (!circleSqQueue.isEmpty()) {
