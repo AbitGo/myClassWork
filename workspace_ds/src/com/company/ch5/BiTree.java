@@ -2,7 +2,9 @@ package com.company.ch5;
 
 import com.company.ch3.Stack.CircleSqQueue;
 import com.company.ch3.Stack.LinkStack.LinkStack;
+import com.company.ch3.Stack.SqStack.SqStack;
 import com.company.ch3.queue.LinkSqeue;
+import jdk.nashorn.internal.codegen.types.BitwiseType;
 
 public class BiTree {
     private BiTreeNode root;
@@ -69,20 +71,24 @@ public class BiTree {
     //非递归先序历遍
     public void preRootTraverse() throws Exception {
         //DLR
+        //将根节点压入栈中
         BiTreeNode t = this.root;
         if (t != null) {
-            LinkSqeue s = new LinkSqeue();
-            s.offer(t);
+            SqStack s = new SqStack();
+            s.push(t);
             while (!s.isEmpty()) {
-                t = (BiTreeNode) s.poll();
+                t = (BiTreeNode) s.pop();
                 System.out.print(t.data);
                 while (t != null) {
                     if (t.lchild != null) {
+                        //如果左孩子为空则直接打印该节点
                         System.out.print(t.lchild.data);
                     }
                     if (t.rchild != null) {
-                        System.out.print(t.rchild.data);
+                        //右孩子非空入栈
+                        s.push(t.rchild);
                     }
+                    //向下一层深入左子树
                     t = t.lchild;
                 }
             }
@@ -90,12 +96,39 @@ public class BiTree {
     }
 
     //非递归中序历遍
-    public void inRootTraverse() {
+    public void inRootTraverse() throws Exception {
         //LDR
+        //将根节点压入栈中
+        BiTreeNode root = this.root;
+        if (root != null) {
+            SqStack sqStack = new SqStack();
+            sqStack.push(root);
+            //当栈不为空时
+            while (!sqStack.isEmpty()){
 
+                //System.out.println("peek"+sqStack.peek());
+                //当压入栈的是空指针及到了最深层的左子树
+                while (sqStack.peek() !=null){
+
+                    BiTreeNode node = ((BiTreeNode)sqStack.peek()).lchild;
+                    sqStack.push(node);
+                }
+
+                //因为最后一个压入栈中的肯定是null,所以才造成该循环结束
+                sqStack.pop();
+                //当栈不为空的时候提取栈顶
+                if (!sqStack.isEmpty()){
+                    root = (BiTreeNode) sqStack.pop();
+                    //打印该节点
+                    System.out.print(root.data);
+                    sqStack.push(root.rchild);
+                }
+            }
+
+        }
     }
 
-    //非递归中序历遍
+    //非递归后序历遍
     public void postRootTraverse() {
         //LRD
 

@@ -8,11 +8,16 @@ public class SqStack implements IStack {
     //在非空栈中，top始终指向栈顶元素的下一个存储位置(我的理解就是座标
     //当栈空的时候，top的值为空
     private int top;
-    private int maxSize;
+    private int maxSize=100;
     public SqStack(int Size){
         //创建新的栈，并且为空
         top = 0;
         maxSize = Size;
+        stackElem = new Object[maxSize];
+    }
+    public SqStack(){
+        //创建新的栈，并且为空
+        top = 0;
         stackElem = new Object[maxSize];
     }
     @Override
@@ -36,7 +41,7 @@ public class SqStack implements IStack {
     public Object peek() {
         //获取栈顶元素
         if(!isEmpty()){
-            return stackElem[top-1];
+            return stackElem[top];
         }else{
             return null;
         }

@@ -7,6 +7,8 @@ public class SqStackTest {
         sqStack.push(1);
         sqStack.push(2);
         sqStack.push(3);
+        sqStack.push(4);
+        sqStack.push(5);
         System.out.println("----------插入操作：结束----------");
 
         System.out.println("----------查看栈顶操作：开始----------");

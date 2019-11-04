@@ -15,7 +15,7 @@ public class DebugBiTree {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         BiTree biTreeTest = createBiTree();
 
         System.out.println("递归先根遍历:");
@@ -34,9 +34,15 @@ public class DebugBiTree {
         System.out.println();
         System.out.println("-------------");
 
-        System.out.println("递归先根遍历:");
-        biTreeTest.preRootTraverse(root);
+        System.out.println("非递归先根遍历:");
+        biTreeTest.preRootTraverse();
         System.out.println();
         System.out.println("-------------");
+
+        System.out.println("非递归中根遍历:");
+        biTreeTest.inRootTraverse();
+        System.out.println();
+        System.out.println("-------------");
+
     }
 }
