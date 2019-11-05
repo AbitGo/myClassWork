@@ -134,6 +134,26 @@ public class BiTree {
 
     }
 
+    //层次历遍操作实现的非递归算法
+    public void levelTraverse() {
+        BiTreeNode t = this.root;
+        if (t != null) {
+            LinkSqeue circleSqQueue = new LinkSqeue();
+            //根节点入队
+            circleSqQueue.offer(t);
+            while (!circleSqQueue.isEmpty()) {
+                t = (BiTreeNode) circleSqQueue.poll();
+                System.out.print(t.data);
+                if (t.lchild != null) {
+                    circleSqQueue.offer(t.lchild);
+                }
+                if (t.rchild != null) {
+                    circleSqQueue.offer(t.rchild);
+                }
+            }
+        }
+    }
+
     public BiTreeNode searchNode(BiTreeNode t, Object x) {
         if (t != null) {
             if (t.data.equals(x))
@@ -248,25 +268,7 @@ public class BiTree {
         return false;
     }
 
-    public void levelTraverse() {
-        //层次历遍操作实现的非递归算法
-        BiTreeNode t = this.root;
-        if (t != null) {
-            LinkSqeue circleSqQueue = new LinkSqeue();
-            //根节点入队
-            circleSqQueue.offer(t);
-            while (!circleSqQueue.isEmpty()) {
-                t = (BiTreeNode) circleSqQueue.poll();
-                System.out.print(t.data);
-                if (t.lchild != null) {
-                    circleSqQueue.offer(t.lchild);
-                }
-                if (t.rchild != null) {
-                    circleSqQueue.offer(t.rchild);
-                }
-            }
-        }
-    }
+
 
 
 }

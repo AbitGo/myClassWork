@@ -7,7 +7,7 @@ public class DebugBiTree {
         BiTreeNode g = new BiTreeNode("G");
         BiTreeNode h = new BiTreeNode("H");
         BiTreeNode e = new BiTreeNode("E",g,null);
-        BiTreeNode b = new BiTreeNode("D",d,e);
+        BiTreeNode b = new BiTreeNode("B",d,e);
         BiTreeNode f = new BiTreeNode("F",null,h);
         BiTreeNode c = new BiTreeNode("C",f,null);
         BiTreeNode a = new BiTreeNode("A",b,c);
@@ -41,6 +41,20 @@ public class DebugBiTree {
 
         System.out.println("非递归中根遍历:");
         biTreeTest.inRootTraverse();
+        System.out.println();
+        System.out.println("-------------");
+
+        System.out.println("层次历遍操作实现的非递归算法:");
+        biTreeTest.levelTraverse();
+        System.out.println();
+        System.out.println("-------------");
+
+        System.out.println("对树进行查询:");
+        BiTreeNode result =  biTreeTest.searchNode(biTreeTest.getRoot(),"B");
+        if(result!=null)
+            System.out.println(result.data);
+        else
+            System.out.println();
         System.out.println();
         System.out.println("-------------");
 
