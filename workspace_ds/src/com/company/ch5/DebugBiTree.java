@@ -58,5 +58,23 @@ public class DebugBiTree {
         System.out.println();
         System.out.println("-------------");
 
+        System.out.println("对树节点个数进行查询:");
+        int count = biTreeTest.countNode1(biTreeTest.getRoot());
+        System.out.println("count:"+count);
+        System.out.println();
+        System.out.println("-------------");
+
+        System.out.println("对树节点个数进行查询2:");
+        count = biTreeTest.countNode2(biTreeTest.getRoot());
+        System.out.println("count:"+count);
+        System.out.println();
+        System.out.println("-------------");
+
+        System.out.println("对树节点个数进行查询3:");
+        count = biTreeTest.countNode3(biTreeTest.getRoot());
+        System.out.println("count:"+count);
+        System.out.println();
+        System.out.println("-------------");
+
     }
 }

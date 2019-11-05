@@ -168,13 +168,13 @@ public class BiTree {
 
     //统计二叉树中结点个数的算法
     //使用递归的方式
-    public int countNode(BiTreeNode t) {
+    public int countNode1(BiTreeNode t) {
         //使用递归算法
         int count = 0;
         if (t != null) {
             ++count;
-            count += countNode(t.lchild);
-            count += countNode(t.rchild);
+            count += countNode1(t.lchild);
+            count += countNode1(t.rchild);
         }
         return count;
     }
@@ -183,7 +183,7 @@ public class BiTree {
     //使用递归的方式
     public int countNode2(BiTreeNode t) {
         //使用递归算法
-        if (t != null) {
+        if (t == null) {
             return 0;
         } else {
             return 1 + countNode2(t.lchild) + countNode2(t.rchild);
@@ -192,7 +192,8 @@ public class BiTree {
 
     //统计二叉树中结点个数的算法
     //使用非递归的方式
-    public int countNode1(BiTreeNode t) {
+    //类似于层次历遍
+    public int countNode3(BiTreeNode t) {
         //使用递归算法
         int count = 0;
         if (t != null) {
