@@ -76,5 +76,17 @@ public class DebugBiTree {
         System.out.println();
         System.out.println("-------------");
 
+        System.out.println("对树深度查询1<递归>为:");
+        count = biTreeTest.getDepth1(biTreeTest.getRoot());
+        System.out.println("count:"+count);
+        System.out.println();
+        System.out.println("-------------");
+
+        System.out.println("对树深度查询2<非递归>为:");
+        count = biTreeTest.getDepth2(biTreeTest.getRoot());
+        System.out.println("count:"+count);
+        System.out.println();
+        System.out.println("-------------");
+
     }
 }

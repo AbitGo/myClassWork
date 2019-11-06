@@ -213,17 +213,17 @@ public class BiTree {
         return count;
     }
 
-    public int getDepth(BiTreeNode t) {
+    public int getDepth1(BiTreeNode t) {
         if (t != null) {
-            int lDepth = getDepth(t.lchild);
-            int rDepth = getDepth(t.rchild);
+            int lDepth = getDepth1(t.lchild);
+            int rDepth = getDepth1(t.rchild);
             return 1 + (lDepth > rDepth ? lDepth : rDepth);
         }
         return 0;
     }
 
 
-    public int getDepth1(BiTreeNode t) {
+    public int getDepth2(BiTreeNode t) {
         if (t == null) {
             return 0;
         } else if (t.rchild == null && t.lchild == null) {
