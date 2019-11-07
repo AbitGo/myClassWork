@@ -88,5 +88,23 @@ public class DebugBiTree {
         System.out.println();
         System.out.println("-------------");
 
+
+        BiTree biTree2 = createBiTree();
+        System.out.println("对两棵树进行<方法一>对比:");
+        Boolean result_equals = biTreeTest.isEqual1(biTreeTest.getRoot(),biTree2.getRoot());
+        if(result_equals==true){
+            System.out.println("两棵树一致");
+        }else {
+            System.out.println("两棵树不一致");
+        }
+
+        System.out.println("对两棵树进行<方法二>对比:");
+        result_equals = biTreeTest.isEqual2(biTreeTest.getRoot(),biTree2.getRoot());
+        if(result_equals==true){
+            System.out.println("两棵树一致");
+        }else {
+            System.out.println("两棵树不一致");
+        }
+
     }
 }

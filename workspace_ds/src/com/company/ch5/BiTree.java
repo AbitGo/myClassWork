@@ -233,7 +233,7 @@ public class BiTree {
         }
     }
 
-    public boolean isEqual(BiTreeNode t1, BiTreeNode t2) {
+    public boolean isEqual1(BiTreeNode t1, BiTreeNode t2) {
         if (t1 == null && t2 == null) {
             return true;
         }
@@ -241,9 +241,9 @@ public class BiTree {
         if (t1 != null && t2 != null) {
             if (t1.data.equals(t2.data)) {
                 //左子树是否相等
-                if (isEqual(t1.lchild, t2.lchild)) {
+                if (isEqual1(t1.lchild, t2.lchild)) {
                     //右子树是否相等
-                    if (isEqual(t1.rchild, t2.rchild)) {
+                    if (isEqual1(t1.rchild, t2.rchild)) {
                         return true;
                     }
                 }
@@ -253,7 +253,8 @@ public class BiTree {
         return false;
     }
 
-    public boolean isEqual1(BiTreeNode t1, BiTreeNode t2) {
+    public boolean isEqual2(BiTreeNode t1, BiTreeNode t2) {
+        //当两个节点都为空时,必定为真
         if (t1 == null && t2 == null) {
             return true;
         }
@@ -263,7 +264,7 @@ public class BiTree {
             //1。两个结点的值相等
             //2。左子树相等
             //3。右子树相等
-            return (t1.data.equals(t2.data) && (isEqual1(t1.lchild, t2.lchild)) && (isEqual1(t1.rchild, t2.rchild)));
+            return (t1.data.equals(t2.data) && (isEqual2(t1.lchild, t2.lchild)) && (isEqual2(t1.rchild, t2.rchild)));
         }
         //当剩下只有一个不为空，则返回false
         return false;
