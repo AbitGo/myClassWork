@@ -97,6 +97,7 @@ public class DebugBiTree {
         }else {
             System.out.println("两棵树不一致");
         }
+        System.out.println("-------------");
 
         System.out.println("对两棵树进行<方法二>对比:");
         result_equals = biTreeTest.isEqual2(biTreeTest.getRoot(),biTree2.getRoot());
@@ -105,6 +106,26 @@ public class DebugBiTree {
         }else {
             System.out.println("两棵树不一致");
         }
+        System.out.println("-------------");
+
+        System.out.println("利用前序遍历以及中序遍历生成二叉树:");
+        String preOrder = "ABDEGCFH";
+        String inOrder = "DBGEAFHC";
+        BiTree testa = new BiTree(preOrder,inOrder,0,0,preOrder.length());
+        System.out.println("后根遍历");
+        testa.postRootTraverse(testa.getRoot());
+        System.out.println("-------------");
+
+        System.out.println("标明空子树的先根遍历创建一颗二叉树:");
+        String preOrder1 = "AB##CD###";
+        BiTree testb = new BiTree(preOrder1);
+        System.out.println("先根遍历");
+        testa.preRootTraverse(testb.getRoot());
+        System.out.println("中根遍历");
+        testa.inRootTraverse(testb.getRoot());
+        System.out.println("后根遍历");
+        testa.postRootTraverse(testb.getRoot());
+        System.out.println("-------------");
 
     }
 }

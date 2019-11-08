@@ -8,6 +8,37 @@ import jdk.nashorn.internal.codegen.types.BitwiseType;
 
 public class BiTree {
     private BiTreeNode root;
+    private int index_len = 0;
+
+
+    //通过先根+中根/后根+中根建立
+    public BiTree(String preOrder, String inOrder, int preIndex, int inIndex, int count) {
+        if (count > 0) {
+            char r = preOrder.charAt(preIndex);
+            int i = 0;
+            for(;i<count;i++){
+                if(r==inOrder.charAt(i+inIndex)){
+                    break;
+                }
+            }
+            root = new BiTreeNode(r);
+            root.lchild = new BiTree(preOrder,inOrder,preIndex+1,inIndex,i).root;
+            root.rchild = new BiTree(preOrder,inOrder,preIndex+i+1,inIndex+i+1,count-i-1).root;
+
+        }
+    }
+
+    //由标明空子树的先根遍历创建一颗二叉树
+    public BiTree(String preStr){
+        char c = preStr.charAt(index_len++);
+        if(c!='#'){
+            root = new BiTreeNode(c);
+            root.rchild = new BiTree(preStr).root;
+            root.lchild = new BiTree(preStr).root;
+        }else {
+            root = null;
+        }
+    }
 
     public BiTreeNode getRoot() {
         return root;
@@ -104,20 +135,20 @@ public class BiTree {
             SqStack sqStack = new SqStack();
             sqStack.push(root);
             //当栈不为空时
-            while (!sqStack.isEmpty()){
+            while (!sqStack.isEmpty()) {
 
                 //System.out.println("peek"+sqStack.peek());
                 //当压入栈的是空指针及到了最深层的左子树
-                while (sqStack.peek() !=null){
+                while (sqStack.peek() != null) {
 
-                    BiTreeNode node = ((BiTreeNode)sqStack.peek()).lchild;
+                    BiTreeNode node = ((BiTreeNode) sqStack.peek()).lchild;
                     sqStack.push(node);
                 }
 
                 //因为最后一个压入栈中的肯定是null,所以才造成该循环结束
                 sqStack.pop();
                 //当栈不为空的时候提取栈顶
-                if (!sqStack.isEmpty()){
+                if (!sqStack.isEmpty()) {
                     root = (BiTreeNode) sqStack.pop();
                     //打印该节点
                     System.out.print(root.data);
@@ -269,8 +300,6 @@ public class BiTree {
         //当剩下只有一个不为空，则返回false
         return false;
     }
-
-
 
 
 }
