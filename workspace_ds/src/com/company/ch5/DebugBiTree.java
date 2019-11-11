@@ -127,5 +127,20 @@ public class DebugBiTree {
         testa.postRootTraverse(testb.getRoot());
         System.out.println("-------------");
 
+        System.out.println("完全二叉树的顺序存储结构建立其二叉链式存储结构:");
+        String preOrder2 = "ABCDEFGH";
+
+        BiTreeNode a = new BiTree().createBiTree_method(preOrder2,0);
+        System.out.println("先根遍历");
+        testa.preRootTraverse(a);
+        System.out.println();
+        System.out.println("中根遍历");
+        testa.inRootTraverse(a);
+        System.out.println();
+        System.out.println("后根遍历");
+        testa.postRootTraverse(a);
+        System.out.println();
+        System.out.println("-------------");
+
     }
 }

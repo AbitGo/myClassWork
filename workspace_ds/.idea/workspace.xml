@@ -17,20 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ch5/DebugBiTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTable/SequenceTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="13" lean-forward="true" selection-end-line="99" />
+            <state relative-caret-position="405">
+              <caret line="120" column="32" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -39,25 +30,40 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/ch1/Node.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
-              <caret line="11" lean-forward="true" selection-end-line="39" />
+              <caret line="11" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/ch5/BiTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1431#1432#0" expanded="true" />
+                <element signature="e#1458#1459#0" expanded="true" />
+                <element signature="e#1502#1503#0" expanded="true" />
+                <element signature="e#1534#1535#0" expanded="true" />
+                <element signature="e#1570#1571#0" expanded="true" />
+                <element signature="e#1598#1599#0" expanded="true" />
+                <element signature="e#1644#1645#0" expanded="true" />
+                <element signature="e#1680#1681#0" expanded="true" />
+                <element signature="e#1716#1717#0" expanded="true" />
+                <element signature="e#1748#1749#0" expanded="true" />
+                <element signature="e#1798#1799#0" expanded="true" />
+                <element signature="e#1830#1831#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ch5/BiTree.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/ch5/constant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1310#1311#0" expanded="true" />
-                <element signature="e#1386#1387#0" expanded="true" />
-                <element signature="e#1450#1451#0" expanded="true" />
-                <element signature="e#1532#1533#0" expanded="true" />
-                <element signature="e#1600#1601#0" expanded="true" />
-                <element signature="e#1682#1683#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="81">
+              <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -66,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTable/SequenceTableTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
-              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -84,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/ch5/BiTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding>
                 <element signature="e#233#234#0" expanded="true" />
                 <element signature="e#269#270#0" expanded="true" />
@@ -97,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTable/LinkTable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="8" lean-forward="true" selection-end-line="175" />
+              <caret line="8" selection-end-line="175" />
             </state>
           </provider>
         </entry>
@@ -142,7 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/ch3/Stack/SqStack/Exp3_1.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch3/queue/CircleSqQueueTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch2/AlgorithmDesgin/p56_3_1.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch2/SequenceTable/SequenceTable.java" />
@@ -191,8 +196,9 @@
         <option value="$PROJECT_DIR$/src/com/company/ch3/queue/LinkSqeue.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch3/Stack/SqStack/SqStackTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch3/Stack/SqStack/SqStack.java" />
-        <option value="$PROJECT_DIR$/src/com/company/ch5/BiTree.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch5/DebugBiTree.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ch5/constant.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ch5/BiTree.java" />
       </list>
     </option>
   </component>
@@ -202,9 +208,9 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1062" />
-    <option name="y" value="549" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1025" />
+    <option name="y" value="-25" />
     <option name="width" value="1392" />
     <option name="height" value="821" />
   </component>
@@ -216,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,7 +260,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -434,18 +440,20 @@
       <workItem from="1572962930774" duration="285000" />
       <workItem from="1573022791711" duration="3950000" />
       <workItem from="1573134041859" duration="2231000" />
-      <workItem from="1573219316592" duration="3030000" />
+      <workItem from="1573219316592" duration="3674000" />
+      <workItem from="1573266279760" duration="7000" />
+      <workItem from="1573477693044" duration="1292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199541000" />
+    <option name="totallyTimeSpent" value="201484000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="70" y="-8" width="2498" height="1456" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16971382" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17227235" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -454,7 +462,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22464898" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22390318" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937598" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,7 +472,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32980332" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32839313" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32829046" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -480,13 +488,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch3/AlgorithmDesgin/p106_3_2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ch3/queue/LinkSqeueTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -795,17 +796,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch3/queue/CircleSqQueue.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/interfaceFile/SequenceTableInterface.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTable/SequenceTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="26" />
+        <state relative-caret-position="351">
+          <caret line="13" selection-end-line="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/interfaceFile/SequenceTableInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="297">
+          <caret line="11" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTable/SequenceTableTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -816,17 +825,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" lean-forward="true" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTable/LinkTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="8" lean-forward="true" selection-end-line="175" />
+          <caret line="8" selection-end-line="175" />
         </state>
       </provider>
     </entry>
@@ -837,24 +839,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTable/SequenceTable.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch3/queue/CircleSqQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" lean-forward="true" selection-end-line="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/SequenceTable/SequenceTableTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        <state relative-caret-position="108">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ch5/BiTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
             <element signature="e#233#234#0" expanded="true" />
             <element signature="e#269#270#0" expanded="true" />
@@ -862,26 +857,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch5/BiTree.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch5/DebugBiTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1310#1311#0" expanded="true" />
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1532#1533#0" expanded="true" />
-            <element signature="e#1600#1601#0" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="405">
+          <caret line="120" column="32" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch5/DebugBiTree.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch5/constant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
+        <state relative-caret-position="81">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch5/BiTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1502#1503#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+            <element signature="e#1598#1599#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
+            <element signature="e#1830#1831#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -8,7 +8,6 @@ import jdk.nashorn.internal.codegen.types.BitwiseType;
 
 public class BiTree {
     private BiTreeNode root;
-    private int index_len = 0;
 
 
     //通过先根+中根/后根+中根建立
@@ -30,14 +29,27 @@ public class BiTree {
 
     //由标明空子树的先根遍历创建一颗二叉树
     public BiTree(String preStr){
-        char c = preStr.charAt(index_len++);
-        if(c!='#'){
-            root = new BiTreeNode(c);
-            root.rchild = new BiTree(preStr).root;
-            root.lchild = new BiTree(preStr).root;
-        }else {
-            root = null;
+        if(constant.index_len<=preStr.length()){
+            char c = preStr.charAt(constant.index_len++);
+            if(c!='#'){
+                root = new BiTreeNode(c);
+                root.rchild = new BiTree(preStr).root;
+                root.lchild = new BiTree(preStr).root;
+            }else {
+                root = null;
+            }
         }
+    }
+
+    //由完全二叉树的顺序存储结构建立其二叉链式存储结构
+    public BiTreeNode createBiTree_method(String sqBiTree,int index){
+        BiTreeNode root = null;
+        if(index<sqBiTree.length()){
+            root = new BiTreeNode(sqBiTree.charAt(index));
+            root.lchild = createBiTree_method(sqBiTree,index*2+1);
+            root.rchild = createBiTree_method(sqBiTree,index*2+2);
+        }
+        return root;
     }
 
     public BiTreeNode getRoot() {
@@ -300,6 +312,8 @@ public class BiTree {
         //当剩下只有一个不为空，则返回false
         return false;
     }
+
+
 
 
 }
