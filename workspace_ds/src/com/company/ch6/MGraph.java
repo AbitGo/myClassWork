@@ -93,9 +93,17 @@ public class MGraph implements IGraph {
     }
 
     @Override
-    public int firstAdjVex(int x) {
+    public int firstAdjVex(int x) throws Exception {
         //返回v的第一个邻接点，若v没有邻接点则返回-1，0<=v<vexNum
-        return 0;
+        if(x<0 || x>=vexNum){
+            throw new Exception("顶点不存在");
+        }
+        for(int j=0;j<vexNum;j++){
+            if(arcs[x][j]!=0 && arcs[x][j]<INFINITY){
+                return j;
+            }
+        }
+        return -1;
     }
 
     @Override

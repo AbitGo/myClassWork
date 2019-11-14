@@ -6,6 +6,6 @@ public interface IGraph {
     int getArcNum();
     Object getVex(int x);
     int locateVex(Object x);
-    int firstAdjVex(int x);
+    int firstAdjVex(int x) throws Exception;
     int nextAdjVex(int x,int w);
 }
