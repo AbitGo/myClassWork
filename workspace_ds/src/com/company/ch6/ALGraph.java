@@ -198,12 +198,15 @@ public class ALGraph implements IGraph {
         }
         VNode vex = vexs[x];
         ArcNode arcw = null;
+
+        //这段代码是为了寻找到w所在位置，并将arcw被赋值于arc
         for (ArcNode arc = vex.firsArc; arc != null; arc = arc.nextArc) {
             if (arc.adjVex == w) {
                 arcw = arc;
                 break;
             }
         }
+        //当且仅当arcw不为空并且下一个节点也不为空时
         if (arcw != null && arcw.nextArc != null) {
             return arcw.nextArc.adjVex;
         } else
@@ -215,4 +218,6 @@ public class ALGraph implements IGraph {
         arc.nextArc = vexs[v].firsArc;
         vexs[v].firsArc = arc;
     }
+
+
 }

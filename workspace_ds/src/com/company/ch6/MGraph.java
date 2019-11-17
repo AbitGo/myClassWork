@@ -68,7 +68,7 @@ public class MGraph implements IGraph {
         arcs = new int[vexNum][vexNum];
         for (int v = 0;v<vexNum;v++){
             for(int x = 0;x<vexNum;x++){
-                //赋值为int的max值，假装为无限大
+                //赋值为int的max值，为无限大
                 arcs[v][x]= 0;
             }
         }
@@ -97,7 +97,7 @@ public class MGraph implements IGraph {
         arcs = new int[vexNum][vexNum];
         for (int v = 0;v<vexNum;v++){
             for(int x = 0;x<vexNum;x++){
-                //赋值为int的max值，假装为无限大
+                //赋值为int的max值，为无限大
                 arcs[v][x]= 0;
             }
         }
@@ -182,7 +182,6 @@ public class MGraph implements IGraph {
     @Override
     public Object getVex(int x) {
         //返回v表示节点的值0<=v<vexNum
-
         return this.vexs[x];
     }
 
