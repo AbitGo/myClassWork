@@ -74,6 +74,8 @@ public class MGraph implements IGraph {
         }
         for(int i=0;i<arcNum;i++){
             //通过拆解字符串AB这类字符串，以获得顶点
+            //这里说明AB是指A->B
+            //及第A行(1)行得第二列为1
             int v = locateVex(param2[i].charAt(0));
             int u = locateVex(param2[i].charAt(1));
             arcs[v][u]=arcs[u][v]=1;
@@ -91,7 +93,7 @@ public class MGraph implements IGraph {
         vexs = new Object[vexNum];
 
         for(int v = 0;v<((String)param1[3]).length();v++){
-            //分别赋值ABCDE
+            //分别赋值
             vexs[v]= ((String)param1[3]).charAt(v);
         }
         arcs = new int[vexNum][vexNum];
@@ -103,6 +105,8 @@ public class MGraph implements IGraph {
         }
         for(int i=0;i<arcNum;i++){
             //通过拆解字符串AB这类字符串，以获得顶点
+            //这里说明AB是指A->B
+            //及第A行(1)行得第二列为1
             int v = locateVex(param2[i].charAt(0));
             int u = locateVex(param2[i].charAt(1));
             arcs[v][u]=1;
@@ -132,6 +136,8 @@ public class MGraph implements IGraph {
         }
         for(int i=0;i<arcNum;i++){
             //通过拆解字符串AB这类字符串，以获得顶点
+            //这里说明AB是指A->B
+            //及第A行(1)行得第二列为1
             int v = locateVex(param2[i].charAt(0));
             int u = locateVex(param2[i].charAt(1));
             arcs[v][u]=arcs[u][v]=(int)param2[i].charAt(2);
@@ -161,6 +167,8 @@ public class MGraph implements IGraph {
         }
         for(int i=0;i<arcNum;i++){
             //通过拆解字符串AB这类字符串，以获得顶点
+            //这里说明AB是指A->B
+            //及第A行(1)行得第二列为1
             int v = locateVex(param2[i].charAt(0));
             int u = locateVex(param2[i].charAt(1));
             arcs[v][u]=(int)param2[i].charAt(2);

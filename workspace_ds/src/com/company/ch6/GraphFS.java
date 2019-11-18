@@ -17,12 +17,13 @@ public class GraphFS {
                 BFS(g,v);
             }
         }
+        System.out.println();
     }
 
     public static void BFS(IGraph g,int v) throws Exception {
         //该节点已经被访问过了
         visited[v]=true;
-        System.out.println(g.getVex(v).toString()+" ");
+        System.out.print(g.getVex(v).toString()+" ");
         //创建队列
         LinkSqeue linkSqeue = new LinkSqeue();
         //入队
@@ -36,7 +37,7 @@ public class GraphFS {
                 //当当前邻接点还没有被读取的时候，则进行状态的翻转
                 if(!visited[w]){
                     visited[w]=true;
-                    System.out.println(g.getVex(w).toString()+" ");
+                    System.out.print(g.getVex(w).toString()+" ");
                     linkSqeue.offer(w);
                 }
             }
@@ -55,12 +56,13 @@ public class GraphFS {
                 DFS(g,v);
             }
         }
+        System.out.println();
     }
 
     public static void DFS(IGraph g,int v) throws Exception {
         //该节点已经被访问过了
         visited[v]=true;
-        System.out.println(g.getVex(v).toString()+" ");
+        System.out.print(g.getVex(v).toString()+" ");
         for(int w = g.firstAdjVex(v);w>=0;w=g.nextAdjVex(v,w)){
             if(!visited[w]){
                 DFS(g,w);

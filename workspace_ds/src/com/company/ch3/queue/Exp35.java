@@ -1,6 +1,6 @@
 package com.company.ch3.queue;
 
-import com.company.ch1.SequenceTable.SequenceTable;
+import com.company.ch2.SequenceTable.SequenceTable;
 import com.company.ch3.queue.LinkSqeue;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
