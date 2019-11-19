@@ -20,4 +20,8 @@ public class ArcNode {
     public ArcNode(int adjVex, int value) {
         this(adjVex, value, null);
     }
+
+    public ArcNode(int adjVex) {
+        this.adjVex = adjVex;
+    }
 }
