@@ -38,7 +38,7 @@ public class Exp6_2 {
                         //接下来就是w-v之间的空间
                         find_DFS(g,w,v,k);
                     }else {
-                        //i==k的时候
+                        //i==k的时候,则说明到达了目的地
                         break;
                     }
                 }

@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ch6/ArcNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="270">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding>
                 <element signature="e#187#188#0" expanded="true" />
                 <element signature="e#220#221#0" expanded="true" />
@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/ch6/VNode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
               <folding>
                 <element signature="e#119#120#0" expanded="true" />
                 <element signature="e#151#152#0" expanded="true" />
@@ -57,11 +57,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ch6/Exp6_2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            <state relative-caret-position="999">
+              <caret line="74" column="33" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="74" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/ch6/Exp6_3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -89,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/ch3/AlgorithmDesgin/p106_3_5.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch4/StringInterface.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch1/interfaceFile/SequenceTableInterface.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch1/SequenceTable/SequenceTable.java" />
@@ -140,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/com/company/ch6/Exp6_1.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch6/ArcNode.java" />
         <option value="$PROJECT_DIR$/src/com/company/ch6/Exp6_2.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ch6/Exp6_3.java" />
       </list>
     </option>
   </component>
@@ -163,8 +172,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,29 +191,6 @@
               <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch3" type="462c0819:PsiDirectoryNode" />
-              <item name="queue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch3" type="462c0819:PsiDirectoryNode" />
-              <item name="Stack" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
@@ -251,20 +237,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Exp6_2">
-    <configuration name="DebugBiTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.ch5.DebugBiTree" />
-      <module name="workspace_ds" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.ch5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Exp6_3">
     <configuration name="Exp6_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.ch6.Exp6_1" />
       <module name="workspace_ds" />
@@ -280,6 +253,19 @@
     </configuration>
     <configuration name="Exp6_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.ch6.Exp6_2" />
+      <module name="workspace_ds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.ch6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exp6_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.ch6.Exp6_3" />
       <module name="workspace_ds" />
       <extension name="coverage">
         <pattern>
@@ -318,19 +304,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DebugBiTree" />
       <item itemvalue="Application.GraphTest" />
       <item itemvalue="Application.MGraphTest" />
       <item itemvalue="Application.Exp6_1" />
       <item itemvalue="Application.Exp6_2" />
+      <item itemvalue="Application.Exp6_3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Exp6_3" />
         <item itemvalue="Application.Exp6_2" />
         <item itemvalue="Application.Exp6_1" />
         <item itemvalue="Application.MGraphTest" />
         <item itemvalue="Application.GraphTest" />
-        <item itemvalue="Application.DebugBiTree" />
       </list>
     </recent_temporary>
   </component>
@@ -416,17 +402,18 @@
       <workItem from="1574069959869" duration="5297000" />
       <workItem from="1574149315579" duration="7560000" />
       <workItem from="1574161835717" duration="3862000" />
+      <workItem from="1574250157198" duration="3397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246983000" />
+    <option name="totallyTimeSpent" value="250380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="72" y="-8" width="2496" height="1456" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15353037" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15476191" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -461,7 +448,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch1/LinkTable/Node.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/ch4/Matrix/SymmetricMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -797,10 +783,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch6/ArcNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#187#188#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ch6/VNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding>
             <element signature="e#119#120#0" expanded="true" />
             <element signature="e#151#152#0" expanded="true" />
@@ -818,25 +819,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch6/ArcNode.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch6/Exp6_2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#187#188#0" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="999">
+          <caret line="74" column="33" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="74" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ch6/Exp6_2.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/ch6/Exp6_3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        <state relative-caret-position="486">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
         </state>
       </provider>
     </entry>
