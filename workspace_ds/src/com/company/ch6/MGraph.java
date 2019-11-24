@@ -181,6 +181,18 @@ public class MGraph implements IGraph {
         return this.vexNum;
     }
 
+    public int[][] getArcs() {
+        return arcs;
+    }
+
+    public Object[] getVexs() {
+        return vexs;
+    }
+
+    public void setVexs(Object[] vexs) {
+        this.vexs = vexs;
+    }
+
     @Override
     public int getArcNum() {
         //返回边数
