@@ -58,6 +58,7 @@ public class MiniSpanTree_PRIM {
         int min = Integer.MAX_VALUE;
         int v = -1;
         for(int i = 0;i<closeEdges.length;i++)
+            //这里的代码，例如达到了v2节点，v2-v3为7，v0-v3为5而非覆盖，如果遇到v5节点(v5-v3)<(v0-v3)则覆盖
             if(closeEdges[i].lowCost!=0 && closeEdges[i].lowCost<min){
                 min = closeEdges[i].lowCost;
                 v = i;
