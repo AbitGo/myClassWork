@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ch6/MiniSpanTree_PRIM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+            <state relative-caret-position="918">
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/ch7/PileSort.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -51,7 +51,7 @@
               <caret line="2" column="24" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="24" />
               <folding>
                 <element signature="e#166#167#0" expanded="true" />
-                <element signature="e#183#184#0" expanded="true" />
+                <element signature="e#189#190#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/ch5/HuffmanTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+            <state relative-caret-position="959">
+              <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -149,9 +149,9 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="43" />
-    <option name="y" value="1309" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1392" />
     <option name="height" value="821" />
   </component>
@@ -163,8 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,102 +180,6 @@
               <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch2" type="462c0819:PsiDirectoryNode" />
-              <item name="AlgorithmDesgin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch2" type="462c0819:PsiDirectoryNode" />
-              <item name="DuLinkTable" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch2" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaceFile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch2" type="462c0819:PsiDirectoryNode" />
-              <item name="LinkTable" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch2" type="462c0819:PsiDirectoryNode" />
-              <item name="SequenceTable" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch3" type="462c0819:PsiDirectoryNode" />
-              <item name="AlgorithmDesgin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch3" type="462c0819:PsiDirectoryNode" />
-              <item name="queue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch3" type="462c0819:PsiDirectoryNode" />
-              <item name="Stack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch3" type="462c0819:PsiDirectoryNode" />
-              <item name="Stack" type="462c0819:PsiDirectoryNode" />
-              <item name="LinkStack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_ds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ch3" type="462c0819:PsiDirectoryNode" />
-              <item name="Stack" type="462c0819:PsiDirectoryNode" />
-              <item name="SqStack" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="workspace_ds" type="b2602c69:ProjectViewProjectNode" />
@@ -311,6 +213,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,7 +249,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Exp6_4">
+  <component name="RunManager" selected="Application.HuffmanTree">
     <configuration name="Exp6_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.ch6.Exp6_1" />
       <module name="workspace_ds" />
@@ -398,12 +302,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MGraphTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.ch6.MGraphTest" />
+    <configuration name="HuffmanTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.ch5.HuffmanTree" />
       <module name="workspace_ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.ch6.*" />
+          <option name="PATTERN" value="com.company.ch5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -412,19 +316,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MGraphTest" />
       <item itemvalue="Application.Exp6_1" />
       <item itemvalue="Application.Exp6_2" />
       <item itemvalue="Application.Exp6_3" />
       <item itemvalue="Application.Exp6_4" />
+      <item itemvalue="Application.HuffmanTree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HuffmanTree" />
         <item itemvalue="Application.Exp6_4" />
         <item itemvalue="Application.Exp6_3" />
         <item itemvalue="Application.Exp6_2" />
         <item itemvalue="Application.Exp6_1" />
-        <item itemvalue="Application.MGraphTest" />
       </list>
     </recent_temporary>
   </component>
@@ -518,17 +422,19 @@
       <workItem from="1574772987342" duration="114000" />
       <workItem from="1574942429522" duration="12000" />
       <workItem from="1575037128234" duration="2937000" />
+      <workItem from="1575106622000" duration="1063000" />
+      <workItem from="1575125354783" duration="848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260620000" />
+    <option name="totallyTimeSpent" value="262531000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="1309" width="1392" height="821" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3078078" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31279808" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -920,8 +826,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ch6/MiniSpanTree_PRIM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        <state relative-caret-position="918">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -935,7 +841,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/ch7/PileSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -945,15 +851,15 @@
           <caret line="2" column="24" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="24" />
           <folding>
             <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ch5/HuffmanTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="959">
+          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
         </state>
       </provider>
     </entry>
