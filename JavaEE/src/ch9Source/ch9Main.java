@@ -1,11 +1,12 @@
-import javafx.application.Application;
+package ch9Source;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Main {
+public class ch9Main {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
-        HelloWorld helloWorld = (HelloWorld)applicationContext.getBean("helloworld");
-        helloWorld.sayHello();
+        JuiceMaker2 juiceMaker2 = (JuiceMaker2)applicationContext.getBean("juicemaker2");
+        System.out.println(juiceMaker2.makeJuice());
     }
 }

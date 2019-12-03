@@ -3,8 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id = "helloworld" class="HelloWorld">
-        <property name="name" value="spring"/>
+    <bean id = "juicemaker2" class="ch9Source.JuiceMaker2">
+        <property name="beverageShop" value="贡茶"/>
+        <property name="source" ref="source"/>
+    </bean>
+
+    <bean id = "source" class="ch9Source.Source">
+        <property name="fruit" value="橙汁"/>
+        <property name="sugar" value="少糖"/>
+        <property name="size" value="大杯"/>
     </bean>
 
 </beans>
