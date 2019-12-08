@@ -14,4 +14,11 @@
         <property name="size" value="大杯"/>
     </bean>
 
+    <bean id = "beanPostProcessor" class="ch9Source.BeanPostProcessorImpl"/>
+
+    <bean id = "juicemaker3" class="ch9Source.JuiceMaker3" init-method="init" destroy-method="myDestory">
+        <property name="beverageShop" value="贡茶"/>
+        <property name="source" ref="source"/>
+    </bean>
+
 </beans>
