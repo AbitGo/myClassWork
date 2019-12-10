@@ -21,4 +21,14 @@
         <property name="source" ref="source"/>
     </bean>
 
+    <bean id = "role1" class = "ch9Source.Role">
+        <constructor-arg index="0" value="总经理"/>
+        <constructor-arg index="1" value="公司管理者"/>
+    </bean>
+
+    <bean id = "role2" class="ch9Source.Role">
+        <property name="roleName" value="高级工程师"/>
+        <property name="note" value="重要人员"/>
+     </bean>
+
 </beans>
