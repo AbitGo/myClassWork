@@ -14,11 +14,15 @@ public class ch9Main {
 //        System.out.println(juiceMaker3.makeJuice());
 //        applicationContext.close();
 
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
-        Role role1 = (Role)applicationContext.getBean("role1");
-        System.out.println(role1.printInfo());
+//        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
+//        Role role1 = (Role)applicationContext.getBean("role1");
+//        System.out.println(role1.printInfo());
+//
+//        Role role2 = (Role)applicationContext.getBean("role2");
+//        System.out.println(role2.printInfo());
 
-        Role role2 = (Role)applicationContext.getBean("role2");
-        System.out.println(role2.printInfo());
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
+        ComplexAssemly complexAssembly = (ComplexAssemly)applicationContext.getBean("complexAssembly");
+        System.out.println(complexAssembly.printInfo());
     }
 }
