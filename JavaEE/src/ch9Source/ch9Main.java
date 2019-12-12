@@ -8,12 +8,12 @@ public class ch9Main {
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
 //        JuiceMaker2 juiceMaker2 = (JuiceMaker2)applicationContext.getBean("juicemaker2");
 //        System.out.println(juiceMaker2.makeJuice());
-
+//
 //        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
 //        JuiceMaker3 juiceMaker3 = (JuiceMaker3)applicationContext.getBean("juicemaker3");
 //        System.out.println(juiceMaker3.makeJuice());
 //        applicationContext.close();
-
+//
 //        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
 //        Role role1 = (Role)applicationContext.getBean("role1");
 //        System.out.println(role1.printInfo());
