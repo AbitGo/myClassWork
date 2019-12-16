@@ -6,6 +6,7 @@ import java.util.Properties;
 import java.util.Set;
 
 public class ComplexAssemly {
+    // 需要进行复杂数据结构的类
     private Long id;
     private List<String> list;
     private Map<String,String> map;

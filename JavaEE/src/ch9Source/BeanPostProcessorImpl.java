@@ -17,4 +17,5 @@ public class BeanPostProcessorImpl implements BeanPostProcessor {
         System.out.println("["+bean.getClass().getSimpleName()+"]对象"+beanName+"实例化完成");
         return bean;
     }
+
 }
