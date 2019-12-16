@@ -21,6 +21,8 @@
         <property name="source" ref="source"/>
     </bean>
 
+
+    <!--使用构造-->
     <bean id = "role1" class = "ch9Source.Role">
         <constructor-arg index="0" value="总经理"/>
         <constructor-arg index="1" value="公司管理者"/>
@@ -31,9 +33,11 @@
         <property name="note" value="重要人员"/>
      </bean>
 
+    <!--使用构造-->
     <bean id = "complexAssembly" class="ch9Source.ComplexAssemly">
         <property name="id" value="1"/>
         <property name="list">
+            <!--使用list-->
             <list>
                 <value>value-list-1</value>
                 <value>value-list-2</value>
@@ -41,6 +45,7 @@
             </list>
         </property>
         <property name="map">
+            <!--使用map-->
             <map>
                 <entry key="key1" value="value-key-1"/>
                 <entry key="key2" value="value-key-2"/>
