@@ -60,6 +60,7 @@
                 <prop key="prop3">value-prop-3</prop>
             </props>
         </property>
+        <!--使用set集合-->
         <property name="set">
             <set>
                 <value>value-set-1</value>
