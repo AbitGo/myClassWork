@@ -28,7 +28,6 @@ public class exp3_client {
             input = scanner.nextLine();
         }
 
-
         ps.close();
         soc.close();
     }

@@ -22,6 +22,7 @@ public class exp3_server {
 
     static class AddClientsThread extends Thread {
         Socket socket = null;
+        Boolean flag = true;
 
         public Socket getSocket() {
             return socket;
@@ -42,14 +43,19 @@ public class exp3_server {
 
                 while (true) {
                     try {
+                        if(socket.isClosed()){
+                            this.flag = false;
+                            SocketList.remove(this.socket);
+                            System.out.println("当前线程已经结束");
+                        }
                         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                        do {
+                        while (flag){
                             String temp = br.readLine();
                             System.out.println(temp);
 
                             for(int i=0;i<SocketList.size();i++){
 
-                                System.out.println(SocketList.size());
+                                System.out.println("当前在线人数:"+SocketList.size()+"人");
                                 Socket tempSocket = SocketList.get(i);
                                 if(tempSocket!=socket){
                                     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(tempSocket.getOutputStream()));
@@ -62,13 +68,15 @@ public class exp3_server {
                             if (!temp.equals("")) {
                                 break;
                             }
-                        } while (true);
+                        }
                         //他会关闭我的socket
                         //br.close();
                     } catch (IOException e) {
                         //如果下线则删除该代码
-                        System.out.println("Socket is closed");
-                        e.printStackTrace();
+                        System.out.println("Socket is closed,当前线程已经结束");
+
+                        this.flag = false;
+                        SocketList.remove(this.socket);
                     }
 
                     try {
