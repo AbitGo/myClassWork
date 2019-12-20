@@ -8,6 +8,7 @@ import java.util.List;
 
 
 public class exp3_server {
+    //使用socket的连接作为链表
     public static ServerSocket serverSocket = null;
     public static List<Socket> SocketList = new ArrayList<>();
     public static void main(String[] args) throws IOException {
@@ -74,8 +75,9 @@ public class exp3_server {
                     } catch (IOException e) {
                         //如果下线则删除该代码
                         System.out.println("Socket is closed,当前线程已经结束");
-
+                        //终止该循环
                         this.flag = false;
+                        //删除该socket链表
                         SocketList.remove(this.socket);
                     }
 
