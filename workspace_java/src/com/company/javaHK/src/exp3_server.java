@@ -23,6 +23,7 @@ public class exp3_server {
 
     static class AddClientsThread extends Thread {
         Socket socket = null;
+        //是否一直运行的标志，在发生断开连接的时候进行删除
         Boolean flag = true;
 
         public Socket getSocket() {
