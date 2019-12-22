@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>setInterval</title>
+</head>
+<body>
+    <a href=# onclick="openinnnn()">aaa</a>
+    <script>
+    var time;
+    var flag=true;
+    var num=0;
+    function openinnnn(){
+        setInterval("ShowTime()",1000);
+    }
+    function ShowTime(){
+        num++;
+        if(num==5){
+            clearInterval(flag);
+            
+        }
+        time = new Date();
+        document.body.innerHTML=time;
+    }
+    </script>
+</body>
+</html>

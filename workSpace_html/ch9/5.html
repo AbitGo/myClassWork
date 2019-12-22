@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <canvas id = "cvs" height="1000px" width="1000px">xxxxxxx</canvas>
+    <script>
+        var cvs = document.getElementById("cvs");
+        var ctx = cvs.getContext("2d");
+
+        // ctx.beginPath();
+        // ctx.arc(150,150,50,50,0,2*Math.PI,false);
+        // ctx.stroke();
+
+
+        // ctx.strokeStyle="black";
+
+        // ctx.fillRect(600,400,20,20);
+        // ctx.translate(40,40);//平移
+        // //ctx.scale(2,0.5);//缩放
+        // ctx.fillRect(600,400,20,20);
+        // ctx.fillRect();
+
+        ctx.translate(150,150);
+        ctx.strokeStyle="rgb(255,0,0.5)";
+        for(var i=0;i<10;i++){
+            ctx.scale(0.95,0.95);
+            ctx.rotate((Math.Pi/36)*i);
+            ctx.fillRect(0,0,80,20);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 20px;
+            background-color: red;
+            transition: all 2s linear 0s;
+        }
+        #d1{
+            /* 透明度 */
+            opacity: 1;
+        }
+        #d2{
+            opacity: 0.6;
+        }
+        #d3{
+            opacity: 0.2;
+        }
+        div:hover{
+            background-color: aqua;
+            transition: all 2s linear 0s;
+        }
+        
+    </style>
+</head>
+<body>
+        <div id = "d1"></div>
+        <div id = "d2"></div>
+        <div id = "d3"></div>
+        <input type="button" value="click" onclick="myChange()">
+        <script>
+            function myChange(){
+                var d = document.getElementById("d3");
+                d.style.opacity="0.8";
+            }
+        </script>
+</body>
+</html>

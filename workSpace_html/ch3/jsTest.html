@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var arr = new Array(10);
+        var flag = false;
+
+        sort(true);
+
+        function sort(flag) {
+            for (var i = 0; i < arr.length; i++) {
+                arr[i] = Math.ceil(Math.random() * 1000) % 100;
+            }
+            for (var i = 1; i < arr.length; i++) {
+                for (var j = 0; j < i - 1; j++) {
+                    if (flag == true) {
+                        if (arr[i] > arr[j]) {
+                            arr[i] = arr[i] + arr[j] - (arr[j] = arr[i]);
+                        }
+                    }
+                    else {
+                        if (arr[i] < arr[j]) {
+                            arr[i] = arr[i] + arr[j] - (arr[j] = arr[i]);
+                        }
+                    }
+                }
+            }
+            for (var i = 0; i < arr.length; i++) {
+                document.write(arr[i] + " ");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

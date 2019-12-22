@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href= # onclick="Myadd()">add</a>
+    <p>this is a p node!</p>
+    <div id = "d1"></div>
+    
+    <script>
+        function Myadd(){
+            var div1= document.getElementById("d1");
+            var p = document.createElement("p");
+            p.innerHTML = "this is a new p node";
+            div1.appendChild(p);
+        }
+    </script>
+</body>
+</html>

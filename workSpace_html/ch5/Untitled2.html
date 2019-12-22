@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href= # onclick="Myadd()">add</a>
+
+    <!-- <table id= "table1" width="100%" border="5px">
+        <tbody id = "tbody1">
+                <tr>
+                        <th>姓名</th>
+                        <th>成绩</th>
+                        <th>学号</th>
+                    </tr>
+        </tbody>
+        
+
+    </table> -->
+    <table id= "tbody1" width="100%" border="5px">
+                <tr>
+                        <th>姓名</th>
+                        <th>成绩</th>
+                        <th>学号</th>
+                    </tr>
+    </table>
+    
+    <script>
+        function Myadd(){
+            var time = prompt("inter a num");
+            var tbody1= document.getElementById("tbody1");
+
+            var tr1 = document.createElement("tr");
+
+            var th1_1=document.createElement("th");
+            var th1_2=document.createElement("th");
+            var th1_3=document.createElement("th");
+
+            var array = time.split(" ");
+
+            th1_1.innerText=array[0];
+            th1_2.innerText=array[1];
+            th1_3.innerText=array[2];
+
+            tr1.appendChild(th1_1);
+            tr1.appendChild(th1_2);
+            tr1.appendChild(th1_3);
+
+            tbody1.appendChild(tr1);
+        }
+    </script>
+</body>
+</html>

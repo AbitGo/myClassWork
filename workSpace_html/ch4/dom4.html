@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom4</title>
+</head>
+
+<body>
+    <a href=# onclick="showtime()">showtime</a>
+    <script>
+        function showtime() {
+            setInterval("jjjjj()", 0);
+        }
+        function jjjjj() {
+            var data = "";
+            var MyDate = new Date();
+
+            data += "今天是" + (MyDate.getYear() + 1900) + "年 ";
+
+            data += (MyDate.getMonth() + 1) + "月 ";
+            data += MyDate.getDay() + "日 ";
+            data += MyDate.getHours() + "时 ";
+            data += MyDate.getMinutes() + "分 ";
+            data += MyDate.getSeconds() + "分 ";
+
+            document.body.innerHTML = data;
+        }
+
+    </script>
+
+</body>
+
+</html>

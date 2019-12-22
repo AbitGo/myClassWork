@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var str = "abcabcabcabc";
+        // var index = str.indexOf("abc");
+        // var start = 0;
+        // document.write(" " + index);
+        // start += index;
+        // while (index != -1) {
+        //     index++;
+        //     str = str.slice(index, str.length);
+        //     index_new = str.indexOf("abc");
+        //     start += index_new+1;
+        //     if (index_new == -1)
+        //         break;
+        //     document.write(" " + (start +1));
+        //     index = index_new;
+        // }
+
+        var str = "abcabcabcabc";
+        var mySearch="abc";
+        var index = 0;
+        var start = 0;
+        while (index != -1) {
+            str = str.slice(index, str.length);
+            index = str.indexOf(mySearch);
+            start += index;
+            if (index == -1)
+                break;
+            index ++;
+
+        }
+
+    </script>
+</body>
+
+</html>

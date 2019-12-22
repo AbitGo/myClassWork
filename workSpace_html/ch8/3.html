@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <div id="d1">
+    </div>
+
+    <input type="button" value="click" onclick="Create()">
+    <script>
+        function Create() {
+            var div1 = document.getElementById("d1");
+            for(var i=1;i<5;i++){
+                var d=document.createElement("div");
+                d.style.width="300px";
+                d.style.height="20px";
+                d.style.backgroundColor="red";
+                d.style.opacity=(1-0.2*i);
+                div1.appendChild(d);
+            }
+            
+
+        }
+
+    </script>
+</body>
+
+</html>
