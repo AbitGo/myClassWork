@@ -38,6 +38,7 @@ public class exp3_server {
                     // 处于循环中,其实就相当于有N个服务器,当然就可以与n个用户端通信
                     socket = serverSocket.accept();
                     SocketList.add(socket);
+                    //在加入socket中之后进行log打印
                     System.out.println("连接成功");
                 } catch (IOException e) {
                     e.printStackTrace();
