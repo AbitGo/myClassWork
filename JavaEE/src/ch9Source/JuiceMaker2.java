@@ -20,6 +20,7 @@ public class JuiceMaker2 {
         this.source = source;
     }
 
+    //使用print
     public String makeJuice(){
         String juice = "这是一杯"+beverageShop+"饮品店提供的"+source.getSize()+source.getSugar()+source.getFruit();
         return juice;
