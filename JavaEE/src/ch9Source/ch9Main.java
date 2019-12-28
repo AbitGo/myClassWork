@@ -21,6 +21,7 @@ public class ch9Main {
 //        Role role2 = (Role)applicationContext.getBean("role2");
 //        System.out.println(role2.printInfo());
 
+        //通过xml获取配置文件
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
         ComplexAssemly complexAssembly = (ComplexAssemly)applicationContext.getBean("complexAssembly");
         System.out.println(complexAssembly.printInfo());
