@@ -58,8 +58,10 @@ public class JuiceMaker3 implements BeanNameAware, BeanFactoryAware, Application
         System.out.println("["+this.getClass().getSimpleName()+"]调用ApplicationContextAware的setApplicationContext方法");
     }
 
+
     @Override
     public void destroy() throws Exception {
+        //销毁提示
         System.out.println("["+this.getClass().getSimpleName()+"]调用DisposableBean的destroy方法");
     }
 }
