@@ -18,7 +18,7 @@ public class TriangularMatrix {
 
     public TriangularMatrix(int row,boolean up,int c) {
 
-        //个数为
+        //个数为num = row * (row + 1) / 2+1;
         int num = row * (row + 1) / 2+1;
         tripleNodes = new TripleNode[num];
         for (int i = 0; i < num; i++)

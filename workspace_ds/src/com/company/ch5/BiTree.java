@@ -312,8 +312,4 @@ public class BiTree {
         //当剩下只有一个不为空，则返回false
         return false;
     }
-
-
-
-
 }
