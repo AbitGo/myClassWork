@@ -12,6 +12,11 @@ public class Role {
         this.RoleName = roleName;
         this.note = note;
     }
+    public Role(long id,String roleName, String note) {
+        this.id = id;
+        this.RoleName = roleName;
+        this.note = note;
+    }
 
     public long getId() {
         return id;

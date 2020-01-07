@@ -21,9 +21,19 @@ public class ch9Main {
 //        Role role2 = (Role)applicationContext.getBean("role2");
 //        System.out.println(role2.printInfo());
 
+//        //通过xml获取配置文件
+//        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
+//        ComplexAssemly complexAssembly = (ComplexAssemly)applicationContext.getBean("complexAssembly");
+//        System.out.println(complexAssembly.printInfo());
+
         //通过xml获取配置文件
+        //使用c标签
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
-        ComplexAssemly complexAssembly = (ComplexAssemly)applicationContext.getBean("complexAssembly");
-        System.out.println(complexAssembly.printInfo());
+        Role role1 = (Role)applicationContext.getBean("role3");
+        System.out.println(role1.printInfo());
+        //使用p标签
+        Role role2 = (Role)applicationContext.getBean("role4");
+        System.out.println(role2.printInfo());
+
     }
 }
