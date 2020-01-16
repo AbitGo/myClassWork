@@ -12,7 +12,7 @@ public class AnnotionMain {
 //        RoleAnnotation role = context.getBean(RoleAnnotation.class);
 //        System.out.println(role.getId());
 
-        //通过注释注入bean
+        //通过注释注入bean//两次注入
         RoleAnnotation roleAnnotation = context.getBean(RoleAnnotation.class);
         RoleService roleService = context.getBean(RoleService.class);
         roleService.printRoleInfo(roleAnnotation);
