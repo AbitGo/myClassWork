@@ -1,10 +1,7 @@
 package com.company.ch5;
 
-import com.company.ch3.Stack.CircleSqQueue;
-import com.company.ch3.Stack.LinkStack.LinkStack;
 import com.company.ch3.Stack.SqStack.SqStack;
 import com.company.ch3.queue.LinkSqeue;
-import jdk.nashorn.internal.codegen.types.BitwiseType;
 
 public class BiTree {
     private BiTreeNode root;

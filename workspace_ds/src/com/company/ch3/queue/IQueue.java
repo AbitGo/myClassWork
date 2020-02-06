@@ -1,4 +1,4 @@
-package com.company.ch3;
+package com.company.ch3.queue;
 
 public interface IQueue {
     public void clear();

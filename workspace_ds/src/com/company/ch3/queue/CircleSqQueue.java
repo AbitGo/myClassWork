@@ -1,7 +1,5 @@
 package com.company.ch3.queue;
 
-import com.company.ch3.IQueue;
-
 public class CircleSqQueue implements IQueue {
     private Object[] queueElem;
     private int front;

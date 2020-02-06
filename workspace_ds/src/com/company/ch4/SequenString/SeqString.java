@@ -1,6 +1,5 @@
 package com.company.ch4.SequenString;
 
-import com.company.ch3.IQueue;
 import com.company.ch4.IString;
 
 public class SeqString implements IString {
@@ -119,11 +118,6 @@ public class SeqString implements IString {
         for(int i=0;i<curLen-end;i++){
             strValue[begin+i] = strValue[end+i];
         }
-
-//        int temp_start = begin;
-//        for(int i=end;i<curLen;i++){
-//            strValue[temp_start++] = strValue[i];
-//        }
         curLen = curLen-(end-begin);
         return this;
     }

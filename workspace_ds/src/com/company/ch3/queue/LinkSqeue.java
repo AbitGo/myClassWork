@@ -1,7 +1,6 @@
 package com.company.ch3.queue;
 
 import com.company.ch2.LinkTable.Node;
-import com.company.ch3.IQueue;
 
 public class LinkSqeue implements IQueue {
     private Node front;

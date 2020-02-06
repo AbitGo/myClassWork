@@ -1,7 +1,7 @@
 package com.company.ch3.AlgorithmDesgin;
 
 import com.company.ch2.LinkTable.Node;
-import com.company.ch3.IQueue;
+import com.company.ch3.queue.IQueue;
 
 public class p106_3_5 implements IQueue {
     private Node head;

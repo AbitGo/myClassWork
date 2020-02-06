@@ -22,8 +22,6 @@ public class SequenceTableTest {
         }
         System.out.println("----------查询操作：结束----------");
 
-
-
         System.out.println("----------删除操作：开始----------");
         sequenceTable.remove(0);
         sequenceTable.display();
