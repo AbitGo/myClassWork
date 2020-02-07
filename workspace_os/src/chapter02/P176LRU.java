@@ -21,26 +21,16 @@ public class P176LRU {
     }
 
     //获取最大距离值
-    public static int getMaxIndexOfNeed(int[] place,int[] block,int start){
-        //最近需求定位
-        int minBlockIndex = -1;
-        int minPlaceIndex = -1;
-        for(int PlaceIndex = 0;PlaceIndex<place.length;PlaceIndex++){
-            for (int BlockIndex = start + 1; BlockIndex < block.length; BlockIndex++) {
-                if (block[BlockIndex] == place[PlaceIndex]) {
-                    if (minBlockIndex < BlockIndex) {
-                        minBlockIndex = BlockIndex;
-                        minPlaceIndex = PlaceIndex;
-                    }
-                    break;
-                }
-                //这操作是查找获取最大距离值的时，发现内存中的元素以后永久不使用的元素时候
-                if(BlockIndex==block.length-1 && block[BlockIndex]!=place[PlaceIndex]){
-                    return PlaceIndex;
-                }
+    public static int getMaxIndexOfNeed(int[] place,int[] placeCount){
+        int maxCount = -1;
+        int maxIndex = -1;
+        for(int i = 0;i<placeCount.length;i++){
+            if(placeCount[i]>maxCount){
+                maxCount = placeCount[i];
+                maxIndex = i;
             }
         }
-        return minPlaceIndex;
+        return maxIndex;
     }
     public static void main(String[] args) {
         int[] block = new int[]{7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1};
@@ -48,14 +38,21 @@ public class P176LRU {
         int[] placeCount = new int[]{0,0,0};
         for (int index = 0; index < block.length; index++) {
             //假设元素存在则不需要进行任何操作
+            //并且需要进行使用次数的增加
             if(paramExist(place,block[index])){
+                //使用次数的增加
+                for(int i = 0;i<placeCount.length;i++){
+                    placeCount[i]++;
+                }
                 continue;
             }else {
                 int emptyIndex = existEmpty(place);
                 //当前已经元素满了
                 if(emptyIndex==-1){
-                    int maxIndex = getMaxIndexOfNeed(place,block,index);
+                    int maxIndex = getMaxIndexOfNeed(place,placeCount);
                     place[maxIndex] = block[index];
+                    //使用次数清零
+                    placeCount[maxIndex] = 0;
                     for (int param : place) {
                         System.out.print(param + " ");
                     }
