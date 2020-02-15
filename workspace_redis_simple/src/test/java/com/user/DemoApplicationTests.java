@@ -1,4 +1,4 @@
-package com.user;
+package com.User;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

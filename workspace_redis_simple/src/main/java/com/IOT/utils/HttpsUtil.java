@@ -61,9 +61,14 @@ public class HttpsUtil {
 	public void initSSLConfigForTwoWay() throws Exception {
 		
 		// 1 Import your own certificate
-		String demo_base_Path = System.getProperty("user.dir");
+
+		String demo_base_Path = "c:/";
+//		String demo_base_Path = System.getProperty("User.dir");
 		String selfcertpath = demo_base_Path + Constant.SELFCERTPATH;
 		String trustcapath = demo_base_Path + Constant.TRUSTCAPATH;
+//
+//		System.out.println("demo_base_Path:"+demo_base_Path);
+//		System.out.println("selfcertpath:"+selfcertpath);
 
 		KeyStore selfCert = KeyStore.getInstance("pkcs12");
 		selfCert.load(new FileInputStream(selfcertpath),
