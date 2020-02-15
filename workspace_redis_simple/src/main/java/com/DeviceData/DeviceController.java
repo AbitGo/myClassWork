@@ -55,6 +55,15 @@ public class DeviceController {
         //将电信返回的唯一标识符打印出来
         //System.out.println("DianXinCode2:" + DianXinCode);
 
+        //将添加之后的数据，并且生成时间添加至设备中-以免造成空数据
+        //首先添加进去时间具有五分钟的时延性，也就是将时间提前至当前时间的 24*3600-5*60
+        //86400-300=86100
+        Map<String,Object> newTime = new HashMap<>();
+        long tempTime = System.currentTimeMillis()/1000-86100;
+        newTime.put("updataTime",tempTime);
+        newTime.put("lastWakeTime",tempTime);
+        redisService.AddHashKeyAndValue("deviceId:"+DianXinCode,newTime);
+
         if (DianXinCode.equals("null")) {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("msg", "电信平台添加设备失败,请联系管理员");
@@ -168,6 +177,8 @@ public class DeviceController {
             paramJSON.put("DeviceCode", result.get("DeviceCode"));
             paramJSON.put("DeviceUser", result.get("DeviceUser"));
             paramJSON.put("DianXinCode", result.get("DianXinCode"));
+
+            //在获取到DianXinCode的同时应该获取该设备对应的数据，
             jsonArray.add(paramJSON);
         }
         Long count = pageInfo.getTotal();

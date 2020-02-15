@@ -1775,3 +1775,14 @@ org.apache.ibatis.executor.ExecutorException: A query was run and no Result Maps
 2020-02-15 13:51:08.287  INFO 8372 --- [http-nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
 2020-02-15 13:51:08.393  INFO 8372 --- [http-nio-8181-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-02-15 13:51:08.502  INFO 8372 --- [http-nio-8181-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-15 13:53:26.733  INFO 10112 --- [main] com.User.DemoApplicationTests            : Starting DemoApplicationTests on DESKTOP-V0SPMDI with PID 10112 (started by Abit in E:\myClassWork\workspace_redis_simple)
+2020-02-15 13:53:26.734  INFO 10112 --- [main] com.User.DemoApplicationTests            : No active profile set, falling back to default profiles: default
+2020-02-15 13:53:29.585  INFO 10112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-15 13:53:29.588  INFO 10112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-15 13:53:30.139  INFO 10112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 532ms. Found 0 repository interfaces.
+2020-02-15 13:53:30.704  INFO 10112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$45dabc46] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-15 13:53:32.379  INFO 10112 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-15 13:53:32.950  INFO 10112 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-02-15 13:53:33.069  INFO 10112 --- [main] com.User.DemoApplicationTests            : Started DemoApplicationTests in 6.698 seconds (JVM running for 7.598)
+2020-02-15 13:53:33.420  INFO 10112 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-02-15 13:53:33.421  INFO 10112 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
