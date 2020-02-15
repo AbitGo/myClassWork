@@ -8,5 +8,5 @@ import java.util.Map;
 @Mapper
 public interface UserMapper {
     int addUser(Map<String,String> param);
-
+    Map<String,String> loginUser(String LoginName);
 }

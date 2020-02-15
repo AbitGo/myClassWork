@@ -9,4 +9,8 @@
         insert into userInfo set LoginName = #{LoginName},LoginPassword = #{LoginPassword},DeviceUser=#{DeviceUser}
     </insert>
 
+    <select id="loginUser" parameterType="string" resultType="map">
+        select * from userinfo where  LoginName = #{LoginName}
+    </select>
+
 </mapper>

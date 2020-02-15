@@ -13,4 +13,8 @@ public class UserService {
     public int addUser(Map<String,String> param){
         return userMapper.addUser(param);
     }
+
+    public Map<String,String> loginUser(String LoginName){
+        return this.userMapper.loginUser(LoginName);
+    }
 }

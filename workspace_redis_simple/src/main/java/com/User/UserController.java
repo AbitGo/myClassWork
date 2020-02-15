@@ -41,4 +41,30 @@ public class UserController {
         }
         return resultJson.toString();
     }
+
+    @RequestMapping(value = "/User/loginUser", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @CrossOrigin
+    private String loginUser(@RequestBody String addJson){
+        JSONObject jsonObject = JSONObject.parseObject(addJson);
+        String LoginName = jsonObject.getString("LoginName");
+        String LoginPassword = jsonObject.getString("LoginPassword");
+
+        JSONObject resultJson = new JSONObject();
+        Map<String,String> result = userService.loginUser(LoginName);
+        if(result==null){
+            resultJson.put("flag","0");
+            resultJson.put("msg","登陆失败，该账户不存在");
+        }else {
+            String psd = result.get("LoginPassword");
+            if(!psd.equals(LoginPassword)){
+                resultJson.put("flag","0");
+                resultJson.put("msg","登陆失败，密码不正确");
+            }else {
+                resultJson.put("flag","1");
+                resultJson.put("msg","登陆成功");
+                resultJson.put("DeviceUser",result.get("DeviceUser"));
+            }
+        }
+        return resultJson.toString();
+    }
 }
