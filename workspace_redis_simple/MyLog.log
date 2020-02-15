@@ -1,0 +1,54 @@
+2020-02-14 11:43:17.808  INFO 6048 --- [main] com.user.DemoApplicationTests            : Starting DemoApplicationTests on DESKTOP-V0SPMDI with PID 6048 (started by Abit in C:\Users\Abit\Desktop\workspace_redis_simple)
+2020-02-14 11:43:17.818  INFO 6048 --- [main] com.user.DemoApplicationTests            : No active profile set, falling back to default profiles: default
+2020-02-14 11:43:22.771  INFO 6048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-14 11:43:22.776  INFO 6048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-14 11:43:23.765  INFO 6048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 955ms. Found 0 repository interfaces.
+2020-02-14 11:43:24.479  INFO 6048 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d7f04899] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 11:43:29.475  INFO 6048 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-14 11:43:30.247  INFO 6048 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-02-14 11:43:30.392  INFO 6048 --- [main] com.user.DemoApplicationTests            : Started DemoApplicationTests in 13.25 seconds (JVM running for 14.477)
+2020-02-14 11:43:30.919  INFO 6048 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-02-14 11:43:30.920  INFO 6048 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-14 13:26:12.792  INFO 19220 --- [main] com.DemoApplication                      : Starting DemoApplication on DESKTOP-V0SPMDI with PID 19220 (C:\Users\Abit\Desktop\workspace_redis_simple\target\classes started by Abit in C:\Users\Abit\Desktop\workspace_redis_simple)
+2020-02-14 13:26:12.798  INFO 19220 --- [main] com.DemoApplication                      : No active profile set, falling back to default profiles: default
+2020-02-14 13:26:15.634  INFO 19220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-14 13:26:15.637  INFO 19220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-14 13:26:16.170  INFO 19220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 515ms. Found 0 repository interfaces.
+2020-02-14 13:26:16.452  INFO 19220 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a0f3be5a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 13:26:16.749  INFO 19220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2020-02-14 13:26:16.771  INFO 19220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 13:26:16.771  INFO 19220 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-02-14 13:26:16.777  INFO 19220 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_101\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_101\bin;C:\Program Files\Java\jdk1.8.0_101\jre\bin;C:\Program Files\Common Files\Autodesk Shared\;C:\Users\Abit\AppData\Local\Microsoft\WindowsApps;C:\Users\Abit\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Abit\AppData\Local\GitHubDesktop\bin;.]
+2020-02-14 13:26:16.868  INFO 19220 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 13:26:16.868  INFO 19220 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3934 ms
+2020-02-14 13:26:17.581  INFO 19220 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-14 13:26:17.832  INFO 19220 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-02-14 13:26:17.905  INFO 19220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2020-02-14 13:26:17.908  INFO 19220 --- [main] com.DemoApplication                      : Started DemoApplication in 5.899 seconds (JVM running for 7.264)
+2020-02-14 13:28:27.793  INFO 18180 --- [main] com.DemoApplication                      : Starting DemoApplication on DESKTOP-V0SPMDI with PID 18180 (C:\Users\Abit\Desktop\workspace_redis_simple\target\classes started by Abit in C:\Users\Abit\Desktop\workspace_redis_simple)
+2020-02-14 13:28:27.796  INFO 18180 --- [main] com.DemoApplication                      : No active profile set, falling back to default profiles: default
+2020-02-14 13:28:30.282  INFO 18180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-14 13:28:30.284  INFO 18180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-14 13:28:30.778  INFO 18180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 482ms. Found 0 repository interfaces.
+2020-02-14 13:28:31.039  INFO 18180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$487f4dcc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 13:28:31.313  INFO 18180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2020-02-14 13:28:31.330  INFO 18180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-14 13:28:31.331  INFO 18180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-02-14 13:28:31.337  INFO 18180 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_101\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_101\bin;C:\Program Files\Java\jdk1.8.0_101\jre\bin;C:\Program Files\Common Files\Autodesk Shared\;C:\Users\Abit\AppData\Local\Microsoft\WindowsApps;C:\Users\Abit\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Abit\AppData\Local\GitHubDesktop\bin;.]
+2020-02-14 13:28:31.421  INFO 18180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-14 13:28:31.421  INFO 18180 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3554 ms
+2020-02-14 13:28:31.996  INFO 18180 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-14 13:28:32.206  INFO 18180 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-02-14 13:28:32.264  INFO 18180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2020-02-14 13:28:32.267  INFO 18180 --- [main] com.DemoApplication                      : Started DemoApplication in 4.817 seconds (JVM running for 5.645)
+2020-02-14 13:29:04.551  INFO 19864 --- [main] com.user.DemoApplicationTests            : Starting DemoApplicationTests on DESKTOP-V0SPMDI with PID 19864 (started by Abit in C:\Users\Abit\Desktop\workspace_redis_simple)
+2020-02-14 13:29:04.553  INFO 19864 --- [main] com.user.DemoApplicationTests            : No active profile set, falling back to default profiles: default
+2020-02-14 13:29:07.430  INFO 19864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-14 13:29:07.434  INFO 19864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-14 13:29:07.972  INFO 19864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 520ms. Found 0 repository interfaces.
+2020-02-14 13:29:08.575  INFO 19864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f14e0429] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-14 13:29:10.179  INFO 19864 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-14 13:29:10.941  INFO 19864 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-02-14 13:29:11.111  INFO 19864 --- [main] com.user.DemoApplicationTests            : Started DemoApplicationTests in 6.913 seconds (JVM running for 7.841)
+2020-02-14 13:29:11.674  INFO 19864 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-02-14 13:29:11.676  INFO 19864 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

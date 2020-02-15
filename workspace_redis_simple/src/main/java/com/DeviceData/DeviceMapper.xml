@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.DeviceData.DeviceMapper">
+    <insert id="addDeviceByUserCode" parameterType="map">
+        <selectKey keyProperty="id" resultType="int" order="AFTER">
+            select COUNT(DeviceIMEI) from device where DeviceIMEI = #{DeviceIMEI}
+        </selectKey>
+        insert into device set DeviceIMEI=#{DeviceIMEI},DeviceCode=#{DeviceCode},DeviceUser=#{DeviceUser},CreateTime=NOW(),DeviceName=#{DeviceName},DianXinCode=#{DianXinCode}
+    </insert>
+
+    <select id="getDeviceByUserCode" resultType="map">
+        SELECT
+            d.DeviceIMEI,
+            d.DeviceName,
+            d.DeviceCode,
+            d.DeviceUser,
+            d.DianXinCode
+        FROM
+            device AS d
+        WHERE
+            DeviceUser = #{DeviceUser}
+    </select>
+    <!--这里的代码其实可以使用or关键字去筛选-->
+    <select id="getDeviceByDeviceIMEI" resultType="string" parameterType="string">
+        select DianXinCode from device where DeviceIMEI = #{DeviceIMEI}
+    </select>
+    <select id="getDeviceByDeviceCode" resultType="string" parameterType="string">
+        select DianXinCode from device where DeviceCode = #{DeviceCode}
+    </select>
+
+    <delete id="deleteDeviceByDianXinCode" parameterType="string">
+        DELETE from device where DianXinCode = #{DianXinCode}
+    </delete>
+
+
+    <update id="updataDeviceByDeviceIMEI" parameterType="map">
+        UPDATE device set DeviceName =#{DeviceName} where DeviceIMEI = #{DeviceIMEI}
+    </update>
+
+
+</mapper>
