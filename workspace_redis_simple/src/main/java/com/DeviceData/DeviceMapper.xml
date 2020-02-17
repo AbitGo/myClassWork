@@ -6,7 +6,8 @@
         <selectKey keyProperty="id" resultType="int" order="AFTER">
             select COUNT(DeviceIMEI) from device where DeviceIMEI = #{DeviceIMEI}
         </selectKey>
-        insert into device set DeviceIMEI=#{DeviceIMEI},DeviceCode=#{DeviceCode},DeviceUser=#{DeviceUser},CreateTime=NOW(),DeviceName=#{DeviceName},DianXinCode=#{DianXinCode}
+        insert into device set
+        DeviceIMEI=#{DeviceIMEI},DeviceCode=#{DeviceCode},DeviceUser=#{DeviceUser},CreateTime=NOW(),DeviceName=#{DeviceName},DianXinCode=#{DianXinCode}
     </insert>
 
     <select id="getDeviceByUserCode" resultType="map">
@@ -37,6 +38,16 @@
     <update id="updataDeviceByDeviceIMEI" parameterType="map">
         UPDATE device set DeviceName =#{DeviceName} where DeviceIMEI = #{DeviceIMEI}
     </update>
+
+    <insert id="addDeviceRecord" parameterType="map">
+        INSERT INTO record
+        SET CreateTime = #{CreateTime},
+            RecordCode = #{RecordCode},
+            DianXinCode = #{DianXinCode}',
+            DeviceUser = #{DeviceUser},
+            DeviceCode = (
+	            SELECT DeviceCode FROM device WHERE DianXinCode = #{DianXinCode} LIMIT 1)
+    </insert>
 
 
 </mapper>
