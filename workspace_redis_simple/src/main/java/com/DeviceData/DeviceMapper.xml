@@ -20,7 +20,7 @@
         FROM
             device AS d
         WHERE
-            DeviceUser = #{DeviceUser}
+            DeviceUser = #{DeviceUser} or 'root' = #{DeviceUser}
     </select>
     <!--这里的代码其实可以使用or关键字去筛选-->
     <select id="getDeviceByDeviceIMEI" resultType="string" parameterType="string">
@@ -43,7 +43,7 @@
         INSERT INTO record
         SET CreateTime = #{CreateTime},
             RecordCode = #{RecordCode},
-            DianXinCode = #{DianXinCode}',
+            DianXinCode = #{DianXinCode},
             DeviceUser = #{DeviceUser},
             DeviceCode = (
 	            SELECT DeviceCode FROM device WHERE DianXinCode = #{DianXinCode} LIMIT 1)

@@ -27,8 +27,12 @@ public class DeviceService {
     public int deleteDeviceByDianXinCode(String DeviceCode){
         return deviceMapper.deleteDeviceByDianXinCode(DeviceCode);
     }
-    public int updataDeviceByDeviceIMEI(Map<String,String> param){
+    public int updataDeviceByDeviceIMEI(Map<String,String> param) {
         return deviceMapper.updataDeviceByDeviceIMEI(param);
+    }
+
+    public int addDeviceRecord(Map<String,Object> param){
+        return deviceMapper.addDeviceRecord(param);
     }
 
 }

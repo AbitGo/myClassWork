@@ -17,4 +17,8 @@ public class UserService {
     public Map<String,String> loginUser(String LoginName){
         return this.userMapper.loginUser(LoginName);
     }
+
+    public  List<Map<String,String>> getAllUser(){
+        return this.userMapper.getAllUser();
+    }
 }

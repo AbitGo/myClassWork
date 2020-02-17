@@ -401,12 +401,12 @@ public class DeviceController {
     private String PerformTheUnlockTask(@RequestBody String GetJSON) throws Exception {
         JSONObject getJson = JSONObject.parseObject(GetJSON);
         Long CreateTime = System.currentTimeMillis() / 1000;
-
         String serviceId = getJson.getString("serviceId");
         String method = getJson.getString("method");
         String paras = getJson.getString("paras");
         String deviceId = getJson.getString("deviceId");
-
+        //命令下发者
+        String DeviceUser = getJson.getString("DeviceUser");
 
         Map<String, Object> wakeTime = redisService.GetHashKeyAndValue("deviceId:" + deviceId);
         //开始拼接数据
@@ -449,6 +449,14 @@ public class DeviceController {
             jsonObject.put("flag", "0");
             return jsonObject.toString();
         } else {
+            String RecordCode = "Rec"+PubicMethod.getAcademeCode();
+            Map<String,Object> param = new HashMap<>();
+            param.put("CreateTime",CreateTime);
+            param.put("RecordCode",RecordCode);
+            param.put("DianXinCode",deviceId);
+            param.put("DeviceUser",DeviceUser);
+            //缓存数据添加
+            deviceService.addDeviceRecord(param);
             jsonObject.put("msg", "执行下发成功,观察设备");
             jsonObject.put("flag", "1");
         }
@@ -501,23 +509,5 @@ public class DeviceController {
             status = "null";
         }
         return status;
-    }
-
-    //执行下发
-    @RequestMapping(value = "/Device/xxxx", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    @CrossOrigin
-    private String xxxx(@RequestBody String GetJSON) throws Exception {
-        long CreateTime = System.currentTimeMillis()/1000;
-        String RecordCode = "Rec"+PubicMethod.getAcademeCode();
-        String DianXinCode ="asdksagikfgdsafsdi";
-        String DeviceUser = "root";
-        Map<String,Object> param = new HashMap<>();
-        param.put("CreateTime",CreateTime);
-        param.put("RecordCode",RecordCode);
-        param.put("DianXinCode",DianXinCode);
-        param.put("DeviceUser",DeviceUser);
-        int result = deviceService.addDeviceByUserCode(param);
-        System.out.println("result:"+result);
-        return "OK";
     }
 }
