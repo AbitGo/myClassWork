@@ -31,9 +31,9 @@
     </select>
 
     <delete id="deleteDeviceByDianXinCode" parameterType="string">
-        DELETE from device where DianXinCode = #{DianXinCode}
+        DELETE from device where DianXinCode = #{DianXinCode};
+        DELETE from record where DianXinCode=#{DianXinCode}
     </delete>
-
 
     <update id="updataDeviceByDeviceIMEI" parameterType="map">
         UPDATE device set DeviceName =#{DeviceName} where DeviceIMEI = #{DeviceIMEI}
@@ -49,5 +49,8 @@
 	            SELECT DeviceCode FROM device WHERE DianXinCode = #{DianXinCode} LIMIT 1)
     </insert>
 
+    <select id="getDeviceRecord" resultType="map" parameterType="string">
+        SELECT * from record WHERE DeviceCode in (SELECT DeviceCode from device WHERE DeviceUser = #{DeviceUser} or DeviceCode='root') ORDER BY CreateTime DESC
+    </select>
 
 </mapper>

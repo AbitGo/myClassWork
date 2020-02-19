@@ -14,4 +14,5 @@ public interface DeviceMapper {
     int deleteDeviceByDianXinCode(String DeviceCode);
     int updataDeviceByDeviceIMEI(Map<String,String> param);
     int addDeviceRecord(Map<String,Object> param);
+    List<Map<String, Object>> getDeviceRecord(String DeviceUser);
 }

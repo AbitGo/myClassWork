@@ -510,4 +510,55 @@ public class DeviceController {
         }
         return status;
     }
+
+    //通过硬件持有者查找设备开锁记录
+    @RequestMapping(value = "/Device/getDeviceRecordByUserCode", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @CrossOrigin
+    private String getDeviceRecordByUserCode(@RequestBody String getJson) throws Exception {
+        JSONObject GetJSON = JSONObject.parseObject(getJson);
+        String DeviceUser = GetJSON.getString("DeviceUser");
+        int Page = GetJSON.getIntValue("Page");
+        int Limit = GetJSON.getIntValue("Limit");
+
+        PageHelper.startPage(Page, Limit);
+        List<Map<String, Object>> results = deviceService.getDeviceRecord(DeviceUser);
+        //设置返回的总记录数
+        PageInfo<Map<String, Object>> pageInfo = new PageInfo<>(results);
+
+        JSONObject jsonObject = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        for (Map<String, Object> result : results) {
+            JSONObject paramJSON = new JSONObject();
+            paramJSON.put("CreateTime", result.get("CreateTime"));
+            paramJSON.put("DeviceCode", result.get("DeviceCode"));
+            paramJSON.put("RecordCode", result.get("RecordCode"));
+            paramJSON.put("DeviceUser", result.get("DeviceUser"));
+            paramJSON.put("DianXinCode",result.get("DianXinCode"));
+            jsonArray.add(paramJSON);
+        }
+        Long count = pageInfo.getTotal();
+        //不满足一页数
+        Long page = 0L;
+        if (count != 0) {
+            page = count / Limit;
+            if (count % Limit != 0) {
+                page++;
+            }
+        } else {
+            page = 0L;
+        }
+        jsonObject.put("Msg", jsonArray);
+        jsonObject.put("Count", count);
+        jsonObject.put("Page", page);
+        jsonObject.put("Index", Page);
+        jsonObject.put("Limit", Limit);
+        return jsonObject.toString();
+    }
+
+    //通过硬件持有者查找设备开锁记录
+    @RequestMapping(value = "/Device/test", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @CrossOrigin
+    public String test(@RequestBody String getJson) throws Exception {
+        return "OK";
+    }
 }

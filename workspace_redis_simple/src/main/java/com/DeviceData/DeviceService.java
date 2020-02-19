@@ -35,4 +35,8 @@ public class DeviceService {
         return deviceMapper.addDeviceRecord(param);
     }
 
+    public List<Map<String, Object>> getDeviceRecord(String DeviceUser){
+        return this.deviceMapper.getDeviceRecord(DeviceUser);
+    }
+
 }
