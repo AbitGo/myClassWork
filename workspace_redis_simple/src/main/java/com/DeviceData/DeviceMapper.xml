@@ -20,7 +20,7 @@
         FROM
             device AS d
         WHERE
-            DeviceUser = #{DeviceUser} or 'root' = #{DeviceUser}
+            DeviceUser = #{DeviceUser} or #{DeviceUser}='root'
     </select>
     <!--这里的代码其实可以使用or关键字去筛选-->
     <select id="getDeviceByDeviceIMEI" resultType="string" parameterType="string">
@@ -50,7 +50,13 @@
     </insert>
 
     <select id="getDeviceRecord" resultType="map" parameterType="string">
-        SELECT * from record WHERE DeviceCode in (SELECT DeviceCode from device WHERE DeviceUser = #{DeviceUser} or DeviceCode='root') ORDER BY CreateTime DESC
+        SELECT
+	    r.CreateTime,r.DeviceCode,r.DeviceUser,r.DianXinCode,d.DeviceName,d.DeviceIMEI
+        FROM
+	    record AS r
+        INNER JOIN device AS d ON r.DeviceCode = d.DeviceCode WHERE d.DeviceUser = #{DeviceUser} or #{DeviceUser} = 'root'
+        ORDER BY
+	        CreateTime DESC
     </select>
 
 </mapper>

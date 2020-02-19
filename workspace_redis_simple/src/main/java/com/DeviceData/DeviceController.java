@@ -534,6 +534,8 @@ public class DeviceController {
             paramJSON.put("RecordCode", result.get("RecordCode"));
             paramJSON.put("DeviceUser", result.get("DeviceUser"));
             paramJSON.put("DianXinCode",result.get("DianXinCode"));
+            paramJSON.put("DeviceName",result.get("DeviceName"));
+            paramJSON.put("DeviceIMEI",result.get("DeviceIMEI"));
             jsonArray.add(paramJSON);
         }
         Long count = pageInfo.getTotal();

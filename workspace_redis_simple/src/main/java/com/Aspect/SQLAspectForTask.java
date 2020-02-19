@@ -7,16 +7,26 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class SQLAspectForTask {
-    @Pointcut(value = "execution(* com.DeviceData.DeviceController.test(String))")
-    private void SQLDelOptAspectForTask() {
-        //System.out.println("SQLDelOptAspectForTask");
-    }
-    //@After 在方法后执行
-    @After("SQLDelOptAspectForTask()")
-    private void doAfter()
-    {
-        System.out.println("i run after the SQLAspectForTask");
-    }
+//    @Pointcut(value = "execution(* com.DeviceData.DeviceController.test(..))")
+//    private void SQLDelOptAspectForTask() {
+//        //System.out.println("SQLDelOptAspectForTask");
+//    }
+//    //@After 在方法后执行
+//    @After("SQLDelOptAspectForTask()")
+//    private void doAfter()
+//    {
+//        System.out.println("i run after the SQLAspectForTask");
+//    }
+//
+//    @Pointcut(value = "execution(* com.DeviceData.*.*(..))")
+//    private void allAspect() {
+//        //System.out.println("SQLDelOptAspectForTask");
+//    }
+//    @After("allAspect()")
+//    private void allAspectDoAfter()
+//    {
+//        System.out.println("i run after the allAspect");
+//    }
 
 //
 //    //@Before 在方法前执行
