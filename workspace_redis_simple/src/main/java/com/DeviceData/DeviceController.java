@@ -176,6 +176,7 @@ public class DeviceController {
             paramJSON.put("DeviceName", result.get("DeviceName"));
             paramJSON.put("DeviceCode", result.get("DeviceCode"));
             paramJSON.put("DeviceUser", result.get("DeviceUser"));
+            paramJSON.put("LoginName", result.get("LoginName"));
 
             //在获取到DianXinCode的同时应该获取该设备对应的数据
             String DianXinCode = (String)result.get("DianXinCode");
@@ -406,7 +407,7 @@ public class DeviceController {
         String paras = getJson.getString("paras");
         String deviceId = getJson.getString("deviceId");
         //命令下发者
-        String DeviceUser = getJson.getString("DeviceUser");
+        String DeviceUser = getJson.getString("deviceUser");
 
         Map<String, Object> wakeTime = redisService.GetHashKeyAndValue("deviceId:" + deviceId);
         //开始拼接数据

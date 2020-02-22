@@ -16,11 +16,13 @@
             d.DeviceName,
             d.DeviceCode,
             d.DeviceUser,
-            d.DianXinCode
+            d.DianXinCode,
+            u.LoginName
         FROM
             device AS d
+        INNER JOIN userinfo AS u ON u.DeviceUser = d.DeviceUser
         WHERE
-            DeviceUser = #{DeviceUser} or #{DeviceUser}='root'
+            d.DeviceUser =#{DeviceUser} or 'root' = #{DeviceUser}
     </select>
     <!--这里的代码其实可以使用or关键字去筛选-->
     <select id="getDeviceByDeviceIMEI" resultType="string" parameterType="string">

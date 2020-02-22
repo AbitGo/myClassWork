@@ -70,6 +70,28 @@ public class UserController {
         return resultJson.toString();
     }
 
+    @RequestMapping(value = "/User/changeUserPwd", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @CrossOrigin
+    private String changeUserPwd(@RequestBody String addJson){
+        JSONObject jsonObject = JSONObject.parseObject(addJson);
+        String DeviceUser = jsonObject.getString("DeviceUser");
+        String NewPwd = jsonObject.getString("NewPwd");
+        Map<String,String> param= new HashMap<>();
+        param.put("DeviceUser",DeviceUser);
+        param.put("NewPwd",NewPwd);
+
+        JSONObject resultJson = new JSONObject();
+        int result = userService.changeUserPwd(param);
+        if(result==0){
+            resultJson.put("flag","0");
+            resultJson.put("msg","修改失败，该账户不存在");
+        }else {
+            resultJson.put("flag","1");
+            resultJson.put("msg","修改成功，请重新登陆");
+        }
+        return resultJson.toString();
+    }
+
     @RequestMapping(value = "/User/getAllUser", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @CrossOrigin
     private String getAllUser(@RequestBody String addJson){
@@ -93,7 +115,6 @@ public class UserController {
         }
         resultJson.put("flag","1");
         resultJson.put("msg",jsonArray);
-
         return resultJson.toString();
     }
 }

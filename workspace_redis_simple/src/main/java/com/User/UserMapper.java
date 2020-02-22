@@ -10,4 +10,5 @@ public interface UserMapper {
     int addUser(Map<String,String> param);
     Map<String,String> loginUser(String LoginName);
     List<Map<String,String>> getAllUser();
+    int changeUserPwd(Map<String,String> param);
 }

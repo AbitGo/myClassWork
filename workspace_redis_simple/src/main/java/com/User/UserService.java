@@ -21,4 +21,7 @@ public class UserService {
     public  List<Map<String,String>> getAllUser(){
         return this.userMapper.getAllUser();
     }
+    public int changeUserPwd(Map<String,String> param){
+        return this.userMapper.changeUserPwd(param);
+    }
 }
