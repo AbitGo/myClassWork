@@ -1,13 +1,10 @@
 package com.Redis;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import javax.annotation.Resources;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -40,7 +37,6 @@ public class RedisUtil {
         ValueOperations<String,String> valueOperations = redisTemplate.opsForValue();
         return valueOperations.get(key);
     }
-
 
     //Zset有序队列的api
     public Boolean AddZSetKeyAndValue(String TablenName,String key,Double value)
@@ -107,8 +103,5 @@ public class RedisUtil {
         Boolean  result = redisTemplate.delete(tableName);
         return result;
     }
-
-
-
 
 }

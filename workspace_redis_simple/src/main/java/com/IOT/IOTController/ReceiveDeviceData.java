@@ -100,7 +100,8 @@ public class ReceiveDeviceData {
     @RequestMapping(value = "/IoT/addDevice", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     private ResponseEntity<HttpStatus> addDevice(@RequestBody String AddJson) throws Exception {
         JSONObject DataJson = JSONObject.parseObject(AddJson);
-        System.out.println("Data:"+AddJson);
+        //System.out.println("Data:"+AddJson);
+        System.out.println("AddDevice:"+(String) DataJson.get("deviceId"));
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

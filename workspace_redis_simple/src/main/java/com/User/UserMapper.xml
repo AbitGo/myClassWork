@@ -8,15 +8,12 @@
         </selectKey>
         insert into userInfo set LoginName = #{LoginName},LoginPassword = #{LoginPassword},DeviceUser=#{DeviceUser}
     </insert>
-
     <select id="loginUser" parameterType="string" resultType="map">
         select * from userinfo where  LoginName = #{LoginName}
     </select>
-
     <select id="getAllUser" resultType="map">
         select LoginName,DeviceUser from userinfo where DeviceUser != 'root'
     </select>
-
     <update id="changeUserPwd" parameterType="map">
         update userinfo set LoginPassword = #{NewPwd} where  DeviceUser=#{DeviceUser}
     </update>

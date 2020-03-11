@@ -1,6 +1,5 @@
 package com.User;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.util.PubicMethod;
@@ -27,7 +26,8 @@ public class UserController {
         Map<String,String> param = new HashMap<>();
         param.put("LoginName",LoginName);
         param.put("LoginPassword",LoginPassword);
-        param.put("DeviceUser",DeviceUser);
+        //因为LoginName就是唯一的
+        param.put("DeviceUser",LoginName);
 
         JSONObject resultJson = new JSONObject();
 
