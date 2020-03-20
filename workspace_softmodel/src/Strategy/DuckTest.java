@@ -9,5 +9,13 @@ public class DuckTest {
         duck.display();
         duck.performFly();
         duck.swim();
+
+        //橡皮鸭
+        Duck duck1 = new RubberDuck();
+        duck1.setFlyBehavior(new FlyNoWay());
+        duck1.setQuackBahavior(new MuteQuack());
+        duck1.display();
+        duck1.performFly();
+        duck1.swim();
     }
 }
