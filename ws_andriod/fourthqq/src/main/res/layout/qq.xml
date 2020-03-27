@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f0b1">
+    <RelativeLayout
+        android:id="@+id/rlltop"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#b6f000">
+        <ImageView
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rllNum"
+        android:background="#ffffff"
+        android:layout_below="@+id/rlltop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_margin="5dp"
+            android:hint="请输入QQ号"
+            android:textColorHint="#5E5252"
+            android:textColor="#020202"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@mipmap/no_s"
+            android:scaleType="center"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/Pwd"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/rllNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <EditText
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="#ffffff"
+            android:textColorHint="#5E5252"
+            android:hint="请输入密码"
+            android:textColor="#020202"
+            android:inputType="textPassword" />
+    </LinearLayout>
+    
+    <Button
+        android:layout_margin="25dp"
+        android:background="#0EE0B6"
+        android:textSize="25dp"
+        android:layout_below="@+id/Pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登陆"/>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:textColor="#050505"
+            android:text="无法登陆?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#050505"
+            android:layout_alignParentRight="true"
+            android:text="新用户"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

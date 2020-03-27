@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">fifthlesson</string>
+    <string-array name="myprovice">
+        <item>江苏省</item>
+        <item>广东省</item>
+        <item>山西省</item>
+    </string-array>
+</resources>
