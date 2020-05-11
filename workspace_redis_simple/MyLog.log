@@ -1,11 +1,11 @@
-2020-02-23 11:07:39.678  INFO 2548 --- [main] com.User.DemoApplicationTests            : Starting DemoApplicationTests on DESKTOP-V0SPMDI with PID 2548 (started by Abit in E:\myClassWork\workspace_redis_simple)
-2020-02-23 11:07:39.694  INFO 2548 --- [main] com.User.DemoApplicationTests            : No active profile set, falling back to default profiles: default
-2020-02-23 11:07:42.593  INFO 2548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-02-23 11:07:42.595  INFO 2548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-23 11:07:43.100  INFO 2548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 484ms. Found 0 repository interfaces.
-2020-02-23 11:07:43.545  INFO 2548 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a0ee5cf9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-02-23 11:07:45.202  INFO 2548 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-02-23 11:07:45.706  INFO 2548 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2020-02-23 11:07:45.797  INFO 2548 --- [main] com.User.DemoApplicationTests            : Started DemoApplicationTests in 6.504 seconds (JVM running for 7.361)
-2020-02-23 11:07:46.191  INFO 2548 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2020-02-23 11:07:46.199  INFO 2548 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-27 18:56:50.740  INFO 17040 --- [main] com.User.DemoApplicationTests            : Starting DemoApplicationTests on DESKTOP-V0SPMDI with PID 17040 (started by Abit in E:\myClassWork\workspace_redis_simple)
+2020-04-27 18:56:50.745  INFO 17040 --- [main] com.User.DemoApplicationTests            : No active profile set, falling back to default profiles: default
+2020-04-27 18:56:53.813  INFO 17040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-27 18:56:53.817  INFO 17040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-27 18:56:54.328  INFO 17040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 482ms. Found 0 repository interfaces.
+2020-04-27 18:56:54.877  INFO 17040 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4813c64d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 18:56:56.454  INFO 17040 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-27 18:56:57.049  INFO 17040 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-04-27 18:56:57.153  INFO 17040 --- [main] com.User.DemoApplicationTests            : Started DemoApplicationTests in 6.902 seconds (JVM running for 7.802)
+2020-04-27 18:56:57.494  INFO 17040 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-04-27 18:56:57.495  INFO 17040 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
