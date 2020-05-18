@@ -34,8 +34,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Strategy/QuackBahavior.java" />
-        <option value="$PROJECT_DIR$/src/Strategy/FlyWithWings.java" />
         <option value="$PROJECT_DIR$/src/Strategy/FlyNoWay.java" />
         <option value="$PROJECT_DIR$/src/Strategy/Quack.java" />
         <option value="$PROJECT_DIR$/src/Strategy/Squeak.java" />
@@ -85,6 +83,8 @@
         <option value="$PROJECT_DIR$/src/Prototype/WoodenHome.java" />
         <option value="$PROJECT_DIR$/src/Prototype/ConcreteHome.java" />
         <option value="$PROJECT_DIR$/src/Prototype/PrototypeTest.java" />
+        <option value="$PROJECT_DIR$/src/Account.java" />
+        <option value="$PROJECT_DIR$/src/vestedHourlyEmployee.java" />
       </list>
     </option>
   </component>
@@ -118,25 +118,19 @@
               <item name="workspace_softmodel" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="workspace_softmodel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace_softmodel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Prototype" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/安卓作业/game/java后端" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaEE" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
@@ -251,16 +245,19 @@
       <workItem from="1588128944664" duration="674000" />
       <workItem from="1588762589383" duration="1965000" />
       <workItem from="1589176249359" duration="49000" />
+      <workItem from="1589764247005" duration="319000" />
+      <workItem from="1589765575915" duration="914000" />
+      <workItem from="1589784996745" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27612000" />
+    <option name="totallyTimeSpent" value="28871000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19839142" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20643431" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -737,5 +734,8 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.java" />
+    <entry file="file://$PROJECT_DIR$/src/Account.java" />
+    <entry file="file://$PROJECT_DIR$/src/vestedHourlyEmployee.java" />
   </component>
 </project>
