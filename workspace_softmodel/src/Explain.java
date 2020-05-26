@@ -88,4 +88,6 @@ public class Explain {
 
     final String prototype="模板模式";
 
+    final String Composite ="组合模式";
+
 }
