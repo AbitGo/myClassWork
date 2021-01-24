@@ -1,0 +1,82 @@
+2020-06-07 00:00:17.473  INFO 8908 --- [main] com.DemoApplication                      : Starting DemoApplication on DESKTOP-J3PHB4V with PID 8908 (started by ABit in C:\Users\ABit\Desktop\javaEE大作业\javaEE)
+2020-06-07 00:00:17.517  INFO 8908 --- [main] com.DemoApplication                      : No active profile set, falling back to default profiles: default
+2020-06-07 00:00:21.157  INFO 8908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-07 00:00:21.161  INFO 8908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-07 00:00:21.703  INFO 8908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 520ms. Found 0 repository interfaces.
+2020-06-07 00:00:22.046  INFO 8908 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$910020f2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-07 00:00:22.286  INFO 8908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8456 (http)
+2020-06-07 00:00:22.306  INFO 8908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-07 00:00:22.306  INFO 8908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-06-07 00:00:22.312  INFO 8908 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_211\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\ABit\AppData\Local\Microsoft\WindowsApps;D:\software\Microsoft VS Code\bin;C:\Users\ABit\AppData\Local\GitHubDesktop\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2020-06-07 00:00:22.396  INFO 8908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-07 00:00:22.396  INFO 8908 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4823 ms
+2020-06-07 00:00:23.188  INFO 8908 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-07 00:00:23.280  WARN 8908 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-07 00:00:23.532  WARN 8908 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-07 00:00:23.584  INFO 8908 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-07 00:00:23.679  INFO 8908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8456 (http) with context path ''
+2020-06-07 00:00:23.681  INFO 8908 --- [main] com.DemoApplication                      : Started DemoApplication in 6.78 seconds (JVM running for 7.813)
+2020-06-07 00:00:31.171  INFO 8908 --- [http-nio-8456-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-07 00:00:31.172  INFO 8908 --- [http-nio-8456-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-07 00:00:31.184  INFO 8908 --- [http-nio-8456-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-06-07 00:00:31.402  INFO 8908 --- [http-nio-8456-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-07 00:00:32.121  INFO 8908 --- [http-nio-8456-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-07 00:02:02.899  INFO 404 --- [main] com.DemoApplication                      : Starting DemoApplication on DESKTOP-J3PHB4V with PID 404 (started by ABit in C:\Users\ABit\Desktop\javaEE大作业\javaEE)
+2020-06-07 00:02:02.902  INFO 404 --- [main] com.DemoApplication                      : No active profile set, falling back to default profiles: default
+2020-06-07 00:02:06.260  INFO 404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-07 00:02:06.262  INFO 404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-07 00:02:06.861  INFO 404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 586ms. Found 0 repository interfaces.
+2020-06-07 00:02:07.192  INFO 404 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eb735d73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-07 00:02:07.434  INFO 404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8456 (http)
+2020-06-07 00:02:07.453  INFO 404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-07 00:02:07.454  INFO 404 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-06-07 00:02:07.460  INFO 404 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_211\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\ABit\AppData\Local\Microsoft\WindowsApps;D:\software\Microsoft VS Code\bin;C:\Users\ABit\AppData\Local\GitHubDesktop\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2020-06-07 00:02:07.697  INFO 404 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-07 00:02:07.697  INFO 404 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4751 ms
+2020-06-07 00:02:08.420  INFO 404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-07 00:02:08.525  WARN 404 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-07 00:02:08.751  WARN 404 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-07 00:02:08.783  INFO 404 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-07 00:02:08.856  INFO 404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8456 (http) with context path ''
+2020-06-07 00:02:08.858  INFO 404 --- [main] com.DemoApplication                      : Started DemoApplication in 6.511 seconds (JVM running for 7.513)
+2020-06-07 00:02:11.807  INFO 404 --- [http-nio-8456-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-07 00:02:11.807  INFO 404 --- [http-nio-8456-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-07 00:02:11.818  INFO 404 --- [http-nio-8456-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-06-07 00:02:11.978  INFO 404 --- [http-nio-8456-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-07 00:02:12.717  INFO 404 --- [http-nio-8456-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-07 15:57:04.584  INFO 12436 --- [main] com.DemoApplication                      : Starting DemoApplication on DESKTOP-J3PHB4V with PID 12436 (started by ABit in C:\Users\ABit\Desktop\javaEE大作业\javaEE)
+2020-06-07 15:57:04.589  INFO 12436 --- [main] com.DemoApplication                      : No active profile set, falling back to default profiles: default
+2020-06-07 15:57:07.009  INFO 12436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-07 15:57:07.012  INFO 12436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-07 15:57:07.483  INFO 12436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 455ms. Found 0 repository interfaces.
+2020-06-07 15:57:07.767  INFO 12436 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$910020f2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-07 15:57:08.078  INFO 12436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8456 (http)
+2020-06-07 15:57:08.100  INFO 12436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-07 15:57:08.101  INFO 12436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-06-07 15:57:08.107  INFO 12436 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_211\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\ABit\AppData\Local\Microsoft\WindowsApps;D:\software\Microsoft VS Code\bin;C:\Users\ABit\AppData\Local\GitHubDesktop\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2020-06-07 15:57:08.194  INFO 12436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-07 15:57:08.194  INFO 12436 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3553 ms
+2020-06-07 15:57:08.927  INFO 12436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-07 15:57:09.039  WARN 12436 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-07 15:57:09.315  WARN 12436 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-07 15:57:09.356  INFO 12436 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-07 15:57:09.433  INFO 12436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8456 (http) with context path ''
+2020-06-07 15:57:09.438  INFO 12436 --- [main] com.DemoApplication                      : Started DemoApplication in 5.39 seconds (JVM running for 6.422)
+2020-06-07 16:22:52.872  INFO 12436 --- [http-nio-8456-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-07 16:22:52.873  INFO 12436 --- [http-nio-8456-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-07 16:22:52.889  INFO 12436 --- [http-nio-8456-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-06-07 16:22:52.997  INFO 12436 --- [http-nio-8456-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-07 16:22:53.532  INFO 12436 --- [http-nio-8456-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-07 21:13:54.556  INFO 17508 --- [main] com.user.DemoApplicationTests            : Starting DemoApplicationTests on DESKTOP-J3PHB4V with PID 17508 (started by ABit in C:\Users\ABit\Desktop\javaEE����ҵ\javaEE)
+2020-06-07 21:13:54.557  INFO 17508 --- [main] com.user.DemoApplicationTests            : No active profile set, falling back to default profiles: default
+2020-06-07 21:13:57.601  INFO 17508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-07 21:13:57.604  INFO 17508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-07 21:13:58.044  INFO 17508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 413ms. Found 0 repository interfaces.
+2020-06-07 21:13:58.532  INFO 17508 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$116ee6f4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-07 21:14:00.245  INFO 17508 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-07 21:14:00.451  WARN 17508 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-07 21:14:00.924  WARN 17508 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-06-07 21:14:01.081  INFO 17508 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-06-07 21:14:01.203  INFO 17508 --- [main] com.user.DemoApplicationTests            : Started DemoApplicationTests in 6.978 seconds (JVM running for 8.006)
+2020-06-07 21:14:01.480  INFO 17508 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-06-07 21:14:01.482  INFO 17508 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

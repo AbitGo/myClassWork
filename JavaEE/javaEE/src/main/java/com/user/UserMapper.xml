@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.user.UserMapper">
+
+    <select id="userLogin" parameterType="string" resultType="map">
+        select * from user_login where loginName = #{mLoginName};
+    </select>
+
+
+<!--    <insert id="inertUserInfo" >-->
+<!--        <foreach collection="list" index="index" item = "itempojo" separator=";">-->
+<!--            INSERT into user_login (userName,loginName,loginPassword,userEmail,userRole)-->
+<!--            VALUES (#{itempojo.userName},#{itempojo.loginName},#{itempojo.loginPassword},#{itempojo.userEmail},#{itempojo.userRole})-->
+<!--        </foreach>-->
+
+<!--    </insert>-->
+
+    <update id="changeUserPwd" parameterType="map">
+        <selectKey keyProperty="id" resultType="int" order="AFTER">
+        select count(*) from user_login where loginPassword = #{oldLoginPassword} and loginName = #{cloginName}
+        </selectKey>
+        update user_login set loginPassword = #{newLoginPassword}
+        where loginPassword = #{oldLoginPassword} and loginName = #{cLoginName}
+    </update>
+
+<!--    <select id="formCarsh" parameterType="string" resultMap="string">-->
+
+<!--    </select>-->
+
+
+<!--    <update id="UpdateUserInfo" parameterType="map">-->
+<!--        UPDATE `user`SET-->
+<!--        LoginName = #{LoginName},-->
+<!--        LoginPassword = #{LoginPassword},-->
+<!--        UserMail = #{UserMail},-->
+<!--        UserName = #{UserName},-->
+<!--        UserPhone = #{UserPhone},-->
+<!--        <choose>-->
+<!--            <when test="Activity!=null">-->
+<!--                Activity = #{Activity},-->
+<!--            </when>-->
+<!--        </choose>-->
+
+<!--        <choose>-->
+<!--            <when test="UserArea!=null">-->
+<!--                UserArea = #{UserArea},-->
+<!--            </when>-->
+<!--        </choose>-->
+<!--        Description = #{Description}-->
+<!--        WHERE-->
+<!--            UserCode = #{UserCode}-->
+<!--        AND `Enable` = 1-->
+<!--    </update>-->
+
+
+<!--    <update id="DeleteUserInfo" parameterType="string" >-->
+<!--        UPDATE user set-->
+<!--        Enable = 0-->
+<!--        where UserCode=#{UserCode}-->
+<!--    </update>-->
+
+<!--    <select id="GetUserInfoForAdmin" parameterType="map" resultType="map">-->
+<!--        SELECT UserCode,UserName,UserRole,UserPhone,UserMail,-->
+<!--        (SELECT ProvinceName FROM province AS p WHERE p.ProvinceCode = u.UserProvince) AS ProvinceInfo,UserProvince,UserArea,LoginName,-->
+<!--        (SELECT AreaName FROM area AS a WHERE a.AreaCode = u.UserArea ) AS AreaInfo,-->
+<!--        Activity,Description FROM `user` AS u-->
+<!--        WHERE-->
+<!--        LeaderCode = #{LeaderCode}-->
+<!--        <choose>-->
+<!--            <when test="UserName!=null">-->
+<!--                AND UserName LIKE "%"#{UserName}"%"-->
+<!--            </when>-->
+<!--        </choose>-->
+<!--        <choose>-->
+<!--            <when test="UserCode!=null">-->
+<!--                AND UserCode LIKE "%"#{UserCode}"%"-->
+<!--            </when>-->
+<!--        </choose>-->
+<!--        <choose>-->
+<!--            <when test="Activity!=null">-->
+<!--                AND Activity = #{Activity}-->
+<!--            </when>-->
+<!--        </choose>-->
+<!--        and u.Enable =1-->
+<!--    </select>-->
+
+<!--    <select id="GetUserInfoForRoot" parameterType="map" resultType="map">-->
+<!--        SELECT UserCode,UserName,UserRole,UserPhone,UserMail,-->
+<!--        (SELECT ProvinceName FROM province AS p WHERE p.ProvinceCode = u.UserProvince) AS ProvinceInfo,UserProvince,UserArea,LoginName,-->
+<!--        (SELECT AreaName FROM area AS a WHERE a.AreaCode = u.UserArea ) AS AreaInfo,-->
+<!--        Activity,Description FROM `user` AS u-->
+<!--        WHERE-->
+<!--        1=1-->
+<!--        <choose>-->
+<!--            <when test="UserName!=null">-->
+<!--                AND UserName LIKE "%"#{UserName}"%"-->
+<!--            </when>-->
+<!--        </choose>-->
+<!--        <choose>-->
+<!--            <when test="UserCode!=null">-->
+<!--                AND UserCode LIKE "%"#{UserCode}"%"-->
+<!--            </when>-->
+<!--        </choose>-->
+<!--        and u.Enable = 1-->
+<!--    </select>-->
+
+
+</mapper>

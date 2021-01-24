@@ -1,0 +1,27 @@
+var title = localStorage.getItem('title');
+console.log(title);
+$(document).ready(function(){
+    $("#back").click(function(){
+        window.location.href="../templates/index.html"
+    });
+    $.ajax
+    ({
+        async:true,
+        type: "POST",
+        url: "http://localhost:8080/queryInfo",
+        dataType: "json",
+        data: JSON.stringify({
+            "title": title
+        }),
+        contentType: "application/json",
+        success: function (res) {
+            for(var i=0; i<res.msg.length; i++){
+                tr = '<td id="title">'+res.msg[i].title+'</td>'
+                    +'<td id="dateTime">' +res.msg[i].dateTime+'</td>'
+                    +'<td id="price">'+res.msg[i].price+'</td>'
+                    +'<td id="type">'+res.msg[i].type+'</td>';
+                $("#table").append('<tr id="current" style="height: 30px; align-content: center">' + tr + '</tr>');
+            }
+        }
+    });
+})

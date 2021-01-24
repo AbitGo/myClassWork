@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.Form.FormMapper">
+
+    <insert id="addFormStyle" parameterType="map">
+        insert into form_style (startTime, endTime, formDate, formCode,formNum)
+        values (#{startTime},#{endTime},#{formDate},#{formCode},#{formNum})
+    </insert>
+
+    <select id="formCrash" parameterType="long" resultType="string">
+        select formCode from form_style where startTime &lt; #{searchTime} and  #{searchTime} &lt; endTime
+    </select>
+
+    <select id="getFormByTimeAndFormCode" parameterType="map" resultType="map">
+        select * from form_record where formCode = #{formCode} and userID=#{loginName}
+    </select>
+
+</mapper>

@@ -1,0 +1,135 @@
+<!-- <!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>学生提交表单</title>
+
+    
+    <script src="js/jquery-3.0.0.min.js"></script>
+
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <div class="radio-custom">
+            <input type="radio" class="radius-50">体温是否超过37.5℃</input>
+        </div>
+    </div>
+
+    
+    
+</body> -->
+
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>学生提交表单</title>
+
+    <link rel="stylesheet" type="text/css" href="css/compant.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="js/jquery-3.0.0.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="login_warp">
+            <div class="loginbox fl">
+                <!--导航栏-->
+                <div class="login_header">
+                    <span>学生体温提交表单</span>
+                </div>
+
+                <div id="formMsg">表单消息:</div>
+                <div class="content">
+
+                    <table>
+                        <tr>
+                            <td>学生ID:</td>
+                            <td>17200135123</td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="2">
+                                <input type="radio" class="radius-50" name="formValue1" id="formValue1_1" />
+                                体温是低于37.5℃</td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="radio" class="radius-50" name="formValue1" id="formValue2_2" />
+                                体温是高于37.5℃</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox-custom" id="formValue2">
+                                    <input type="checkbox" name="name"></input>
+                                    <label></label>
+                                </div>
+                            </td>
+                            <td>伴有咳嗽、发烧等症状</td>
+
+                        </tr>
+                    </table>
+                    <div class="list" style="display: block;">
+                        <div class="form_item">
+                            <input type="submit" id="submit_form" name="" value="确认提交">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="submitslider fl"></div>
+        </div>
+
+        <script type="text/javascript">
+            function getForm() {
+                var str = window.sessionStorage;
+                var loginName = str.getItem("loginName");
+                //var loginName = "17200135123";
+                //进行用户登陆的接口调用
+                $.ajax
+                    ({
+                        async: true,
+                        type: "POST",
+                        url: "http://47.103.135.104:8456/form/getForm",
+                        dataType: "json",
+                        data: JSON.stringify({
+                            "loginName": loginName,
+                        }),
+                        contentType: "application/json",
+                        success: function (obj) {
+
+                            if (obj.flag == "1") {
+                                //如果为1则表单需要进行重新提交
+
+                            }
+
+                            else if (obj.flag == "0") {
+                                //如果为0则无表单需要提交 
+                                //需要阻止表单提交
+                                $("#submit_form").val("不可提交表单");
+                                $("#submit_form").attr("disable", true);
+                            } else {
+                                //如果为2则是修改表单
+                                //需要阻止表单提交
+                                $("#submit_form").val("确认修改");
+                            }
+                            alert(obj.msg);
+                            $("#formMsg").html("表单消息:" +obj.msg);
+                        }
+                    });
+            }
+            //页面开启运行
+            window.onload = getForm;
+        </script>
+    </div>
+</body>
+
+</html>

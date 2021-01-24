@@ -1,0 +1,99 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vue tab 登录</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/userlogin.js"></script>
+    <script src="js/userChangePwd.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="login_warp">
+            <div class="loginbox fl">
+                <!--导航栏-->
+                <div class="login_header">
+                    <span class="selected">账号登录</span>
+                    <span>修改密码</span>
+                </div>
+
+
+                <div class="content">
+                    <div class="list" style="display: block;">
+                        <div class="form_item"><input type="text" name="fname" id="fname_login" placeholder="用户名"></div>
+                        <div class="form_item"><input type="password" name="fpassword" id="fpassword" placeholder="密码">
+                        </div>
+                        <div class="form_item">
+                            <div class="fl"><input type="checkbox">记住密码</div>
+                            <div class="fr" id="cleanAll">重新填写</a></div>
+                        </div>
+
+                        <!--增加空白面积-->
+                        <div class="clear"></div>
+                        <div class="form_item">
+                            <input type="submit" id="userLogin" value="登录">
+                        </div>
+                    </div>
+                    <div class="list" style="display: none;">
+                        <div class="form_item"><input type="text" name="fname" id = "fname_changePwd" placeholder="登陆账号"></div>
+                        <div class="form_item"><input type="password" name="password_old" id="password_old"
+                                placeholder="旧登陆密码"></div>
+                        <div class="form_item"><input type="password" name="password_new" id="password_new"
+                                placeholder="新登陆密码"></div>
+                        <div class="form_item">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="form_item">
+                            <input type="submit" id= "userChangePwd" name="" value="确认修改">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="loginrslider fl"></div>
+        </div>
+
+        <script type="text/javascript">
+            $(function () {
+                //获取点击事件的对象
+                $(".login_header span").click(function () {
+                    //获取要显示或隐藏的对象
+                    var divShow = $(".content").children('.list');
+                    //判断当前对象是否被选中，如果没选中的话进入if循环
+                    if (!$(this).hasClass('selected')) {
+                        //获取当前对象的索引
+                        var index = $(this).index();
+                        //当前对象添加选中样式并且其同胞移除选中样式；
+                        $(this).addClass('selected').siblings('span').removeClass('selected');
+                        //索引对应的div块显示
+                        $(divShow[index]).show();
+                        //索引对应的div块的同胞隐藏
+                        $(divShow[index]).siblings('.list').hide();
+                    }
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            //清楚表单内的数据，通过jquery中的id选择器找找出用户名以及密码
+            $(function () {
+                $("#cleanAll").click(function () {
+                    $("#fname").val('');
+                    $("#fpassword").val('');
+                });
+
+            });
+        </script>
+
+
+    </div>
+</body>
+
+</html>

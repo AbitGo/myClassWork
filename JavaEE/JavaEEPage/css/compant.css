@@ -1,0 +1,57 @@
+table tr th, table tr td {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+body{
+    width: 100%;
+    margin-left: 30%;
+    margin-right: auto;
+    } 
+
+table {
+    width: 200px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.checkbox-custom , .radio-custom {
+    position: relative;
+}
+
+.checkbox-custom input[type=checkbox], .radio-custom input[type=radio] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-appearance: none;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+.checkbox-custom .radius-50, .radio-custom .radius-50 {
+    border-radius: 50%;
+}
+
+.checkbox-custom input[type=checkbox]:checked , .radio-custom input[type=radio]:checked {
+    border-color: #35ff89;
+    background: #35ff9a;
+}
+
+.checkbox-custom input[type=checkbox]:checked:after, .radio-custom input[type=radio]:checked:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+}
